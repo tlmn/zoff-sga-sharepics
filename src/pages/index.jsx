@@ -11,7 +11,7 @@ export default () => {
         <div className="container py-2">
           <div className="mx-auto grid grid-cols-12 col-gap-4 row-gap-2 py-5">
             <div className="col-span-12 text-center">
-              <h1 className="text-lg text-turquoise uppercase leading-tight">
+              <h1 className="text-lg text-turquoise uppercase leading-tight italic">
                 Sharepic Generator <br /> linksjugend ['solid]
               </h1>
             </div>
