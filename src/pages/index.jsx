@@ -4,7 +4,6 @@ import React from "react";
 import { templates } from "../config/vars";
 
 export default () => {
-  console.log(templates);
   return (
     <Layout>
       <div className="bg-darkGray font-headline leading-normal">

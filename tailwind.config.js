@@ -1,9 +1,13 @@
+const Color = require("color");
+
+const lighten = (clr, val) => Color(clr).lighten(val).rgb().string();
+
 module.exports = {
   purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
   theme: {
     extend: {},
     colors: {
-      darkGray: "#252525",
+      darkGray: { default: "#252525", lighter: lighten("#252525", 0.8) },
       red: "#E2190C",
       turquoise: "#00FFC2",
       violet: "#C9CEFF",
@@ -17,6 +21,7 @@ module.exports = {
       4: "80px",
     },
     lineHeight: {
+      none: 1,
       tight: 1.15,
       normal: 1.2,
     },

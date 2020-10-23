@@ -1,45 +1,31 @@
 export const colors = [
-  {
-    darkGrey: "#252525",
-    red: "#E2190C",
-    turquoise: "#00FFC2",
-    violet: "#C9CEFF",
-    white: "#fff",
-  },
+  { name: "darkGray", value: "#252525" },
+  { name: "red", value: "#E2190C" },
+  { name: "turquoise", value: "#00FFC2" },
+  { name: "violet", value: "#C9CEFF" },
+  { name: "white", value: "#fff" },
 ];
 
 export const colorCombinations = [
   {
     label: "darkGray_turquoise",
     name: "dunkelgrau & türkis",
-    colors: {
-      primary: "darkGray",
-      secondary: "turquoise",
-    },
+    colors: ["darkGray", "turquoise"],
   },
   {
     label: "turquoise_darkGray",
     name: "türkis & dunkelgrau",
-    colors: {
-      primary: "turquoise",
-      secondary: "darkGray",
-    },
+    colors: ["turquoise", "darkGray"],
   },
   {
     label: "violet_red",
     name: "violett & rot",
-    colors: {
-      primary: "violet",
-      secondary: "red",
-    },
+    colors: ["violet", "red"],
   },
   {
     label: "red_violet",
     name: "rot & violett",
-    colors: {
-      primary: "red",
-      secondary: "violet",
-    },
+    colors: ["red", "violet"],
   },
 ];
 
