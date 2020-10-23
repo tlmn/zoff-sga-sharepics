@@ -12,7 +12,7 @@ input[type="file"] {
 label {
   @apply italic;
   @apply font-bold;
-  @apply text-md;
+  @apply text-xl;
 }
 
 .btn-download {

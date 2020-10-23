@@ -43,6 +43,10 @@ export default ({ state, setState }) => {
         value={state.bodyTextScale}
         onChange={(e) => setState({ ...state, bodyTextScale: e.target.value })}
       />
+      <input
+        onChange={(e) => setState({ ...state, logoLocalBranch: e.target.value })}
+        value={state.logoLocalBranch}
+      />
       <button className="btn-download" onClick={() => html2image()}>
         Download
       </button>

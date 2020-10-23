@@ -28,8 +28,9 @@ module.exports = {
     fontSize: {
       small: "12px",
       base: "18px",
-      md: "40px",
-      lg: "48px",
+      md: "30px",
+      lg: "40px",
+      xl: "48px",
     },
     cursor: {
       auto: "auto",

@@ -27,6 +27,16 @@ export const colorCombinations = [
     name: "rot & violett",
     colors: ["red", "violet"],
   },
+  {
+    label: "darkGray_red",
+    name: "grau & rot",
+    colors: ["darkGray", "red"],
+  },
+  {
+    label: "white_red",
+    name: "weiß & rot",
+    colors: ["white", "red"],
+  },
 ];
 
 export const templates = [

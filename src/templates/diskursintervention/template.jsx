@@ -14,7 +14,7 @@ export default ({ state }) => {
         ref={state.templateRef}
       >
         <span
-          className="mb-3 text-center text-md font-bold font-headline"
+          className="mb-3 text-center text-xl font-bold font-headline"
           dangerouslySetInnerHTML={{
             __html: state.categoryText === "" ? "\u00a0" : state.categoryText,
           }}
@@ -53,6 +53,17 @@ export default ({ state }) => {
           />
         </div>
         <LogoText className="self-center" fillColor={getColor(state, 1)} />
+        <div
+          className="uppercase font-headline text-center text-md"
+          style={{
+            color: getColor(state, 1),
+            transform: "rotate(-6deg)",
+          }}
+          dangerouslySetInnerHTML={{
+            __html:
+              state.logoLocalBranch === "" ? "\u00a0" : state.logoLocalBranch,
+          }}
+        />
       </div>
     </div>
   );
