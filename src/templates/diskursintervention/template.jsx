@@ -1,7 +1,7 @@
-import Cockpit from "./cockpit";
+import { formatEmojis, getColor } from "../../lib/lib";
+
 import LogoText from "../../assets/svg/logo-text";
 import React from "react";
-import { getColor } from "../../lib/lib";
 
 export default ({ state }) => {
   return (
@@ -14,7 +14,7 @@ export default ({ state }) => {
         ref={state.templateRef}
       >
         <span
-          className="mb-3 text-center text-md uppercase font-bold font-headline"
+          className="mb-3 text-center text-md font-bold font-headline"
           dangerouslySetInnerHTML={{
             __html: state.categoryText === "" ? "\u00a0" : state.categoryText,
           }}
@@ -30,7 +30,11 @@ export default ({ state }) => {
               color: getColor(state, 1),
             }}
             dangerouslySetInnerHTML={{
-              __html: state.bodyText,
+              __html: formatEmojis(
+                state.bodyText
+                  .replace(/\{/gi, `<span class="stripe">`)
+                  .replace(/\}/gi, `</span>`)
+              ),
             }}
           />
         </div>
