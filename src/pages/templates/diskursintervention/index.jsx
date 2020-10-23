@@ -5,11 +5,11 @@ import Template from "../../../templates/diskursintervention/template";
 
 export default () => {
   const [state, setState] = useState({
-    categoryText: "Kategorie",
-    bodyText: "Lorem Ipsum is simply!!",
+    categoryText: "So komplex und doch so einfach",
+    bodyText: "Das Problem heißt {Rassismus}",
     bodyTextScale: 100,
     bodyTextScaleRange: [60, 150],
-    colorCombination: "darkGray_turquoise",
+    colorCombination: "turquoise_darkGray",
     templateRef: useRef(null),
     templateScale: true,
   });

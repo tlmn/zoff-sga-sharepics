@@ -5,6 +5,7 @@
 @import "./fonts.css";
 @import "./cockpit.css";
 @import "./template.css";
+@import "./stripes.css";
 
 .grid-12 {
   @apply grid-cols-12;

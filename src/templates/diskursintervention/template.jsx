@@ -24,7 +24,7 @@ export default ({ state }) => {
         />
         <div className="mb-3 flex-1 flex">
           <span
-            className="block // overflow-hidden // w-full // self-center // text-center font-bold font-headline leading-none"
+            className="block // w-full // self-center // text-center font-bold font-headline leading-none"
             style={{
               fontSize: `${(state.bodyTextScale / 100) * 140}px`,
               color: getColor(state, 1),
@@ -32,8 +32,22 @@ export default ({ state }) => {
             dangerouslySetInnerHTML={{
               __html: formatEmojis(
                 state.bodyText
-                  .replace(/\{/gi, `<span class="stripe">`)
-                  .replace(/\}/gi, `</span>`)
+                  .replace(
+                    /\{/gi,
+                    `<div class="stripeContainer"><div class="stripeText" style="color: ${getColor(
+                      state,
+                      0
+                    )}">`
+                  )
+                  .replace(
+                    /\}/gi,
+                    `</div><div class="stripeElement" style="transform:rotate(${
+                      Math.random() * 3 - 1.5
+                    }deg); background-color: ${getColor(
+                      state,
+                      1
+                    )}"></div></div>`
+                  )
               ),
             }}
           />
