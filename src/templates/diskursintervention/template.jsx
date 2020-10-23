@@ -8,7 +8,7 @@ export default ({ state }) => {
     <div className="col-span-6 relative">
       <div
         className={`p-4 // flex flex-col absolute // border-1 // template ${
-          state.templateScale && `template-scale`
+          state.templateScale ? `template-scale` : `relative`
         }`}
         style={{ backgroundColor: getColor(state, 0) }}
         ref={state.templateRef}
@@ -48,6 +48,7 @@ export default ({ state }) => {
                       1
                     )}"></div></div>`
                   )
+                  .replace(/\n/gi, `<br/>`)
               ),
             }}
           />
