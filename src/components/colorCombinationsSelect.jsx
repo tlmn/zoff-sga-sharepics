@@ -3,6 +3,7 @@ import { colorCombinations } from "../config/vars";
 
 export default ({ state, setState }) => (
   <select
+    // eslint-disable-next-line jsx-a11y/no-onchange
     onChange={(e) => setState({ ...state, colorCombination: e.target.value })}
     className="border-2 border-black"
   >
