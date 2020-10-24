@@ -29,7 +29,7 @@ export const colorCombinations = [
   },
   {
     label: "darkGray_red",
-    name: "grau & rot",
+    name: "dunkelgrau & rot",
     colors: ["darkGray", "red"],
   },
   {
