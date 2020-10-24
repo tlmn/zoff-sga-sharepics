@@ -1,6 +1,5 @@
 import { formatEmojis, getColor } from "../../lib/lib";
 
-import LogoText from "../../assets/svg/logo-text";
 import React from "react";
 
 export default ({ state }) => {
@@ -15,7 +14,7 @@ export default ({ state }) => {
       >
         <div className="flex">
           <span
-            className="block // w-full // self-center // text-left font-bold font-headline leading-none"
+            className="block // w-full // self-center // text-left italic font-bold font-headline leading-none"
             style={{
               fontSize: `${(state.bodyTextScale / 100) * 80}px`,
               color: getColor(state, 1),
