@@ -6,13 +6,21 @@ import Template from "../../../templates/diskursintervention-mit-bild/template";
 
 export default () => {
   const [state, setState] = useState({
-    image: { url: null, position: { x: 0, y: 0 }, scale: 0 },
-    bodyText: "SPD: Oops, I did it again",
-    bodyTextScale: 100,
-    bodyTextScaleRange: [60, 150],
-    colorCombination: "turquoise_darkGray",
-    logoLocalBranch: "",
-    templateRef: useRef(null),
+    currentSlide: 0,
+    slides: [
+      {
+        data: {
+          image: { url: null, position: { x: 0, y: 0 }, scale: 0 },
+          body: {
+            content: "SPD: Oops, I did it again!",
+            scaleRange: [60, 150],
+            scale: 100,
+          },
+        },
+        templateRef: useRef(null),
+      },
+    ],
+    colorTheme: "turquoise_darkGray",
     templateScale: true,
   });
 

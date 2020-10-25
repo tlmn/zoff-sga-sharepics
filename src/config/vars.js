@@ -6,7 +6,7 @@ export const colors = [
   { name: "white", value: "#fff" },
 ];
 
-export const colorCombinations = [
+export const colorThemes = [
   {
     label: "darkGray_turquoise",
     name: "dunkelgrau & türkis",
