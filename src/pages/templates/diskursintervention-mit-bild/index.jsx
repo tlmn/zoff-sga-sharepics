@@ -17,7 +17,7 @@ export default () => {
             scale: 100,
           },
         },
-        templateRef: useRef(null),
+        ref: useRef(null),
       },
     ],
     colorTheme: "turquoise_darkGray",

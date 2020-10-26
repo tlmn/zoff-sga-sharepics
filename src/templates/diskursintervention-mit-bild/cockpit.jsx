@@ -1,28 +1,8 @@
 import ColorThemesSelect from "../../components/colorThemesSelect";
 import React from "react";
-import htmlToImage from "html-to-image";
-import slugify from "react-slugify";
+import { html2image } from "../../lib/lib";
 
 export default ({ state, setState }) => {
-  const html2image = async () => {
-    setState({ ...state, templateScale: false });
-    htmlToImage
-      .toJpeg(state.slides[state.currentSlide].templateRef.current, {
-        quality: 1,
-        width: 1080,
-        height: 1080,
-      })
-      .then(function (dataUrl) {
-        var link = document.createElement("a");
-        link.download = `sharepic-${slugify(
-          state.slides[state.currentSlide].data.body.content
-        )}.jpg`;
-        link.href = dataUrl;
-        link.click();
-        setState({ ...state, templateScale: true });
-      });
-  };
-
   return (
     <div className="p-1 bg-turquoise">
       <input
@@ -38,6 +18,7 @@ export default ({ state, setState }) => {
               data: {
                 ...state.slides[state.currentSlide].data,
                 image: {
+                  ...state.slides[state.currentSlide].data.image,
                   url: URL.createObjectURL(e.target.files[0]),
                 },
               },
@@ -133,7 +114,16 @@ export default ({ state, setState }) => {
           })
         }
       />
-      <button className="btn-download" onClick={() => html2image()}>
+      <button
+        className="btn-download"
+        onClick={() =>
+          html2image({
+            state,
+            setState,
+            ...state.slides[state.currentSlide].data.body.content,
+          })
+        }
+      >
         Download
       </button>
     </div>

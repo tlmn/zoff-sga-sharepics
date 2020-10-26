@@ -14,7 +14,7 @@ export default ({ state }) => {
               state.templateScale ? `template-scale` : `relative`
             }`}
             style={{ backgroundColor: getColor(state, 0) }}
-            ref={state.slides[state.currentSlide].templateRef}
+            ref={state.slides[state.currentSlide].ref}
           >
             <div className="flex flex-col h-full">
               <div className="flex flex-col flex-1 px-4 pt-4">

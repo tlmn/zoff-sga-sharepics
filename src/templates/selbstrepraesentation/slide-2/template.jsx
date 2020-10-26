@@ -1,8 +1,9 @@
-import { formatEmojis, getColor } from "../../lib/lib";
+import { formatEmojis, getColor } from "../../../lib/lib";
 
+import LogoArrow from "../../../assets/svg/logo-arrow";
 import React from "react";
 
-export default ({ state }) => {
+export default ({ state, thumbnail = false }) => {
   switch (state.currentSlide) {
     default:
       return (
@@ -12,7 +13,7 @@ export default ({ state }) => {
               state.templateScale ? `template-scale` : `relative`
             }`}
             style={{ backgroundColor: getColor(state, 0) }}
-            ref={state.slides[state.currentSlide].ref}
+            ref={!thumbnail ? state.slides[state.currentSlide].ref : null}
           >
             <div className="flex">
               <span
@@ -34,18 +35,7 @@ export default ({ state }) => {
                 }}
               />
             </div>
-            <div
-              className="mt-3 flex-1 text-left // font-headline text-lg italic font-bold uppercase"
-              dangerouslySetInnerHTML={{
-                __html:
-                  state.slides[state.currentSlide].data.author.content === ""
-                    ? "\u00a0"
-                    : state.slides[state.currentSlide].data.author.content,
-              }}
-              style={{
-                color: getColor(state, 1),
-              }}
-            />
+            <LogoArrow fillColor={getColor(state, 1)} />
           </div>
         </div>
       );

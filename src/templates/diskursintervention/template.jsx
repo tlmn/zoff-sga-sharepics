@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
 import { formatEmojis, getColor } from "../../lib/lib";
 
 import LogoText from "../../assets/svg/logo-text";
+import React from "react";
 
 export default ({ state }) => {
   switch (state.currentSlide) {
@@ -13,7 +13,7 @@ export default ({ state }) => {
               state.templateScale ? `template-scale` : `relative`
             }`}
             style={{ backgroundColor: getColor(state, 0) }}
-            ref={state.slides[state.currentSlide].templateRef}
+            ref={state.slides[state.currentSlide].ref}
           >
             <span
               className="mb-3 text-center text-xl font-bold font-headline"

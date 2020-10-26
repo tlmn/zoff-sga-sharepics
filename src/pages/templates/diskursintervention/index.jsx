@@ -18,7 +18,7 @@ export default () => {
           },
           localBranch: { content: "" },
         },
-        templateRef: useRef(null),
+        ref: useRef(null),
       },
     ],
     colorTheme: "turquoise_darkGray",

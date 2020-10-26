@@ -20,7 +20,7 @@ export default () => {
           location: { content: "Ort" },
           date: { content: "Datum" },
         },
-        templateRef: useRef(null),
+        ref: useRef(null),
       },
     ],
     colorTheme: "darkGray_turquoise",
