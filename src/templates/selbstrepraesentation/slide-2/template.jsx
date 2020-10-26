@@ -14,7 +14,7 @@ export default ({ state, thumbnail = false }) => (
     >
       <div className="flex">
         <span
-          className="block // w-full // self-center // text-left italic font-bold font-headline leading-none"
+          className="block // w-full // self-center // text-left font-bold font-headline leading-none"
           style={{
             fontSize: `${(state.slides[2].data.body.scale / 100) * 80}px`,
             color: getColor(state, 1),
