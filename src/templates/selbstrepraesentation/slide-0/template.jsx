@@ -20,7 +20,9 @@ export default ({ state, thumbnail = false }) => {
                 __html:
                   state.slides[state.currentSlide].data.body.content === ""
                     ? "\u00a0"
-                    : state.slides[state.currentSlide].data.body.content,
+                    : formatEmojis(
+                        state.slides[state.currentSlide].data.body.content
+                      ),
               }}
               style={{
                 color: getColor(state, 1),
