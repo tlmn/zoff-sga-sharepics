@@ -22,6 +22,29 @@ export default ({ state, setState }) => (
       }
       value={state.slides[0].data.body.content}
     />
+    <input
+      type="range"
+      id="imageScale"
+      name="imageScale"
+      min={state.slides[0].data.body.scaleRange[0]}
+      max={state.slides[0].data.body.scaleRange[1]}
+      defaultValue={state.slides[0].data.body.scale}
+      onChange={(e) =>
+        setState({
+          ...state,
+          ...state.slides.splice(0, 1, {
+            ...state.slides[0],
+            data: {
+              ...state.slides[0].data,
+              body: {
+                ...state.slides[0].data.body,
+                scale: e.target.value,
+              },
+            },
+          }),
+        })
+      }
+    />
     <button
       className="btn-download"
       onClick={() =>
