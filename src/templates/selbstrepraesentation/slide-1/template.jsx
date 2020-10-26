@@ -8,24 +8,24 @@ export default ({ state, setState, thumbnail = false }) => {
   switch (state.currentSlide) {
     default:
       return (
-        <div className="col-span-6 relative">
+        <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
           <div
             className={`template ${
-              state.templateScale ? `template-scale` : `relative`
+              state.templateScale && !thumbnail ? `template-scale` : `relative`
             }`}
             style={{ backgroundColor: getColor(state, 0) }}
-            ref={!thumbnail ? state.slides[state.currentSlide].ref : null}
+            ref={!thumbnail ? state.slides[1].ref : null}
           >
             <Draggable
               onDrag={(e, data) => {
                 setState({
                   ...state,
-                  ...state.slides.splice(state.currentSlide, 1, {
-                    ...state.slides[state.currentSlide],
+                  ...state.slides.splice(1, 1, {
+                    ...state.slides[1],
                     data: {
-                      ...state.slides[state.currentSlide].data,
+                      ...state.slides[1].data,
                       image: {
-                        ...state.slides[state.currentSlide].data.image,
+                        ...state.slides[1].data.image,
                         position: { x: data.x, y: data.y },
                       },
                     },
@@ -55,19 +55,15 @@ export default ({ state, setState, thumbnail = false }) => {
               className="absolute // top-0 left-0 right-0 // z-10 // w-full h-full"
               style={{
                 backgroundImage: `url(${
-                  state.slides[state.currentSlide].data.image.url !== null
-                    ? state.slides[state.currentSlide].data.image.url
+                  state.slides[1].data.image.url !== null
+                    ? state.slides[1].data.image.url
                     : "/assets/images/olaf-scholz.jpg"
                 })`,
                 height: "100%",
-                backgroundPositionX: `${
-                  state.slides[state.currentSlide].data.image.position.x
-                }px`,
-                backgroundPositionY: `${
-                  state.slides[state.currentSlide].data.image.position.y
-                }px`,
+                backgroundPositionX: `${state.slides[1].data.image.position.x}px`,
+                backgroundPositionY: `${state.slides[1].data.image.position.y}px`,
                 backgroundSize: `${
-                  state.slides[state.currentSlide].data.image.scale * 10 + 100
+                  state.slides[1].data.image.scale * 10 + 100
                 }%`,
               }}
             />

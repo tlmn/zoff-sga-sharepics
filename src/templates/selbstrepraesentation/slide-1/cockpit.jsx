@@ -13,12 +13,12 @@ export default ({ state, setState }) => (
         e.target.files[0] !== null &&
         setState({
           ...state,
-          ...state.slides.splice(state.currentSlide, 1, {
-            ...state.slides[state.currentSlide],
+          ...state.slides.splice(1, 1, {
+            ...state.slides[1],
             data: {
-              ...state.slides[state.currentSlide].data,
+              ...state.slides[1].data,
               image: {
-                ...state.slides[state.currentSlide].data.image,
+                ...state.slides[1].data.image,
                 url: URL.createObjectURL(e.target.files[0]),
               },
             },
@@ -31,17 +31,17 @@ export default ({ state, setState }) => (
       id="imageScale"
       name="imageScale"
       min="0"
-      defaultValue={state.slides[state.currentSlide].data.image.scale}
+      defaultValue={state.slides[1].data.image.scale}
       max="30"
       onChange={(e) =>
         setState({
           ...state,
-          ...state.slides.splice(state.currentSlide, 1, {
-            ...state.slides[state.currentSlide],
+          ...state.slides.splice(1, 1, {
+            ...state.slides[1],
             data: {
-              ...state.slides[state.currentSlide].data,
+              ...state.slides[1].data,
               image: {
-                ...state.slides[state.currentSlide].data.image,
+                ...state.slides[1].data.image,
                 scale: e.target.value,
               },
             },
@@ -54,12 +54,12 @@ export default ({ state, setState }) => (
       onChange={(e) =>
         setState({
           ...state,
-          ...state.slides.splice(state.currentSlide, 1, {
-            ...state.slides[state.currentSlide],
+          ...state.slides.splice(1, 1, {
+            ...state.slides[1],
             data: {
-              ...state.slides[state.currentSlide].data,
+              ...state.slides[1].data,
               image: {
-                ...state.slides[state.currentSlide].data.image,
+                ...state.slides[1].data.image,
                 position: { x: 0, y: 0 },
               },
             },

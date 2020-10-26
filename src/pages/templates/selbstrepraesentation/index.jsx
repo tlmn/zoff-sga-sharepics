@@ -3,6 +3,9 @@ import React, { useRef, useState } from "react";
 import Cockpit from "../../../templates/selbstrepraesentation/cockpit";
 import { Link } from "gatsby";
 import Template from "../../../templates/selbstrepraesentation/template";
+import Template0 from "../../../templates/selbstrepraesentation/slide-0/template";
+import Template1 from "../../../templates/selbstrepraesentation/slide-1/template";
+import Template2 from "../../../templates/selbstrepraesentation/slide-2/template";
 
 export default () => {
   const [state, setState] = useState({
@@ -42,14 +45,50 @@ export default () => {
         </Link>
       </div>
       <div className="col-span-12 flex justify-center py-2">
-        {state.slides.map((slide, i) => (
-          <button
-            onClick={() => setState({ ...state, currentSlide: i })}
-            className="bg-darkGray text-turquoise font-headline italic text-lg hover:bg-darkGray-lighter p-2 mx-2"
-          >
-            {i + 1}
-          </button>
-        ))}
+        {state.slides.map((slide, i) => {
+          switch (i) {
+            case 0:
+              return (
+                <button
+                  onClick={() => setState({ ...state, currentSlide: i })}
+                  className="is-thumbnail hover:opacity-75"
+                >
+                  <Template0
+                    state={state}
+                    setState={setState}
+                    thumbnail={true}
+                  />
+                </button>
+              );
+            case 1:
+              return (
+                <button
+                  onClick={() => setState({ ...state, currentSlide: i })}
+                  className="is-thumbnail hover:opacity-75"
+                >
+                  <Template1
+                    state={state}
+                    setState={setState}
+                    thumbnail={true}
+                  />
+                </button>
+              );
+            case 2:
+              return (
+                <button
+                  onClick={() => setState({ ...state, currentSlide: i })}
+                  className="is-thumbnail hover:opacity-75"
+                >
+                  <Template2
+                    state={state}
+                    setState={setState}
+                    thumbnail={true}
+                  />
+                </button>
+              );
+            default:
+          }
+        })}
       </div>
 
       <div className="col-span-6">

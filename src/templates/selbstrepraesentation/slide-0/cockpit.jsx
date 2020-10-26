@@ -9,10 +9,10 @@ export default ({ state, setState }) => (
       onChange={(e) =>
         setState({
           ...state,
-          ...state.slides.splice(state.currentSlide, 1, {
-            ...state.slides[state.currentSlide],
+          ...state.slides.splice(0, 1, {
+            ...state.slides[0],
             data: {
-              ...state.slides[state.currentSlide].data,
+              ...state.slides[0].data,
               body: {
                 content: e.target.value,
               },
@@ -20,7 +20,7 @@ export default ({ state, setState }) => (
           }),
         })
       }
-      value={state.slides[state.currentSlide].data.body.content}
+      value={state.slides[0].data.body.content}
     />
     <button
       className="btn-download"
@@ -28,7 +28,7 @@ export default ({ state, setState }) => (
         html2image({
           state,
           setState,
-          ...state.slides[state.currentSlide].data.body.content,
+          ...state.slides[0].data.body.content,
         })
       }
     >
