@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-import Cockpit from "../../../templates/zitat/cockpit";
+import Controls from "../../../templates/zitat/controls";
 import Layout from "../../../components/layout";
 import { Link } from "gatsby";
 import Template from "../../../templates/zitat/template";
@@ -38,7 +38,7 @@ export default () => {
           <Template state={state} />
         </div>
         <div className="col-span-4 col-start-8">
-          <Cockpit state={state} setState={setState} />
+          <Controls state={state} setState={setState} />
         </div>
       </div>
     </Layout>

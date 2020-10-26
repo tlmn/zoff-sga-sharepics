@@ -3,7 +3,7 @@
 @tailwind components;
 
 @import "./fonts.css";
-@import "./cockpit.css";
+@import "./controls.css";
 @import "./template.css";
 @import "./stripes.css";
 

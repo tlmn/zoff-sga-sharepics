@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-import Cockpit from "../../../templates/selbstrepraesentation/cockpit";
+import Controls from "../../../templates/selbstrepraesentation/controls";
 import { Link } from "gatsby";
 import Template from "../../../templates/selbstrepraesentation/template";
 import Template0 from "../../../templates/selbstrepraesentation/slide-0/template";
@@ -95,7 +95,7 @@ export default () => {
         <Template state={state} setState={setState} />
       </div>
       <div className="col-span-6">
-        <Cockpit state={state} setState={setState} />
+        <Controls state={state} setState={setState} />
       </div>
     </div>
   );

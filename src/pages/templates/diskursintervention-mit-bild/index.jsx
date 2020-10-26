@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-import Cockpit from "../../../templates/diskursintervention-mit-bild/cockpit";
+import Controls from "../../../templates/diskursintervention-mit-bild/controls";
 import { Link } from "gatsby";
 import Template from "../../../templates/diskursintervention-mit-bild/template";
 
@@ -35,7 +35,7 @@ export default () => {
         <Template state={state} setState={setState} />
       </div>
       <div className="col-span-4 col-start-8">
-        <Cockpit state={state} setState={setState} />
+        <Controls state={state} setState={setState} />
       </div>
     </div>
   );
