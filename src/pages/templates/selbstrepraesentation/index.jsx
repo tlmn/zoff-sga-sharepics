@@ -33,7 +33,7 @@ export default () => {
         ref: useRef(null),
       },
     ],
-    colorTheme: "turquoise_darkGray",
+    colorTheme: "darkGray_turquoise",
     templateScale: true,
   });
 
