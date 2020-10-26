@@ -37,20 +37,11 @@ export default ({ state, setState, thumbnail = false }) => {
               }}
             >
               <div
-                className="absolute top-0 left-0 right-0 w-full h-full z-10 cursor-pointer"
+                className="absolute top-0 left-0 right-0 w-full h-full z-0 cursor-pointer"
                 draggable
                 ref={draggableRef}
               />
             </Draggable>
-            <div
-              className="absolute top-0 left-0 right-0 z-20 w-full h-full"
-              style={{
-                background:
-                  "linear-gradient(180deg, #000000 0%, rgba(196, 196, 196, 0) 69.27%)",
-                mixBlendMode: "multiply",
-                transform: "rotate(180deg)",
-              }}
-            />
             <div
               className="absolute // top-0 left-0 right-0 // z-10 // w-full h-full"
               style={{
