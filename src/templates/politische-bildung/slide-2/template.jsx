@@ -14,6 +14,7 @@ export default ({ state, setState, thumbnail = false }) => (
       <div className="p-4 flex flex-col h-full">
         <span
           className="flex-1 text-left font-body text-lg"
+          style={{ color: getColor(state, 1) }}
           dangerouslySetInnerHTML={{
             __html: state.slides[2].data.body.content,
           }}
