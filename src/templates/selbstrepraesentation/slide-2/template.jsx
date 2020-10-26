@@ -1,6 +1,6 @@
 import { formatEmojis, getColor } from "../../../lib/lib";
 
-import LogoArrow from "../../../assets/svg/logo-arrow";
+import LogoText from "../../../assets/svg/logo-text";
 import React from "react";
 
 export default ({ state, thumbnail = false }) => (
@@ -12,9 +12,9 @@ export default ({ state, thumbnail = false }) => (
       style={{ backgroundColor: getColor(state, 0) }}
       ref={!thumbnail ? state.slides[2].ref : null}
     >
-      <div className="flex">
+      <div className="flex h-full">
         <span
-          className="block // w-full // self-center // text-left font-bold font-headline leading-none"
+          className="block flex-1 // w-full // self-start // text-left font-bold font-headline leading-none"
           style={{
             fontSize: `${(state.slides[2].data.body.scale / 100) * 80}px`,
             color: getColor(state, 1),
@@ -26,7 +26,9 @@ export default ({ state, thumbnail = false }) => (
           }}
         />
       </div>
-      <LogoArrow fillColor={getColor(state, 1)} />
+      <div className="flex justify-center w-full">
+        <LogoText fillColor={getColor(state, 1)} className="" />
+      </div>
     </div>
   </div>
 );
