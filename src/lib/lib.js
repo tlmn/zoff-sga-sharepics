@@ -36,3 +36,8 @@ export const getColor = (currentState, order) => {
       )[0].colors[order]
   )[0].value;
 };
+
+export const getPrimaryColor = (currentState) => {
+  return colors.filter((color) => color.name === currentState.primaryColor)[0]
+    .value;
+};

@@ -9,8 +9,8 @@
 }
 .stripeElement {
   @apply absolute;
-  width: 110%;
-  margin-left: -5%;
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
   @apply h-full;
   @apply left-0;
   @apply top-0;

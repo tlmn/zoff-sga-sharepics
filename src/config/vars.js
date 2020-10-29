@@ -39,6 +39,12 @@ export const colorThemes = [
   },
 ];
 
+export const primaryColors = [
+  { label: "turquoise", name: "türkis" },
+  { label: "violet", name: "violet" },
+  { label: "red", name: "rot" },
+];
+
 export const templates = [
   {
     name: "Diskursintervention",
