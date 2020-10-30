@@ -12,7 +12,7 @@ export default () => {
         data: {
           category: { content: "So komplex und doch so einfach" },
           body: {
-            content: "Das Problem heißt {Rassismus}!",
+            content: "Das Problem heißt {Rassismus!}",
             scaleRange: [60, 150],
             scale: 100,
           },
