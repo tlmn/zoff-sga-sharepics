@@ -1,10 +1,4 @@
 @font-face {
-  font-family: "Lulo Clean";
-  font-weight: 400;
-  src: url(/assets/fonts/lulo/cleanone-webfont.woff);
-}
-
-@font-face {
   font-family: "Gilroy ExtraBold";
   font-weight: 800;
   font-style: normal;
@@ -21,5 +15,12 @@
 @font-face {
   font-family: "Hind";
   font-weight: 600;
+  src: url(/assets/fonts/hind/semibold.woff);
+}
+
+
+@font-face {
+  font-family: "Hind";
+  font-weight: 700;
   src: url(/assets/fonts/hind/bold.woff);
 }
