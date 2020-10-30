@@ -38,7 +38,7 @@ export default ({ state, setState }) => {
               }}
             >
               <div
-                className="absolute top-0 left-0 right-0 w-full h-full z-10 cursor-pointer"
+                className="absolute top-0 left-0 right-0 w-full h-full z-50 cursor-pointer"
                 draggable
                 ref={draggableRef}
               />
