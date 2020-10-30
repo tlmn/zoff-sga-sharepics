@@ -99,6 +99,7 @@ export default () => {
                 </button>
               );
             default:
+              return null;
           }
         })}
       </div>

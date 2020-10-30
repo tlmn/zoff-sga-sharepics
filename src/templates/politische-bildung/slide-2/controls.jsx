@@ -34,7 +34,7 @@ export default ({ state, setState }) => (
             state,
             setState,
           },
-          "selbstrepraesentation-2"
+          `politische-bildung-3-${state.slides[0].data.body.content}`
         )
       }
     >

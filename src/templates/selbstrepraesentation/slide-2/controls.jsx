@@ -52,11 +52,13 @@ export default ({ state, setState }) => (
     <button
       className="btn-download"
       onClick={() =>
-        html2image({
-          state,
-          setState,
-          ...state.slides[2].data.body.content,
-        })
+        html2image(
+          {
+            state,
+            setState,
+          },
+          `selbstrepraesentation-3-${state.slides[2].data.body.content}`
+        )
       }
     >
       Download

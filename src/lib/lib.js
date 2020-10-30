@@ -4,7 +4,7 @@ import emojiRegex from "emoji-regex";
 import htmlToImage from "html-to-image";
 import slugify from "react-slugify";
 
-export const html2image = async ({ state, setState, fileName = "solid" }) => {
+export const html2image = async ({ state, setState }, fileName = "solid") => {
   setState({ ...state, templateScale: false });
   htmlToImage
     .toJpeg(state.slides[state.currentSlide].ref.current, {
@@ -14,7 +14,7 @@ export const html2image = async ({ state, setState, fileName = "solid" }) => {
     })
     .then(function (dataUrl) {
       var link = document.createElement("a");
-      link.download = `sharepic-${slugify(fileName)}.jpg`;
+      link.download = `sharepic-${slugify(fileName.substring(0, 20))}.jpg`;
       link.href = dataUrl;
       link.click();
       setState({ ...state, templateScale: true });

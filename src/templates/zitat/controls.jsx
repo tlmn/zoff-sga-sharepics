@@ -73,11 +73,13 @@ export default ({ state, setState }) => {
           <button
             className="btn-download"
             onClick={() =>
-              html2image({
-                state,
-                setState,
-                ...state.slides[state.currentSlide].data.body.content,
-              })
+              html2image(
+                {
+                  state,
+                  setState,
+                },
+                `zitat-${state.slides[0].data.body.content}`
+              )
             }
           >
             Download

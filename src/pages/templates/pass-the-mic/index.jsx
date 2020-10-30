@@ -25,8 +25,7 @@ export default () => {
         data: {
           image: { url: null, position: { x: 0, y: 0 }, scale: 0 },
           author: {
-            content:
-              "Pia Klemp",
+            content: "Pia Klemp",
           },
         },
         ref: useRef(null),
@@ -73,6 +72,7 @@ export default () => {
                 </button>
               );
             default:
+              return null;
           }
         })}
       </div>

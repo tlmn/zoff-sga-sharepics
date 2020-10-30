@@ -25,7 +25,6 @@ export default ({ state, thumbnail = false }) => (
               color: getColor(state, 0),
               fontSize: `${(state.slides[0].data.body.scale / 100) * 80}px`,
               transform: "rotate(-6deg)",
-              background: getColor(state, 1),
             }}
           />
         </div>

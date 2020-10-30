@@ -33,8 +33,7 @@ export default () => {
       {
         data: {
           body: {
-            content:
-              "Man muss doch alles selber machen!",
+            content: "Man muss doch alles selber machen!",
             scale: 100,
             scaleRange: [60, 150],
           },
@@ -96,6 +95,7 @@ export default () => {
                 </button>
               );
             default:
+              return null;
           }
         })}
       </div>

@@ -10,34 +10,34 @@ export default ({ state, setState }) => {
         onChange={(e) =>
           setState({
             ...state,
-            ...state.slides.splice(state.currentSlide, 1, {
-              ...state.slides[state.currentSlide],
+            ...state.slides.splice(0, 1, {
+              ...state.slides[0],
               data: {
-                ...state.slides[state.currentSlide].data,
+                ...state.slides[0].data,
                 category: { content: e.target.value },
               },
             }),
           })
         }
-        value={state.slides[state.currentSlide].data.category.content}
+        value={state.slides[0].data.category.content}
       />
       <textarea
         onChange={(e) =>
           setState({
             ...state,
-            ...state.slides.splice(state.currentSlide, 1, {
-              ...state.slides[state.currentSlide],
+            ...state.slides.splice(0, 1, {
+              ...state.slides[0],
               data: {
-                ...state.slides[state.currentSlide].data,
+                ...state.slides[0].data,
                 body: {
-                  ...state.slides[state.currentSlide].data.body,
+                  ...state.slides[0].data.body,
                   content: e.target.value,
                 },
               },
             }),
           })
         }
-        value={state.slides[state.currentSlide].data.body.content}
+        value={state.slides[0].data.body.content}
         className="border-1"
         rows={3}
         cols={30}
@@ -46,18 +46,18 @@ export default ({ state, setState }) => {
         type="range"
         id="bodyTextScale"
         name="bodyTextScale"
-        min={state.slides[state.currentSlide].data.body.scaleRange[0]}
-        max={state.slides[state.currentSlide].data.body.scaleRange[1]}
-        value={state.slides[state.currentSlide].data.body.scale}
+        min={state.slides[0].data.body.scaleRange[0]}
+        max={state.slides[0].data.body.scaleRange[1]}
+        value={state.slides[0].data.body.scale}
         onChange={(e) =>
           setState({
             ...state,
-            ...state.slides.splice(state.currentSlide, 1, {
-              ...state.slides[state.currentSlide],
+            ...state.slides.splice(0, 1, {
+              ...state.slides[0],
               data: {
-                ...state.slides[state.currentSlide].data,
+                ...state.slides[0].data,
                 body: {
-                  ...state.slides[state.currentSlide].data.body,
+                  ...state.slides[0].data.body,
                   scale: e.target.value,
                 },
               },
@@ -69,16 +69,16 @@ export default ({ state, setState }) => {
         onChange={(e) =>
           setState({
             ...state,
-            ...state.slides.splice(state.currentSlide, 1, {
-              ...state.slides[state.currentSlide],
+            ...state.slides.splice(0, 1, {
+              ...state.slides[0],
               data: {
-                ...state.slides[state.currentSlide].data,
+                ...state.slides[0].data,
                 localBranch: { content: e.target.value },
               },
             }),
           })
         }
-        value={state.slides[state.currentSlide].data.localBranch.content}
+        value={state.slides[0].data.localBranch.content}
       />
       <button
         className="btn-download"
@@ -88,7 +88,7 @@ export default ({ state, setState }) => {
               state,
               setState,
             },
-            ...state.slides[state.currentSlide].data.body.content
+            state.slides[0].data.body.content
           )
         }
       >
