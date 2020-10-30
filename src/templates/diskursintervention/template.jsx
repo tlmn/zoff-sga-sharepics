@@ -16,7 +16,7 @@ export default ({ state }) => {
             ref={state.slides[state.currentSlide].ref}
           >
             <span
-              className="mb-3 text-center text-xl font-bold font-headline"
+              className="mb-3 text-center text-xl font-bold font-headline italic"
               dangerouslySetInnerHTML={{
                 __html:
                   state.slides[state.currentSlide].data.category.content === ""
