@@ -56,13 +56,13 @@ export default ({ state, setState, thumbnail = false }) => {
             }}
           />
           <div
-            className="stripeContainer z-40"
+            className="stripeContainer z-40 mb-3"
             style={{
               transform: "rotate(-6deg)",
             }}
           >
             <span
-              className="stripeText mb-3 text-center text-xl font-bold font-headline uppercase"
+              className="stripeText text-center text-xl font-bold font-headline uppercase"
               style={{
                 color: getColor(state, 0),
               }}
