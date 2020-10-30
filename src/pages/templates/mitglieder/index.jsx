@@ -13,7 +13,7 @@ export default () => {
     slides: [
       {
         data: {
-          statement: { content: "Mal im Ernst" },
+          statement: { content: "Ich bin bei Linksjugend ['solid] weil" },
           image: { url: null, position: { x: 0, y: 0 }, scale: 0 },
         },
         ref: useRef(null),
@@ -23,8 +23,8 @@ export default () => {
           body: {
             content:
               "Eine vom Patriarchat befreite Gesellschaft? Viele sprechen davon aber wenige setzen es in die Praxis um.",
-            scale: 100,
-            scaleRange: [60, 150],
+            scale: 60,
+            scaleRange: [50, 70],
           },
           author: { content: "Anna Westner" },
         },
@@ -34,7 +34,7 @@ export default () => {
         data: {
           body: {
             content:
-              "Die Ereignisse rund um den 04. November gehen als Kieler Matrosenaufstand in die Geschichte ein und bilden den Auftakt zur November Revolution.",
+              "Man muss doch alles selber machen!",
             scale: 100,
             scaleRange: [60, 150],
           },
