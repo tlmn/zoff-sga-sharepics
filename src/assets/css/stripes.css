@@ -11,7 +11,7 @@
   @apply absolute;
   width: calc(100% + 3rem);
   margin-left: -1.5rem;
-  @apply h-full;
+  height: 95%;
   @apply left-0;
   @apply top-0;
 }
