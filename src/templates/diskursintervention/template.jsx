@@ -50,7 +50,7 @@ export default ({ state }) => {
                       .replace(
                         /\}/gi,
                         `</div><div class="stripeElement" style="transform:rotate(${
-                          Math.random() * 3 - 1.5
+                          Math.random() * 5 - 2.5
                         }deg); background-color: ${getColor(
                           state,
                           1
