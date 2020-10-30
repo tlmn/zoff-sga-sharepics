@@ -13,7 +13,7 @@ export default () => {
     slides: [
       {
         data: {
-          body: { content: "feministisch", scale: 100, scaleRange: [60, 150] },
+          body: { content: "feministisch", scale: 120, scaleRange: [80, 200] },
         },
         ref: useRef(null),
       },
