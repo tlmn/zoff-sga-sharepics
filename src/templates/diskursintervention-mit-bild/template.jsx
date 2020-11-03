@@ -77,7 +77,7 @@ export default ({ state, setState }) => {
                 <div className="h-full w-full flex items-end justify-center">
                   <div className="stripeContainer">
                     <span
-                      className="block // self-center // text-center font-bold font-headline leading-none // stripeText"
+                      className="block // self-center // text-center font-bold italic font-headline leading-none // stripeText"
                       style={{
                         fontSize: `${
                           (state.slides[state.currentSlide].data.body.scale /
