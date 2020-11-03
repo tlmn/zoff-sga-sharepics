@@ -15,7 +15,7 @@ export default () => {
         data: {
           category: { content: "Mal im Ernst" },
           body: {
-            content: "Was ist {kritische}\n {Männlichkeit?}",
+            content: "Was ist {kritische}\n {Männlich-}\n{keit?}",
             scale: 100,
             scaleRange: [60, 150],
           },
