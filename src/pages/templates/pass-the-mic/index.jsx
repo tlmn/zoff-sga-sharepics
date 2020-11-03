@@ -31,7 +31,7 @@ export default () => {
         ref: useRef(null),
       },
     ],
-    primaryColor: "turquoise",
+    primaryColor: "violet",
     templateScale: true,
   });
 
