@@ -27,11 +27,11 @@ export default ({ state, setState }) => {
                       ...state.slides[state.currentSlide].data,
                       image: {
                         ...state.slides[state.currentSlide].data.image,
-                        position: { x: data.x, y: data.y }
+                        position: { x: data.x, y: data.y },
                       },
                     },
                   }),
-                })
+                });
               }}
               onStop={(e, data) => {
                 draggableRef.current.style.transform = "translate(0px, 0px)";
@@ -61,28 +61,51 @@ export default ({ state, setState }) => {
                     : "/assets/images/olaf-scholz.jpg"
                 })`,
                 height: "100%",
-                backgroundPositionX: `${state.slides[state.currentSlide].data.image.position.x}px`,
-                backgroundPositionY: `${state.slides[state.currentSlide].data.image.position.y}px`,
-                backgroundSize: `${state.slides[state.currentSlide].data.image.scale * 10 + 100}%`,
+                backgroundPositionX: `${
+                  state.slides[state.currentSlide].data.image.position.x
+                }px`,
+                backgroundPositionY: `${
+                  state.slides[state.currentSlide].data.image.position.y
+                }px`,
+                backgroundSize: `${
+                  state.slides[state.currentSlide].data.image.scale * 10 + 100
+                }%`,
               }}
             />
             <div className="p-4 // relative // h-full w-full // flex flex-col // border-1 // z-20 ">
               <div className="mb-3 flex-1 flex">
-                <span
-                  className="block // w-full // self-center // text-center font-bold font-headline leading-none"
-                  style={{
-                    fontSize: `${(state.slides[state.currentSlide].data.body.scale / 100) * 140}px`,
-                    color: getColor(state, 1),
-                    transform: "rotate(-6deg)",
-                  }}
-                  dangerouslySetInnerHTML={{
-                    __html: formatEmojis(
-                      state.slides[state.currentSlide].data.body.content.replace(/\n/gi, `<br/>`)
-                    ),
-                  }}
-                />
+                <div className="h-full w-full flex items-end justify-center">
+                  <div className="stripeContainer">
+                    <span
+                      className="block // self-center // text-center font-bold font-headline leading-none // stripeText"
+                      style={{
+                        fontSize: `${
+                          (state.slides[state.currentSlide].data.body.scale /
+                            100) *
+                          140
+                        }px`,
+                        color: getColor(state, 1),
+                        transform: "rotate(-6deg)",
+                      }}
+                      dangerouslySetInnerHTML={{
+                        __html: formatEmojis(
+                          state.slides[
+                            state.currentSlide
+                          ].data.body.content.replace(/\n/gi, `<br/>`)
+                        ),
+                      }}
+                    />
+                    <div
+                      className="stripeElement"
+                      style={{
+                        backgroundColor: getColor(state, 0),
+                        transform: "rotate(-6deg)",
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
-              <LogoArrow className="self-end" fillColor={getColor(state, 1)} />
+              <LogoArrow className="self-end" fillColor={getColor(state, 0)} />
             </div>
           </div>
         </div>
