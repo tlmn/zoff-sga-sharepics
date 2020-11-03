@@ -51,7 +51,7 @@ export default ({ state, setState }) => (
     />
     <button
       className="block border-2 border-black p-1 mt-2"
-      onChange={(e) =>
+      onClick={(e) =>
         setState({
           ...state,
           ...state.slides.splice(1, 1, {
