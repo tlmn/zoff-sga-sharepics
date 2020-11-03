@@ -8,7 +8,6 @@ export default ({ state, thumbnail = false }) => (
       className={`template ${
         state.templateScale && !thumbnail ? `template-scale` : `relative`
       }`}
-      style={{ backgroundColor: getColor(state, 0) }}
       ref={!thumbnail ? state.slides[0].ref : null}
     >
       <div className="p-4 flex flex-col">
@@ -38,14 +37,14 @@ export default ({ state, thumbnail = false }) => (
                     /\{/gi,
                     `<div class="stripeContainer"><div class="stripeText" style="color: ${getColor(
                       state,
-                      0
+                      1
                     )}">`
                   )
                   .replace(
                     /\}/gi,
                     `</div><div class="stripeElement stripeElement--skewed" style="background-color: ${getColor(
                       state,
-                      1
+                      0
                     )}"></div></div>`
                   )
                   .replace(/\n/gi, `<br/>`)
