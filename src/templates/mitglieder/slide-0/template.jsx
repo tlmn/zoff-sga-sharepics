@@ -64,7 +64,7 @@ export default ({ state, setState, thumbnail = false }) => {
             <span
               className="stripeText text-center text-xl font-bold font-headline uppercase"
               style={{
-                color: getColor(state, 0),
+                color: getColor(state, 1),
               }}
               dangerouslySetInnerHTML={{
                 __html:
@@ -75,7 +75,7 @@ export default ({ state, setState, thumbnail = false }) => {
             />
             <div
               className="stripeElement"
-              style={{ backgroundColor: getColor(state, 1) }}
+              style={{ backgroundColor: getColor(state, 0) }}
             />
           </div>
         </div>
