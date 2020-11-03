@@ -58,7 +58,7 @@ export default ({ state, setState }) => {
                 backgroundImage: `url(${
                   state.slides[state.currentSlide].data.image.url !== null
                     ? state.slides[state.currentSlide].data.image.url
-                    : "/assets/images/olaf-scholz.jpg"
+                    : "/assets/images/defaultImages/diskursintervention-mit-bild-1.jpg"
                 })`,
                 height: "100%",
                 backgroundPositionX: `${

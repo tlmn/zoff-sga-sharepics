@@ -47,7 +47,7 @@ export default ({ state, setState, thumbnail = false }) => {
               backgroundImage: `url(${
                 state.slides[0].data.image.url !== null
                   ? state.slides[0].data.image.url
-                  : "/assets/images/olaf-scholz.jpg"
+                  : "/assets/images/defaultImages/mitglieder-0.jpg"
               })`,
               height: "100%",
               backgroundPositionX: `${state.slides[0].data.image.position.x}px`,

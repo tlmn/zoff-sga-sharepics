@@ -48,7 +48,7 @@ export default ({ state, setState, thumbnail = false }) => {
                 backgroundImage: `url(${
                   state.slides[1].data.image.url !== null
                     ? state.slides[1].data.image.url
-                    : "/assets/images/selbstrepraesentation.jpg"
+                    : "/assets/images/defaultImages/selbstrepraesentation-1.jpg"
                 })`,
                 height: "100%",
                 backgroundPositionX: `${state.slides[1].data.image.position.x}px`,

@@ -46,7 +46,7 @@ export default ({ state, setState, thumbnail = false }) => {
             backgroundImage: `url(${
               state.slides[1].data.image.url !== null
                 ? state.slides[1].data.image.url
-                : "/assets/images/pia-klemp.jpg"
+                : "/assets/images/defaultImages/pass-the-mic-1.jpg"
             })`,
             height: "100%",
             backgroundPositionX: `${
