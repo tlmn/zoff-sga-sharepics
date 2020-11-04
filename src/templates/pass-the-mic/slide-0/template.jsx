@@ -22,7 +22,7 @@ export default ({ state, thumbnail = false }) => (
         />
         <div className="flex-1 flex">
           <span
-            className="block // w-full // self-center // text-left text-black font-bold font-headline uppercase leading-none"
+            className="block // w-full // self-center // text-left text-black font-bold font-headline leading-none"
             style={{
               fontSize: `${(state.slides[0].data.body.scale / 100) * 140}px`,
             }}
