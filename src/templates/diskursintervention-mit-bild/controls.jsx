@@ -49,6 +49,22 @@ export default ({ state, setState }) => {
           })
         }
       />
+      <textarea
+        onChange={(e) =>
+          setState({
+            ...state,
+            ...state.slides.splice(0, 1, {
+              ...state.slides[0],
+              data: {
+                ...state.slides[0].data,
+                localBranch: { content: e.target.value },
+              },
+            }),
+          })
+        }
+      >
+        {state.slides[0].data.localBranch.content}
+      </textarea>
       <button
         className="block border-2 border-black p-1 mt-2"
         onClick={(e) =>

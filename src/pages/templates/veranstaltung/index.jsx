@@ -19,6 +19,7 @@ export default () => {
           speaker: { content: "Veronika Kracher" },
           location: { content: "Ort" },
           date: { content: "Datum" },
+          localBranch: { content: "" },
         },
         ref: useRef(null),
       },

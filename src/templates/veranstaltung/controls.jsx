@@ -118,6 +118,22 @@ export default ({ state, setState }) => {
         }
         value={state.slides[state.currentSlide].data.date.content}
       />
+      <textarea
+        onChange={(e) =>
+          setState({
+            ...state,
+            ...state.slides.splice(0, 1, {
+              ...state.slides[0],
+              data: {
+                ...state.slides[0].data,
+                localBranch: { content: e.target.value },
+              },
+            }),
+          })
+        }
+      >
+        {state.slides[0].data.localBranch.content}
+      </textarea>
       <button
         className="btn-download"
         onClick={() =>

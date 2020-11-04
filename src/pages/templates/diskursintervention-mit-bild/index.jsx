@@ -16,6 +16,7 @@ export default () => {
             scaleRange: [60, 150],
             scale: 100,
           },
+          localBranch: { content: "" },
         },
         ref: useRef(null),
       },
