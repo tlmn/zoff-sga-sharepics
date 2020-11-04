@@ -65,7 +65,7 @@ export default ({ state, setState }) => {
           })
         }
       />
-      <input
+      <textarea
         onChange={(e) =>
           setState({
             ...state,
@@ -78,8 +78,9 @@ export default ({ state, setState }) => {
             }),
           })
         }
-        value={state.slides[0].data.localBranch.content}
-      />
+      >
+        {state.slides[0].data.localBranch.content}
+      </textarea>
       <button
         className="btn-download"
         onClick={() =>
