@@ -35,12 +35,13 @@ export default ({ state, thumbnail = false }) => (
                   )
                   .replace(
                     /\}/gi,
-                    `</div><div class="stripeElement" style="background-color: ${getPrimaryColor(
-                      state,
-                      1
-                    )}; transform:rotate(${
-                      Math.random() * 3 - 1.5
-                    }deg);"></div></div>`
+                    () =>
+                     `</div><div class="stripeElement" style="background-color: ${getPrimaryColor(
+                        state,
+                        1
+                      )}; transform:rotate(${
+                        Math.random() * 8 - 1.5
+                      }deg);"></div></div>`
                   )
                   .replace(/\n/gi, `<br/>`)
               ),
