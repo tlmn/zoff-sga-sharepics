@@ -75,9 +75,12 @@ export default ({ state, setState }) => {
             <div className="p-4 // relative // h-full w-full // flex flex-col // border-1 // z-20 ">
               <div className="mb-3 flex-1 flex">
                 <div className="h-full w-full flex items-end justify-center">
-                  <div className="stripeContainer">
+                  <div
+                    className="stripeContainer"
+                    style={{ transform: "rotate(-6deg)" }}
+                  >
                     <span
-                      className="block // self-center // text-center font-bold italic font-headline leading-none // stripeText"
+                      className="self-center // text-center font-bold italic font-headline leading-none // stripeText"
                       style={{
                         fontSize: `${
                           (state.slides[state.currentSlide].data.body.scale /
@@ -85,7 +88,10 @@ export default ({ state, setState }) => {
                           140
                         }px`,
                         color: getColor(state, 1),
-                        transform: "rotate(-6deg)",
+                        boxDecorationBreak: "clone",
+                        backgroundColor: getColor(state, 0),
+                        lineHeight: 1.5,
+                        padding: "0 1rem",
                       }}
                       dangerouslySetInnerHTML={{
                         __html: formatEmojis(
@@ -93,13 +99,6 @@ export default ({ state, setState }) => {
                             state.currentSlide
                           ].data.body.content.replace(/\n/gi, `<br/>`)
                         ),
-                      }}
-                    />
-                    <div
-                      className="stripeElement"
-                      style={{
-                        backgroundColor: getColor(state, 0),
-                        transform: "rotate(-6deg)",
                       }}
                     />
                   </div>
