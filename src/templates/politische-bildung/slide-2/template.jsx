@@ -2,7 +2,7 @@ import LogoText from "../../../assets/svg/logo-text";
 import React from "react";
 import { getColor } from "../../../lib/lib";
 
-export default ({ state, setState, thumbnail = false }) => (
+export default ({ state, thumbnail = false }) => (
   <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
     <div
       className={`template ${

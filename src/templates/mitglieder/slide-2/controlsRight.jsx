@@ -1,10 +1,9 @@
-import ColorThemesSelect from "../../../components/inputs/colorThemesSelect";
 import React from "react";
 import { html2image } from "../../../lib/lib";
 
 export default ({ state, setState }) => (
-  <div className="p-1 bg-turquoise">
-    <ColorThemesSelect state={state} setState={setState} />
+  <>
+    <label>Text</label>
     <textarea
       onChange={(e) =>
         setState({
@@ -23,15 +22,17 @@ export default ({ state, setState }) => (
       }
       value={state.slides[2].data.body.content}
       className="border-1"
-      rows={3}
-      cols={30}
+      rows={5}
+      cols={60}
     />
+
+    <label>Textgröße</label>
     <input
       type="range"
       id="bodyTextScale"
       name="bodyTextScale"
       min={state.slides[2].data.body.scaleRange[0]}
-      max={state.slides[2].data.body.scaleRange[1]}
+      max={state.slides[2].data.body.scaleRange[2]}
       value={state.slides[2].data.body.scale}
       onChange={(e) =>
         setState({
@@ -49,6 +50,8 @@ export default ({ state, setState }) => (
         })
       }
     />
+
+    <label>Lokalgruppe (optional)</label>
     <textarea
       onChange={(e) =>
         setState({
@@ -73,11 +76,11 @@ export default ({ state, setState }) => (
             state,
             setState,
           },
-          `selbstrepraesentation-3-${state.slides[2].data.body.content}`
+          `mitglieder-3-${state.slides[2].data.body.content}`
         )
       }
     >
       Download
     </button>
-  </div>
+  </>
 );

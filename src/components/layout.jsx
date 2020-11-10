@@ -23,7 +23,11 @@ export default ({ children, state }) => {
 
   return (
     <>
-      <Helmet>
+      <Helmet
+        bodyAttributes={{
+          class: "bg-darkGray-lighter pb-2",
+        }}
+      >
         <meta charSet="utf-8" />
         <title>{longTitle}</title>
         <meta name="description" content={description} />

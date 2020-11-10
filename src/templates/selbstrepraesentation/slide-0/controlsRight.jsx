@@ -1,10 +1,9 @@
-import ColorThemesSelect from "../../../components/inputs/colorThemesSelect";
 import React from "react";
 import { html2image } from "../../../lib/lib";
 
 export default ({ state, setState }) => (
-  <div className="p-1 bg-turquoise">
-    <ColorThemesSelect state={state} setState={setState} />
+  <>
+    <label>Text</label>
     <input
       onChange={(e) =>
         setState({
@@ -22,6 +21,8 @@ export default ({ state, setState }) => (
       }
       value={state.slides[0].data.body.content}
     />
+
+    <label>Textgröße</label>
     <input
       type="range"
       id="imageScale"
@@ -59,5 +60,5 @@ export default ({ state, setState }) => (
     >
       Download
     </button>
-  </div>
+  </>
 );

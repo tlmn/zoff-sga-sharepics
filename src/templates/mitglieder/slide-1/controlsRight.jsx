@@ -3,8 +3,8 @@ import React from "react";
 import { html2image } from "../../../lib/lib";
 
 export default ({ state, setState }) => (
-  <div className="p-1 bg-turquoise">
-    <ColorThemesSelect state={state} setState={setState} />
+  <>
+    <label>Text</label>
     <textarea
       onChange={(e) =>
         setState({
@@ -26,6 +26,8 @@ export default ({ state, setState }) => (
       rows={10}
       cols={60}
     />
+
+    <label>Textgröße</label>
     <input
       type="range"
       id="bodyTextScale"
@@ -49,6 +51,8 @@ export default ({ state, setState }) => (
         })
       }
     />
+
+    <label>Autor:in</label>
     <input
       onChange={(e) =>
         setState({
@@ -78,5 +82,5 @@ export default ({ state, setState }) => (
     >
       Download
     </button>
-  </div>
+  </>
 );

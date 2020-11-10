@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 
-import Controls from "../../../templates/zitat/controls";
-import Layout from "../../../components/layout";
-import { Link } from "gatsby";
+import ControlsLeft from "../../../templates/zitat/controlsLeft";
+import ControlsRight from "../../../templates/zitat/controlsRight";
 import Template from "../../../templates/zitat/template";
+import TemplateLayout from "../../../components/templateLayout";
 
 export default () => {
   const [state, setState] = useState({
@@ -27,20 +27,16 @@ export default () => {
   });
 
   return (
-    <Layout state={state}>
-      <div className="container grid-12">
-        <div className="col-span-12 py-1 flex justify-center">
-          <Link to="/" className="hover:underline">
-            zurück zur Übersicht
-          </Link>
-        </div>
-        <div className="col-span-6">
-          <Template state={state} />
-        </div>
-        <div className="col-span-4 col-start-8">
-          <Controls state={state} setState={setState} />
-        </div>
+    <TemplateLayout state={state}>
+      <div className="col-span-3">
+        <ControlsLeft state={state} setState={setState} />
       </div>
-    </Layout>
+      <div className="col-span-6">
+        <Template state={state} />
+      </div>
+      <div className="col-span-3">
+        <ControlsRight state={state} setState={setState} />
+      </div>
+    </TemplateLayout>
   );
 };

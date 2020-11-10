@@ -5,7 +5,7 @@ import { html2image } from "../../lib/lib";
 export default ({ state, setState }) => {
   return (
     <>
-      <BgImage state={state} setState={setState} currentSlide="0" />
+      <BgImage state={state} setState={setState} currentSlide={0} />
       <label>Text</label>
       <textarea
         onChange={(e) =>

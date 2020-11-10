@@ -1,6 +1,6 @@
-import Controls0 from "./slide-0/controls";
-import Controls1 from "./slide-1/controls";
-import Controls2 from "./slide-2/controls";
+import Controls0 from "./slide-0/controlsRight";
+import Controls1 from "./slide-1/controlsRight";
+import Controls2 from "./slide-2/controlsRight";
 import React from "react";
 
 export default ({ state, setState }) => {

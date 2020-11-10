@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 
-import Controls from "../../../templates/selbstrepraesentation/controls";
-import { Link } from "gatsby";
+import ControlsLeft from "../../../templates/selbstrepraesentation/controlsLeft";
+import ControlsRight from "../../../templates/selbstrepraesentation/controlsRight";
 import Template from "../../../templates/selbstrepraesentation/template";
 import Template0 from "../../../templates/selbstrepraesentation/slide-0/template";
 import Template1 from "../../../templates/selbstrepraesentation/slide-1/template";
 import Template2 from "../../../templates/selbstrepraesentation/slide-2/template";
+import TemplateLayout from "../../../components/templateLayout";
 
 export default () => {
   const [state, setState] = useState({
@@ -39,12 +40,7 @@ export default () => {
   });
 
   return (
-    <div className="container grid-12">
-      <div className="col-span-12 py-1 flex justify-center">
-        <Link to="/" className="hover:underline">
-          zurück zur Übersicht
-        </Link>
-      </div>
+    <TemplateLayout>
       <div className="col-span-12 flex justify-center py-2">
         {state.slides.map((slide, i) => {
           switch (i) {
@@ -92,13 +88,15 @@ export default () => {
           }
         })}
       </div>
-
+      <div className="col-span-3">
+        <ControlsLeft state={state} setState={setState} />
+      </div>
       <div className="col-span-6">
         <Template state={state} setState={setState} />
       </div>
-      <div className="col-span-6">
-        <Controls state={state} setState={setState} />
+      <div className="col-span-3">
+        <ControlsRight state={state} setState={setState} />
       </div>
-    </div>
+    </TemplateLayout>
   );
 };

@@ -1,10 +1,9 @@
-import ColorSelect from "../../../components/inputs/colorsSelect";
 import React from "react";
 import { html2image } from "../../../lib/lib";
 
 export default ({ state, setState }) => (
-  <div className="p-1 bg-turquoise">
-    <ColorSelect state={state} setState={setState} />
+  <>
+    <label>Titel</label>
     <input
       onChange={(e) =>
         setState({
@@ -22,6 +21,7 @@ export default ({ state, setState }) => (
       }
       value={state.slides[state.currentSlide].data.category.content}
     />
+    <label>Text</label>
     <textarea
       onChange={(e) =>
         setState({
@@ -43,6 +43,7 @@ export default ({ state, setState }) => (
       rows={6}
       cols={30}
     />
+    <label>Textgröße</label>
     <input
       type="range"
       id="bodyTextScale"
@@ -75,11 +76,11 @@ export default ({ state, setState }) => (
             state,
             setState,
           },
-          `pass-the-mic-1-${state.slides[0].data.body.content}`
+          `politische-bildung-1-${state.slides[0].data.body.content}`
         )
       }
     >
       Download
     </button>
-  </div>
+  </>
 );

@@ -1,10 +1,9 @@
-import ColorThemesSelect from "../../../components/inputs/colorThemesSelect";
 import React from "react";
 import { html2image } from "../../../lib/lib";
 
 export default ({ state, setState }) => (
-  <div className="p-1 bg-turquoise">
-    <ColorThemesSelect state={state} setState={setState} />
+  <>
+    <label>Text</label>
     <textarea
       onChange={(e) =>
         setState({
@@ -26,6 +25,7 @@ export default ({ state, setState }) => (
       rows={10}
       cols={60}
     />
+    <label>Lokalgruppe (optional)</label>
     <textarea
       onChange={(e) =>
         setState({
@@ -39,6 +39,7 @@ export default ({ state, setState }) => (
           }),
         })
       }
+      rows={2}
     >
       {state.slides[2].data.localBranch.content}
     </textarea>
@@ -56,5 +57,5 @@ export default ({ state, setState }) => (
     >
       Download
     </button>
-  </div>
+  </>
 );

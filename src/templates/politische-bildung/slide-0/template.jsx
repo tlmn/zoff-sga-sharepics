@@ -5,7 +5,7 @@ import React from "react";
 export default ({ state, thumbnail = false }) => (
   <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
     <div
-      className={`template ${
+      className={`template bg-white ${
         state.templateScale && !thumbnail ? `template-scale` : `relative`
       }`}
       ref={!thumbnail ? state.slides[0].ref : null}

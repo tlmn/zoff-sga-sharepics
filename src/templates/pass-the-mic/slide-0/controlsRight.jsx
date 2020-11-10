@@ -1,10 +1,8 @@
-import ColorThemesSelect from "../../../components/inputs/colorThemesSelect";
 import React from "react";
 import { html2image } from "../../../lib/lib";
 
 export default ({ state, setState }) => (
-  <div className="p-1 bg-turquoise">
-    <ColorThemesSelect state={state} setState={setState} />
+  <>
     <input
       onChange={(e) =>
         setState({
@@ -75,11 +73,11 @@ export default ({ state, setState }) => (
             state,
             setState,
           },
-          `politische-bildung-1-${state.slides[0].data.body.content}`
+          `pass-the-mic-1-${state.slides[0].data.body.content}`
         )
       }
     >
       Download
     </button>
-  </div>
+  </>
 );

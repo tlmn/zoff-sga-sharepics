@@ -1,4 +1,3 @@
-import ColorThemesSelect from "../../components/inputs/colorThemesSelect";
 import React from "react";
 import { html2image } from "../../lib/lib";
 
@@ -6,9 +5,8 @@ export default ({ state, setState }) => {
   switch (state.currentSlide) {
     default:
       return (
-        <div className="p-1 bg-turquoise">
-          <ColorThemesSelect state={state} setState={setState} />
-
+        <>
+          <label>Zitattext</label>
           <textarea
             onChange={(e) =>
               setState({
@@ -30,6 +28,8 @@ export default ({ state, setState }) => {
             rows={6}
             cols={30}
           />
+
+          <label>Textgröße</label>
           <input
             type="range"
             id="bodyTextScale"
@@ -53,6 +53,8 @@ export default ({ state, setState }) => {
               })
             }
           />
+
+          <label>Autor:in</label>
           <input
             onChange={(e) =>
               setState({
@@ -84,7 +86,7 @@ export default ({ state, setState }) => {
           >
             Download
           </button>
-        </div>
+        </>
       );
   }
 };
