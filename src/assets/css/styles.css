@@ -9,5 +9,6 @@
 
 .grid-12 {
   @apply grid-cols-12;
+  @apply gap-2;
   @apply grid;
 }

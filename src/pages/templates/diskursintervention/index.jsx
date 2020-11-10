@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
 
-import Controls from "../../../templates/diskursintervention/controls";
-import { Link } from "gatsby";
+import ControlsLeft from "../../../templates/diskursintervention/controlsLeft";
+import ControlsRight from "../../../templates/diskursintervention/controlsRight";
 import Template from "../../../templates/diskursintervention/template";
+import TemplateLayout from "../../../components/templateLayout";
 
 export default () => {
   const [state, setState] = useState({
@@ -26,18 +27,16 @@ export default () => {
   });
 
   return (
-    <div className="container grid-12">
-      <div className="col-span-12 py-1 flex justify-center">
-        <Link to="/" className="hover:underline">
-          zurück zur Übersicht
-        </Link>
+    <TemplateLayout>
+      <div className="col-span-3">
+        <ControlsLeft state={state} setState={setState} />
       </div>
       <div className="col-span-6">
         <Template state={state} />
       </div>
-      <div className="col-span-4 col-start-8">
-        <Controls state={state} setState={setState} />
+      <div className="col-span-3">
+        <ControlsRight state={state} setState={setState} />
       </div>
-    </div>
+    </TemplateLayout>
   );
 };

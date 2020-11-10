@@ -4,9 +4,10 @@ import { html2image } from "../../lib/lib";
 
 export default ({ state, setState }) => {
   return (
-    <div className="p-1 bg-turquoise">
-      <ColorThemesSelect state={state} setState={setState} />
+    <>
+      <label htmlFor="input__titel">Titel</label>
       <input
+        id="input__titel"
         onChange={(e) =>
           setState({
             ...state,
@@ -21,6 +22,8 @@ export default ({ state, setState }) => {
         }
         value={state.slides[0].data.category.content}
       />
+
+      <label htmlFor="input__text">Text</label>
       <textarea
         onChange={(e) =>
           setState({
@@ -38,13 +41,16 @@ export default ({ state, setState }) => {
           })
         }
         value={state.slides[0].data.body.content}
+        id="input__text"
         className="border-1"
         rows={3}
         cols={30}
       />
+
+      <label htmlFor="input__textSize">Textgröße</label>
       <input
         type="range"
-        id="bodyTextScale"
+        id="input__textSize"
         name="bodyTextScale"
         min={state.slides[0].data.body.scaleRange[0]}
         max={state.slides[0].data.body.scaleRange[1]}
@@ -65,7 +71,10 @@ export default ({ state, setState }) => {
           })
         }
       />
+
+      <label htmlFor="input__localBranch">Lokalgruppe (optional)</label>
       <textarea
+        id="input__localBranch"
         onChange={(e) =>
           setState({
             ...state,
@@ -95,6 +104,6 @@ export default ({ state, setState }) => {
       >
         Download
       </button>
-    </div>
+    </>
   );
 };
