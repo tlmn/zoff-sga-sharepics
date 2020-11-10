@@ -8,13 +8,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/assets/images`,
-        name: "images",
-      },
-    },
     "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-manifest`,
@@ -25,7 +18,7 @@ module.exports = {
         background_color: `#00ffc2`,
         theme_color: `#00ffc2`,
         display: `standalone`,
-        icon: `src/assets/images/icon.png`,
+        icon: `static/assets/images/icon.png`,
       },
     },
   ],
