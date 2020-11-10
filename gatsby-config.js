@@ -19,11 +19,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Tilman Miraß – Campaigning und Webentwicklung`,
-        short_name: `Tilman Miraß – Campaigning und Webentwicklung`,
+        name: `linksjugend ['solid] – Sharepic Generator`,
+        short_name: `linksjugend ['solid] – Sharepic Generator`,
         start_url: `/`,
-        background_color: `#f8645b`,
-        theme_color: `#f8645b`,
+        background_color: `#00ffc2`,
+        theme_color: `#00ffc2`,
         display: `standalone`,
         icon: `src/assets/images/icon.png`,
       },
