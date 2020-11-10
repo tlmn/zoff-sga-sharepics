@@ -42,7 +42,6 @@ export default ({ state, setState }) => {
         }
         value={state.slides[0].data.body.content}
         id="input__text"
-        className="border-1"
         rows={3}
         cols={30}
       />
@@ -91,7 +90,7 @@ export default ({ state, setState }) => {
         {state.slides[0].data.localBranch.content}
       </textarea>
       <button
-        className="btn-download"
+        className="btn btn-download"
         onClick={() =>
           html2image(
             {

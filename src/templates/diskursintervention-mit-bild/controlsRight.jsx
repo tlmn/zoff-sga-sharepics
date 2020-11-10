@@ -1,92 +1,12 @@
-import IconReset from "../../assets/svg/reset";
+import BgImage from "../../components/inputs/bgImage";
 import React from "react";
 import { html2image } from "../../lib/lib";
 
 export default ({ state, setState }) => {
   return (
     <>
-      <label>Hintergrundbild</label>
-      <input
-        type="file"
-        id="file"
-        name="file"
-        onChange={(e) =>
-          e.target.files[0] !== null &&
-          setState({
-            ...state,
-            ...state.slides.splice(state.currentSlide, 1, {
-              ...state.slides[state.currentSlide],
-              data: {
-                ...state.slides[state.currentSlide].data,
-                image: {
-                  ...state.slides[state.currentSlide].data.image,
-                  url: URL.createObjectURL(e.target.files[0]),
-                },
-              },
-            }),
-          })
-        }
-      />
-      <label>Zoomfaktor für Bild</label>
-      <input
-        type="range"
-        id="imageScale"
-        name="imageScale"
-        min="0"
-        defaultValue={state.slides[state.currentSlide].data.image.scale}
-        max="30"
-        onChange={(e) =>
-          setState({
-            ...state,
-            ...state.slides.splice(state.currentSlide, 1, {
-              ...state.slides[state.currentSlide],
-              data: {
-                ...state.slides[state.currentSlide].data,
-                image: {
-                  ...state.slides[state.currentSlide].data.image,
-                  scale: e.target.value,
-                },
-              },
-            }),
-          })
-        }
-      />
-      <textarea
-        onChange={(e) =>
-          setState({
-            ...state,
-            ...state.slides.splice(0, 1, {
-              ...state.slides[0],
-              data: {
-                ...state.slides[0].data,
-                localBranch: { content: e.target.value },
-              },
-            }),
-          })
-        }
-      >
-        {state.slides[0].data.localBranch.content}
-      </textarea>
-      <button
-        className=" p-1 mt-2 btn-download flex items-center"
-        onClick={() =>
-          setState({
-            ...state,
-            ...state.slides.splice(state.currentSlide, 1, {
-              ...state.slides[state.currentSlide],
-              data: {
-                ...state.slides[state.currentSlide].data,
-                image: {
-                  ...state.slides[state.currentSlide].data.image,
-                  position: { x: 0, y: 0 },
-                },
-              },
-            }),
-          })
-        }
-      >
-        <IconReset width="30"/> Bildausschnitt
-      </button>
+      <BgImage state={state} setState={setState} currentSlide="0" />
+      <label>Text</label>
       <textarea
         onChange={(e) =>
           setState({
@@ -105,9 +25,10 @@ export default ({ state, setState }) => {
         }
         value={state.slides[state.currentSlide].data.body.content}
         className="border-1"
-        rows={3}
+        rows={2}
         cols={30}
       />
+      <label>Textgröße</label>
       <input
         type="range"
         id="bodyTextScale"
@@ -131,8 +52,26 @@ export default ({ state, setState }) => {
           })
         }
       />
+      <label>Lokalgruppe (optional)</label>
+      <textarea
+        onChange={(e) =>
+          setState({
+            ...state,
+            ...state.slides.splice(0, 1, {
+              ...state.slides[0],
+              data: {
+                ...state.slides[0].data,
+                localBranch: { content: e.target.value },
+              },
+            }),
+          })
+        }
+        rows={2}
+      >
+        {state.slides[0].data.localBranch.content}
+      </textarea>
       <button
-        className="btn-download"
+        className="btn btn-download"
         onClick={() =>
           html2image(
             {

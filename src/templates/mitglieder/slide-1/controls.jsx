@@ -65,7 +65,7 @@ export default ({ state, setState }) => (
       value={state.slides[1].data.author.content}
     />
     <button
-      className="btn-download"
+      className="btn btn-download"
       onClick={() =>
         html2image(
           {

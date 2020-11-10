@@ -32,7 +32,7 @@ export default () => {
         <ControlsLeft state={state} setState={setState} />
       </div>
       <div className="col-span-6">
-        <Template state={state} />
+        <Template state={state} setState={setState} />
       </div>
       <div className="col-span-3">
         <ControlsRight state={state} setState={setState} />

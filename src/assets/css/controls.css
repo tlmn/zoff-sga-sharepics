@@ -30,7 +30,7 @@ label {
   @apply font-headline;
 }
 
-.btn-download {
+.btn {
   @apply bg-turquoise;
   @apply uppercase;
   @apply text-darkGray;
@@ -38,14 +38,17 @@ label {
   @apply py-1;
   @apply px-2;
   @apply italic;
-  @apply w-full;
   @apply rounded-md;
   @apply transition-all;
   @apply ease-in-out;
   @apply duration-200;
 }
 
-.btn-download:hover {
+.btn-download {
+  @apply w-full;
+}
+
+.btn:hover {
   @apply bg-turquoise-lighter;
 }
 

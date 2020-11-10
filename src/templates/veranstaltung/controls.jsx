@@ -135,7 +135,7 @@ export default ({ state, setState }) => {
         {state.slides[0].data.localBranch.content}
       </textarea>
       <button
-        className="btn-download"
+        className="btn btn-download"
         onClick={() =>
           html2image(
             {

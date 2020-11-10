@@ -88,7 +88,7 @@ export default ({ state, setState }) => (
     </button>
 
     <button
-      className="btn-download"
+      className="btn btn-download"
       onClick={() =>
         html2image(
           {
