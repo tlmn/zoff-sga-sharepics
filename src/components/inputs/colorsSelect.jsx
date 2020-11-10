@@ -1,5 +1,5 @@
 import React from "react";
-import { primaryColors } from "../config/vars";
+import { primaryColors } from "../../config/vars";
 
 export default ({ state, setState }) => (
   <select

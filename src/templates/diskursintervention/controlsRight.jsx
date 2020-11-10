@@ -1,4 +1,4 @@
-import ColorThemesSelect from "../../components/colorThemesSelect";
+import ColorThemesSelect from "../../components/inputs/colorThemesSelect";
 import React from "react";
 import { html2image } from "../../lib/lib";
 

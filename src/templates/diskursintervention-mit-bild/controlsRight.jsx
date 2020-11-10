@@ -1,10 +1,11 @@
-import ColorThemesSelect from "../../components/colorThemesSelect";
+import IconReset from "../../assets/svg/reset";
 import React from "react";
 import { html2image } from "../../lib/lib";
 
 export default ({ state, setState }) => {
   return (
-    <div className="p-1 bg-turquoise">
+    <>
+      <label>Hintergrundbild</label>
       <input
         type="file"
         id="file"
@@ -26,6 +27,7 @@ export default ({ state, setState }) => {
           })
         }
       />
+      <label>Zoomfaktor für Bild</label>
       <input
         type="range"
         id="imageScale"
@@ -66,8 +68,8 @@ export default ({ state, setState }) => {
         {state.slides[0].data.localBranch.content}
       </textarea>
       <button
-        className="block border-2 border-black p-1 mt-2"
-        onClick={(e) =>
+        className=" p-1 mt-2 btn-download flex items-center"
+        onClick={() =>
           setState({
             ...state,
             ...state.slides.splice(state.currentSlide, 1, {
@@ -83,9 +85,8 @@ export default ({ state, setState }) => {
           })
         }
       >
-        Reset Bildausschnitt
+        <IconReset width="30"/> Bildausschnitt
       </button>
-      <ColorThemesSelect state={state} setState={setState} />
       <textarea
         onChange={(e) =>
           setState({
@@ -144,6 +145,6 @@ export default ({ state, setState }) => {
       >
         Download
       </button>
-    </div>
+    </>
   );
 };

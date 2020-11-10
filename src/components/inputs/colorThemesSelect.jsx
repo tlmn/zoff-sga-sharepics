@@ -1,5 +1,5 @@
 import React from "react";
-import { colorThemes } from "../config/vars";
+import { colorThemes } from "../../config/vars";
 
 export default ({ state, setState }) => (
   <>

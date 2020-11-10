@@ -1,4 +1,4 @@
-import ColorSelect from "../../../components/colorsSelect";
+import ColorSelect from "../../../components/inputs/colorsSelect";
 import React from "react";
 import { html2image } from "../../../lib/lib";
 
