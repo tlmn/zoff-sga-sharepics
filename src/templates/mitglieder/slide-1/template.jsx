@@ -1,5 +1,5 @@
 import React from "react";
-import { getPrimaryColor } from "../../../lib/lib";
+import { getColor } from "../../../lib/lib";
 
 export default ({ state, setState, thumbnail = false }) => (
   <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
@@ -7,14 +7,14 @@ export default ({ state, setState, thumbnail = false }) => (
       className={`template ${
         state.templateScale && !thumbnail ? `template-scale` : `relative`
       }`}
-      style={{ backgroundColor: getPrimaryColor(state) }}
+      style={{ backgroundColor: getColor(state, 0) }}
       ref={!thumbnail ? state.slides[1].ref : null}
     >
       <div className="p-4 flex flex-col h-full">
         <span
           className="flex-1 font-headline italic leading-tight text-lg text-left"
           style={{
-            color: getPrimaryColor(state),
+            color: getColor(state, 1),
             fontSize: `${(state.slides[1].data.body.scale / 100) * 140}px`,
           }}
           dangerouslySetInnerHTML={{
@@ -23,7 +23,7 @@ export default ({ state, setState, thumbnail = false }) => (
         />
         <span
           className="flex-1 mt-3 // font-headline italic uppercase text-lg text-left"
-          style={{ color: getPrimaryColor(state) }}
+          style={{ color: getColor(state, 1) }}
           dangerouslySetInnerHTML={{
             __html: state.slides[1].data.author.content,
           }}

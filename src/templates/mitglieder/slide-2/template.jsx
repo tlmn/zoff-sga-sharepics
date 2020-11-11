@@ -1,6 +1,6 @@
 import LogoText from "../../../assets/svg/logo-text";
 import React from "react";
-import { getPrimaryColor } from "../../../lib/lib";
+import { getColor } from "../../../lib/lib";
 
 export default ({ state, setState, thumbnail = false }) => (
   <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
@@ -8,14 +8,14 @@ export default ({ state, setState, thumbnail = false }) => (
       className={`template ${
         state.templateScale && !thumbnail ? `template-scale` : `relative`
       }`}
-      style={{ backgroundColor: getPrimaryColor(state) }}
+      style={{ backgroundColor: getColor(state, 1) }}
       ref={!thumbnail ? state.slides[2].ref : null}
     >
       <div className="p-4 flex flex-col h-full">
         <span
           className="flex-1 text-left font-headline uppercase italic leading-tight"
           style={{
-            color: getPrimaryColor(state),
+            color: getColor(state, 0),
             fontSize: `${(state.slides[2].data.body.scale / 100) * 140}px`,
           }}
           dangerouslySetInnerHTML={{
@@ -24,12 +24,12 @@ export default ({ state, setState, thumbnail = false }) => (
         />
         <div className="flex flex-col justify-center w-full">
           <div className="w-full flex justify-center">
-            <LogoText fillColor={getPrimaryColor(state)} />
+            <LogoText fillColor={getColor(state, 0)} />
           </div>
           <div
             className="uppercase font-headline text-center text-md leading-none mt-2"
             style={{
-              color: getPrimaryColor(state),
+              color: getColor(state, 0),
               transform: "rotate(-6deg)",
             }}
             dangerouslySetInnerHTML={{
