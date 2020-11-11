@@ -1,4 +1,4 @@
-import { formatEmojis, getColor } from "../../../lib/lib";
+import { formatEmojis, getPrimaryColor } from "../../../lib/lib";
 
 import React from "react";
 
@@ -12,10 +12,7 @@ export default ({ state, thumbnail = false }) => (
     >
       <div className="p-4 flex flex-col">
         <span
-          className="mb-3 text-center text-xl font-bold font-headline uppercase"
-          style={{
-            color: getColor(state, 1),
-          }}
+          className="mb-3 text-center text-xl font-bold font-headline uppercase text-black"
           dangerouslySetInnerHTML={{
             __html:
               state.slides[0].data.category.content === ""
@@ -25,24 +22,20 @@ export default ({ state, thumbnail = false }) => (
         />
         <div className="flex-1 flex">
           <span
-            className="block // w-full // self-center // text-left font-bold font-headline uppercase leading-none"
+            className="block // w-full // self-center // text-left text-black font-bold font-headline uppercase leading-none"
             style={{
               fontSize: `${(state.slides[0].data.body.scale / 100) * 140}px`,
-              color: getColor(state, 1),
             }}
             dangerouslySetInnerHTML={{
               __html: formatEmojis(
                 state.slides[0].data.body.content
                   .replace(
                     /\{/gi,
-                    `<div class="stripeContainer"><div class="stripeText" style="color: ${getColor(
-                      state,
-                      1
-                    )}">`
+                    `<div class="stripeContainer"><div class="stripeText text-black">`
                   )
                   .replace(
                     /\}/gi,
-                    `</div><div class="stripeElement stripeElement--skewed" style="background-color: ${getColor(
+                    `</div><div class="stripeElement stripeElement--skewed" style="background-color: ${getPrimaryColor(
                       state,
                       0
                     )}"></div></div>`

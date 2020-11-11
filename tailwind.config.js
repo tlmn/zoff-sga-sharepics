@@ -17,6 +17,7 @@ module.exports = {
       turquoise: { default: "#00FFC2", lighter: darken("#00FFC2", 0.15) },
       violet: "#C9CEFF",
       white: "#fff",
+      black: "#000",
     },
     spacing: {
       0: "0",

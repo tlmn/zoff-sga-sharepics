@@ -47,7 +47,7 @@ export default () => {
         ref: useRef(null),
       },
     ],
-    colorTheme: "turquoise_darkGray",
+    primaryColor: "turquoise",
     templateScale: true,
   });
 
