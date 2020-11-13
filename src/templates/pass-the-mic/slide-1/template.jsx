@@ -49,6 +49,7 @@ export default ({ state, setState, thumbnail = false }) => {
                 : "/assets/images/defaultImages/pass-the-mic-1.jpg"
             })`,
             height: "100%",
+            filter: "grayscale(100%)",
             backgroundPositionX: `${
               state.slides[1].data.image.position.x
             }px`,

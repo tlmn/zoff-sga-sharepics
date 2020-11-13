@@ -50,6 +50,7 @@ export default ({ state, setState, thumbnail = false }) => {
                   : "/assets/images/defaultImages/mitglieder-0.jpg"
               })`,
               height: "100%",
+              filter: "grayscale(100%)",
               backgroundPositionX: `${state.slides[0].data.image.position.x}px`,
               backgroundPositionY: `${state.slides[0].data.image.position.y}px`,
               backgroundSize: `${state.slides[0].data.image.scale * 10 + 100}%`,

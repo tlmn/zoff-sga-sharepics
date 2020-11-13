@@ -61,6 +61,7 @@ export default ({ state, setState }) => {
                     : "/assets/images/defaultImages/diskursintervention-mit-bild-1.jpg"
                 })`,
                 height: "100%",
+                filter: "grayscale(100%)",
                 backgroundPositionX: `${
                   state.slides[state.currentSlide].data.image.position.x
                 }px`,
