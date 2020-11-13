@@ -1,6 +1,7 @@
 import BgImage from "../../components/inputs/bgImage";
 import React from "react";
 import { html2image } from "../../lib/lib";
+import { textPositions } from "../../config/vars";
 
 export default ({ state, setState }) => {
   return (
@@ -28,6 +29,29 @@ export default ({ state, setState }) => {
         rows={2}
         cols={30}
       />
+      <label>Textposition</label>
+      <select
+        onChange={(e) =>
+          setState({
+            ...state,
+            ...state.slides.splice(state.currentSlide, 1, {
+              ...state.slides[state.currentSlide],
+              data: {
+                ...state.slides[state.currentSlide].data,
+                body: {
+                  ...state.slides[state.currentSlide].data.body,
+                  textPosition: e.target.value,
+                },
+              },
+            }),
+          })
+        }
+        value={state.slides[0].data.body.textPosition}
+      >
+        {textPositions.map((textPosition) => (
+          <option value={textPosition.value}>{textPosition.label}</option>
+        ))}
+      </select>
       <label>Textgröße</label>
       <input
         type="range"

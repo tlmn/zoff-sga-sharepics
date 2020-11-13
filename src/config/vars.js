@@ -5,6 +5,13 @@ export const colors = [
   { name: "violet", value: "#C9CEFF" },
   { name: "white", value: "#fff" },
 ];
+
+export const textPositions = [
+  { label: "oben", value: "start" },
+  { label: "mitte", value: "center" },
+  { label: "unten", value: "end" },
+];
+
 export const corporateThemes = [
   "darkGray_turquoise",
   "turquoise_darkGray",

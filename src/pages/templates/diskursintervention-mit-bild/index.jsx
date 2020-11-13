@@ -16,6 +16,7 @@ export default () => {
             content: "SPD: Oops, I did it again!",
             scaleRange: [60, 150],
             scale: 100,
+            textPosition: "center"
           },
           localBranch: { content: "" },
         },
