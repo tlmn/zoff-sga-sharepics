@@ -5,6 +5,19 @@ export const colors = [
   { name: "violet", value: "#C9CEFF" },
   { name: "white", value: "#fff" },
 ];
+export const corporateThemes = [
+  "darkGray_turquoise",
+  "turquoise_darkGray",
+  "violet_red",
+  "red_violet",
+];
+
+export const secondaryThemes = [
+  "darkGray_red",
+  "red_darkGray",
+  "red_white",
+  "white_red",
+];
 
 export const colorThemes = [
   {
@@ -31,6 +44,16 @@ export const colorThemes = [
     label: "darkGray_red",
     name: "dunkelgrau & rot",
     colors: ["darkGray", "red"],
+  },
+  {
+    label: "red_darkGray",
+    name: "rot & dunkelgrau",
+    colors: ["red", "darkGray"],
+  },
+  {
+    label: "red_white",
+    name: "rot & weiß",
+    colors: ["red", "white"],
   },
   {
     label: "white_red",
