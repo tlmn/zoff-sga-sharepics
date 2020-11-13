@@ -13,6 +13,7 @@ export default ({ state, setState }) => (
             data: {
               ...state.slides[0].data,
               body: {
+                ...state.slides[0].data.body,
                 content: e.target.value,
               },
             },
