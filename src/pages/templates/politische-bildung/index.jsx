@@ -18,7 +18,7 @@ export default () => {
           body: {
             content: "Was ist {kritische}\n {Männlich-}\n{keit?}",
             scale: 100,
-            scaleRange: [60, 150],
+            scaleRange: [80, 120],
           },
         },
         ref: useRef(null),
@@ -29,7 +29,7 @@ export default () => {
             content:
               "Diese Männlichkeitsbilder und -anforderungen sind nicht leicht zu beschreiben, da sie sich je nach kultureller Zugehörig-keit, sozialem Umfeld, Zeit und Ort ver-ändern. Diese Anforderungen, also all die Aussagen zusammengenommen „wie Männer nun mal so sind“ bzw. „sein müssen“, haben tatsächliche Auswir-kungen auf das Verhalten von Männern. Männlichkeitsbilder sind im Umbruch und umfassen ein Durcheinander wie z.B. den minnesingenden Ritter oder den erfolgreichen (IT-)Unternehmer.",
             scale: 100,
-            scaleRange: [60, 150],
+            scaleRange: [80, 120],
           },
         },
         ref: useRef(null),
