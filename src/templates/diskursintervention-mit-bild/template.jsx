@@ -75,7 +75,9 @@ export default ({ state, setState }) => {
             />
             <div className="p-4 // relative // h-full w-full // flex flex-col // border-1 // z-20 ">
               <div className="mb-3 flex-1 flex">
-                <div className={`h-full w-full flex items-${state.slides[0].data.body.textPosition} justify-center`}>
+                <div
+                  className={`h-full w-full flex items-${state.slides[0].data.body.textPosition} justify-center`}
+                >
                   <div
                     className="stripeContainer mb-4"
                     style={{ transform: "rotate(-6deg)" }}
@@ -106,20 +108,25 @@ export default ({ state, setState }) => {
                 </div>
               </div>
               <div className="absolute right-0 bottom-0 mb-4 mr-4 z-20">
-                <LogoArrow fillColor={getColor(state, 0)} />
-                <div
-                  className="uppercase font-headline text-center text-md leading-none mt-2"
-                  style={{
-                    color: getColor(state, 0),
-                    transform: "rotate(-6deg)",
-                  }}
-                  dangerouslySetInnerHTML={{
-                    __html: state.slides[0].data.localBranch.content.replace(
-                      /\n/gi,
-                      `<br/>`
-                    ),
-                  }}
-                />
+                <div className="flex items-center flex-col">
+                  <LogoArrow fillColor={getColor(state, 0)} />
+                  <div
+                    className="uppercase font-headline text-center text-md leading-none mt-2 ml-2"
+                    style={{
+                      color: getColor(state, 0),
+                      transform: "rotate(-6deg)",
+                    }}
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        state.slides[0].data.localBranch.content === ""
+                          ? "\u00a0"
+                          : state.slides[0].data.localBranch.content.replace(
+                              /\n/gi,
+                              `<br/>`
+                            ),
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -95,20 +95,25 @@ export default ({ state }) => {
                   }}
                 />
                 <div className="absolute right-0 bottom-0 mb-4 mr-4 z-20">
-                  <LogoArrow fillColor={getColor(state, 0)} />
-                  <div
-                    className="uppercase font-headline text-center text-md leading-none mt-2"
-                    style={{
-                      color: getColor(state, 0),
-                      transform: "rotate(-6deg)",
-                    }}
-                    dangerouslySetInnerHTML={{
-                      __html: state.slides[0].data.localBranch.content.replace(
-                        /\n/gi,
-                        `<br/>`
-                      ),
-                    }}
-                  />
+                  <div className="flex items-center flex-col">
+                    <LogoArrow fillColor={getColor(state, 0)} />
+                    <div
+                      className="uppercase font-headline text-center text-md leading-none mt-2 ml-2"
+                      style={{
+                        color: getColor(state, 0),
+                        transform: "rotate(-6deg)",
+                      }}
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          state.slides[0].data.localBranch.content === ""
+                            ? "\u00a0"
+                            : state.slides[0].data.localBranch.content.replace(
+                                /\n/gi,
+                                `<br/>`
+                              ),
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
