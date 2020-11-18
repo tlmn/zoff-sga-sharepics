@@ -36,7 +36,7 @@ export default ({ state, setState, thumbnail = false }) => {
             }}
           >
             <div
-              className="absolute top-0 left-0 right-0 w-full h-full z-20 cursor-pointer"
+              className="absolute top-0 left-0 right-0 w-full h-full z-20 cursor-move"
               draggable
               ref={draggableRef}
             />
