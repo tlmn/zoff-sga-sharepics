@@ -4,7 +4,17 @@ const lighten = (clr, val) => Color(clr).lighten(val).rgb().string();
 const darken = (clr, val) => Color(clr).darken(val).rgb().string();
 
 module.exports = {
-  purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
+  purge: {
+    content: [
+      "./src/**/*.js",
+      "./src/**/*.jsx",
+      "./src/**/*.ts",
+      "./src/**/*.tsx",
+    ],
+    options: {
+      whitelist: ["items-start", "items-center", "items-end"],
+    },
+  },
   theme: {
     extend: {},
     colors: {
