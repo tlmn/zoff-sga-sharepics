@@ -47,7 +47,7 @@ export default ({ state }) => {
                   }}
                 />
                 <div
-                  className="mt-3 flex-1 text-left // font-headline text-lg font-bold"
+                  className="mt-3 flex-1 text-left // font-headline text-lg font-bold uppercase"
                   dangerouslySetInnerHTML={{
                     __html:
                       state.slides[state.currentSlide].data.speaker.content ===
