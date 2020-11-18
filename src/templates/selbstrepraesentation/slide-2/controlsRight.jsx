@@ -1,5 +1,4 @@
 import DownloadButton from "../../../components/inputs/downloadButton";
-import Input from "../../../components/inputs/input";
 import React from "react";
 import TextScale from "../../../components/inputs/textScale";
 import Textarea from "../../../components/inputs/textarea";
