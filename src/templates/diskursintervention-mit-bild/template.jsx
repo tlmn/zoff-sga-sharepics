@@ -74,7 +74,7 @@ export default ({ state, setState }) => {
               }}
             />
             <div className="p-4 // relative // h-full w-full // flex flex-col // border-1 // z-20 ">
-              <div className="mb-3 flex-1 flex">
+              <div className="flex-1 flex">
                 <div
                   className={`h-full w-full flex items-${state.slides[0].data.body.textPosition} justify-center`}
                 >
@@ -89,8 +89,8 @@ export default ({ state, setState }) => {
                           state.slides[state.currentSlide].data.body.scale.value
                         }px`,
                         color: getColor(state, 1),
-                        boxDecorationBreak: "clone",
                         backgroundColor: getColor(state, 0),
+                        display: "initial",
                         lineHeight: 1.5,
                         padding: "0 1rem",
                       }}
