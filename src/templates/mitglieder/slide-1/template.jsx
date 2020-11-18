@@ -15,10 +15,10 @@ export default ({ state, setState, thumbnail = false }) => (
           className="flex-1 font-headline italic leading-tight text-lg text-left"
           style={{
             color: getColor(state, 1),
-            fontSize: `${(state.slides[1].data.body.scale / 100) * 140}px`,
+            fontSize: `${state.slides[1].data.body.scale.value}px`,
           }}
           dangerouslySetInnerHTML={{
-            __html: state.slides[1].data.body.content,
+            __html: state.slides[1].data.body.content.replace(/\n/gi, "<br/>"),
           }}
         />
         <span
