@@ -24,8 +24,7 @@ export default () => {
           body: {
             content:
               "Eine vom Patriarchat befreite Gesellschaft? Viele sprechen davon aber wenige setzen es in die Praxis um.",
-            scale: 60,
-            scaleRange: [50, 70],
+            scale: { value: 60, range: [50, 70] },
           },
           author: { content: "Anna Westner" },
         },
@@ -35,8 +34,7 @@ export default () => {
         data: {
           body: {
             content: "Man muss doch alles selber machen!",
-            scale: 100,
-            scaleRange: [60, 150],
+            scale: { value: 100, range: [60, 150] },
           },
           localBranch: { content: "" },
         },
@@ -96,7 +94,7 @@ export default () => {
           }
         })}
       </div>
-      
+
       <div className="col-span-3">
         <ControlsLeft state={state} setState={setState} />
       </div>
