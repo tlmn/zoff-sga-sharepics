@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import { getColor, getProperty, updateProperty } from "../../../lib/lib";
 
 import Draggable from "react-draggable";
+import { getColor } from "../../../lib/lib";
 
 export default ({ state, setState, thumbnail = false }) => {
   const draggableRef = useRef(null);
