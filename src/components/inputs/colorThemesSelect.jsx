@@ -8,7 +8,9 @@ import React from "react";
 
 export default ({ state, setState }) => (
   <>
-    <label>Corporate Design</label>
+    <div className="uppercase font-headline italic text-white">
+      Corporate Design
+    </div>
     <div className="grid-cols-2 grid">
       {corporateThemes.map((colorTheme) => (
         <div className="col-span-1">
@@ -31,6 +33,10 @@ export default ({ state, setState }) => (
           >
             <div className="px-2">
               <img
+                alt={`Farbschema Vorschau für ${
+                  colorThemes.filter((theme) => theme.label === colorTheme)[0]
+                    .name
+                }`}
                 src={`/assets/images/colorThemes/${
                   colorThemes.filter((theme) => theme.label === colorTheme)[0]
                     .label
@@ -46,7 +52,9 @@ export default ({ state, setState }) => (
         </div>
       ))}
     </div>
-    <label>Geht auch ...</label>
+    <div className="uppercase font-headline italic text-white">
+      Geht auch...
+    </div>
     <div className="grid-cols-4 grid">
       {secondaryThemes.map((colorTheme) => (
         <div className="col-span-1">
@@ -69,6 +77,10 @@ export default ({ state, setState }) => (
           >
             <div className="px-1">
               <img
+                alt={`Farbschema Vorschau für ${
+                  colorThemes.filter((theme) => theme.label === colorTheme)[0]
+                    .name
+                }`}
                 src={`/assets/images/colorThemes/${
                   colorThemes.filter((theme) => theme.label === colorTheme)[0]
                     .label
