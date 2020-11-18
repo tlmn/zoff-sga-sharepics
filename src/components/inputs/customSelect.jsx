@@ -15,7 +15,7 @@ export default ({
     <select
       type="text"
       value={getProperty({ state }, propertyPath)}
-      onChange={(e) =>
+      onBlur={(e) =>
         updateProperty({ state, setState }, propertyPath, e.target.value)
       }
       id={propertyPath}
