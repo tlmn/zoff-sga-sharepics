@@ -17,8 +17,7 @@ export default () => {
           category: { content: "Mal im Ernst" },
           body: {
             content: "Was ist {kritische}\n {Männlich-}\n{keit?}",
-            scale: 100,
-            scaleRange: [80, 120],
+            scale: { value: 120, range: [90, 150] },
           },
         },
         ref: useRef(null),
@@ -27,9 +26,8 @@ export default () => {
         data: {
           body: {
             content:
-              "Diese Männlichkeitsbilder und -anforderungen sind nicht leicht zu beschreiben, da sie sich je nach kultureller Zugehörig-keit, sozialem Umfeld, Zeit und Ort ver-ändern. Diese Anforderungen, also all die Aussagen zusammengenommen „wie Männer nun mal so sind“ bzw. „sein müssen“, haben tatsächliche Auswir-kungen auf das Verhalten von Männern. Männlichkeitsbilder sind im Umbruch und umfassen ein Durcheinander wie z.B. den minnesingenden Ritter oder den erfolgreichen (IT-)Unternehmer.",
-            scale: 100,
-            scaleRange: [80, 120],
+              "Diese Männlichkeitsbilder und -anforderungen sind nicht leicht zu beschreiben, da sie sich je nach kultureller Zugehörigkeit, sozialem Umfeld, Zeit und Ort ver-ändern. Diese Anforderungen, also all die Aussagen zusammengenommen „wie Männer nun mal so sind“ bzw. „sein müssen“, haben tatsächliche Auswir-kungen auf das Verhalten von Männern. Männlichkeitsbilder sind im Umbruch und umfassen ein Durcheinander wie z.B. den minnesingenden Ritter oder den erfolgreichen (IT-)Unternehmer.",
+            scale: { value: 40, range: [30, 60] },
           },
         },
         ref: useRef(null),
@@ -38,9 +36,8 @@ export default () => {
         data: {
           body: {
             content:
-              "Die Ereignisse rund um den 04. November gehen als Kieler Matrosenaufstand in die Geschichte ein und bilden den Auftakt zur November Revolution.",
-            scale: 100,
-            scaleRange: [60, 150],
+              "Die Ereignisse rund um den 4. November gehen als Kieler Matrosenaufstand in die Geschichte ein und bilden den Auftakt zur November Revolution.",
+              scale: { value: 40, range: [30, 60] },
           },
           localBranch: { content: "" },
         },

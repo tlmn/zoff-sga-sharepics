@@ -16,8 +16,7 @@ export default () => {
           category: { content: "Voll unsere Meinung" },
           body: {
             content: "{Don't let}\n{people}\n{drown.}",
-            scale: 100,
-            scaleRange: [60, 150],
+            scale: { value: 160, range: [90, 210] },
           },
         },
         ref: useRef(null),

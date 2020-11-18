@@ -14,8 +14,7 @@ export default () => {
           type: { content: "Vortrag" },
           event: {
             content: "Auf der Fury Road in den Feminismus!",
-            scaleRange: [120, 200],
-            scale: 160,
+            scale: { range: [100, 180], value: 140 },
           },
           speaker: { content: "Veronika Kracher" },
           location: { content: "Ort" },

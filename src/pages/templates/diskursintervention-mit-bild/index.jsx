@@ -14,9 +14,8 @@ export default () => {
           image: { url: null, position: { x: 0, y: 0 }, scale: 0 },
           body: {
             content: "SPD: Oops, I did it again!",
-            scaleRange: [60, 150],
-            scale: 100,
-            textPosition: "center"
+            scale: { value: 100, range: [60, 150] },
+            textPosition: "center",
           },
           localBranch: { content: "" },
         },

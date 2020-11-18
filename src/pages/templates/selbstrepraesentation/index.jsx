@@ -14,7 +14,10 @@ export default () => {
     slides: [
       {
         data: {
-          body: { content: "feministisch", scale: 120, scaleRange: [80, 200] },
+          body: {
+            content: "feministisch",
+            scale: { value: 120, range: [80, 200] },
+          },
         },
         ref: useRef(null),
       },
@@ -27,8 +30,7 @@ export default () => {
           body: {
             content:
               "Eine vom Patriarchat befreite Gesellschaft? Viele sprechen davon aber wenige setzen es in die Praxis um.",
-            scale: 100,
-            scaleRange: [60, 150],
+            scale: { value: 80, range: [40, 120] },
           },
           localBranch: { content: "" },
         },

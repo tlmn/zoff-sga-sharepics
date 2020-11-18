@@ -15,8 +15,7 @@ export default () => {
           body: {
             content:
               "Eine vom Patriarchat befreite Gesellschaft? Viele sprechen davon aber wenige setzen es in die Praxis um.",
-            scaleRange: [60, 150],
-            scale: 100,
+            scale: { value: 80, range: [50, 120] },
           },
         },
         ref: useRef(null),
