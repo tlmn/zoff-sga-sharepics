@@ -16,7 +16,7 @@ export default ({ state, setState, thumbnail = false }) => (
           className="flex-1 text-left font-headline uppercase italic leading-tight"
           style={{
             color: getColor(state, 0),
-            fontSize: `${(state.slides[2].data.body.scale / 100) * 140}px`,
+            fontSize: `${state.slides[2].data.body.scale.value}px`,
           }}
           dangerouslySetInnerHTML={{
             __html: state.slides[2].data.body.content,
