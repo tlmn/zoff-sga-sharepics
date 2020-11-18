@@ -42,6 +42,7 @@ module.exports = {
       auto: "auto",
       default: "default",
       pointer: "pointer",
+      move: "move",
     },
     fontFamily: {
       headline: "Gilroy ExtraBold",
