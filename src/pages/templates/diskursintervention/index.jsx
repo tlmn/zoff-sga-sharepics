@@ -14,8 +14,7 @@ export default () => {
           category: { content: "So komplex und doch so einfach" },
           body: {
             content: "Das Problem heißt {Rassismus!}",
-            scaleRange: [60, 150],
-            scale: 100,
+            scale: { value: 100, range: [60, 150] },
           },
           localBranch: { content: "" },
         },
