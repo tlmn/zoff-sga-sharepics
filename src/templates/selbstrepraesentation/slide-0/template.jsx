@@ -23,7 +23,7 @@ export default ({ state, thumbnail = false }) => (
             }}
             style={{
               color: getColor(state, 0),
-              fontSize: `${(state.slides[0].data.body.scale / 100) * 80}px`,
+              fontSize: `${state.slides[0].data.body.scale.value}px`,
               transform: "rotate(-6deg)",
             }}
           />

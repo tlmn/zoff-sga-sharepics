@@ -18,9 +18,7 @@ export default ({ state, setState, thumbnail = false }) => {
           <span
             className="flex-1 font-body font-semibold text-left text-black"
             style={{
-              fontSize: `${
-                (state.slides[currentSlide].data.body.scale / 100) * 40
-              }px`,
+              fontSize: `${state.slides[currentSlide].data.body.scale.value}px`,
             }}
             dangerouslySetInnerHTML={{
               __html: state.slides[currentSlide].data.body.content,

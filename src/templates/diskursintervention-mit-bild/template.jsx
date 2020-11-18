@@ -86,9 +86,7 @@ export default ({ state, setState }) => {
                       className="self-center // text-center font-bold italic font-headline leading-none // stripeText"
                       style={{
                         fontSize: `${
-                          (state.slides[state.currentSlide].data.body.scale /
-                            100) *
-                          140
+                          state.slides[state.currentSlide].data.body.scale.value
                         }px`,
                         color: getColor(state, 1),
                         boxDecorationBreak: "clone",

@@ -12,7 +12,7 @@ export default ({ state, setState, thumbnail = false }) => (
     >
       <div className="p-4 flex flex-col h-full">
         <span
-          className="flex-1 font-headline italic leading-tight text-lg text-left"
+          className="font-headline italic leading-tight text-lg text-left"
           style={{
             color: getColor(state, 1),
             fontSize: `${state.slides[1].data.body.scale.value}px`,

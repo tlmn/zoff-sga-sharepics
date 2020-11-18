@@ -24,7 +24,7 @@ export default ({ state, thumbnail = false }) => (
           <span
             className="block // w-full // self-center // text-left text-black font-bold font-headline leading-none"
             style={{
-              fontSize: `${(state.slides[0].data.body.scale / 100) * 140}px`,
+              fontSize: `${state.slides[0].data.body.scale.value}px`,
             }}
             dangerouslySetInnerHTML={{
               __html: formatEmojis(
@@ -36,7 +36,7 @@ export default ({ state, thumbnail = false }) => (
                   .replace(
                     /\}/gi,
                     () =>
-                     `</div><div class="stripeElement" style="background-color: ${getPrimaryColor(
+                      `</div><div class="stripeElement" style="background-color: ${getPrimaryColor(
                         state,
                         1
                       )}; transform:rotate(${

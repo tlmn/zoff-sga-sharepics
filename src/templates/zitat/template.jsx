@@ -19,8 +19,7 @@ export default ({ state }) => {
                 className="block // w-full // self-center // text-left italic font-bold font-headline leading-none"
                 style={{
                   fontSize: `${
-                    (state.slides[state.currentSlide].data.body.scale / 100) *
-                    80
+                    state.slides[state.currentSlide].data.body.scale.value
                   }px`,
                   color: getColor(state, 1),
                 }}

@@ -16,7 +16,7 @@ export default ({ state, thumbnail = false }) => (
         <span
           className="block flex-1 // w-full // self-start // text-left font-bold font-headline leading-tight"
           style={{
-            fontSize: `${(state.slides[2].data.body.scale / 100) * 80}px`,
+            fontSize: `${state.slides[2].data.body.scale.value}px`,
             color: getColor(state, 0),
           }}
           dangerouslySetInnerHTML={{

@@ -34,9 +34,7 @@ export default ({ state }) => {
                   className="block // w-full // self-center // text-left font-bold font-headline leading-none"
                   style={{
                     fontSize: `${
-                      (state.slides[state.currentSlide].data.event.scale /
-                        100) *
-                      80
+                      state.slides[state.currentSlide].data.event.scale.value
                     }px`,
                     color: getColor(state, 1),
                   }}
