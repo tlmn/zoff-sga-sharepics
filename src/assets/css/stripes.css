@@ -6,6 +6,8 @@
 .stripeText {
   @apply z-10;
   @apply relative;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 .stripeElement {
   @apply absolute;
