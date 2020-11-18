@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-onchange */
 import { getProperty, updateProperty } from "../../lib/lib";
 
 import React from "react";
@@ -15,7 +16,7 @@ export default ({
     <select
       type="text"
       value={getProperty({ state }, propertyPath)}
-      onBlur={(e) =>
+      onChange={(e) =>
         updateProperty({ state, setState }, propertyPath, e.target.value)
       }
       id={propertyPath}
