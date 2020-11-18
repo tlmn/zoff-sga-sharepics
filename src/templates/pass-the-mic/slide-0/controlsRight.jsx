@@ -1,83 +1,40 @@
+import DownloadButton from "../../../components/inputs/downloadButton";
+import Input from "../../../components/inputs/input";
 import React from "react";
-import { html2image } from "../../../lib/lib";
+import TextScale from "../../../components/inputs/textScale";
+import Textarea from "../../../components/inputs/textarea";
 
-export default ({ state, setState }) => (
-  <>
-    <input
-      onChange={(e) =>
-        setState({
-          ...state,
-          ...state.slides.splice(state.currentSlide, 1, {
-            ...state.slides[state.currentSlide],
-            data: {
-              ...state.slides[state.currentSlide].data,
-              category: {
-                content: e.target.value,
-              },
-            },
-          }),
-        })
-      }
-      value={state.slides[state.currentSlide].data.category.content}
-    />
-    <textarea
-      onChange={(e) =>
-        setState({
-          ...state,
-          ...state.slides.splice(state.currentSlide, 1, {
-            ...state.slides[state.currentSlide],
-            data: {
-              ...state.slides[state.currentSlide].data,
-              body: {
-                ...state.slides[state.currentSlide].data.body,
-                content: e.target.value,
-              },
-            },
-          }),
-        })
-      }
-      value={state.slides[state.currentSlide].data.body.content}
-      className="border-1"
-      rows={6}
-      cols={30}
-    />
-    <input
-      type="range"
-      id="bodyTextScale"
-      name="bodyTextScale"
-      min={state.slides[state.currentSlide].data.body.scaleRange[0]}
-      max={state.slides[state.currentSlide].data.body.scaleRange[1]}
-      value={state.slides[state.currentSlide].data.body.scale}
-      onChange={(e) =>
-        setState({
-          ...state,
-          ...state.slides.splice(state.currentSlide, 1, {
-            ...state.slides[state.currentSlide],
-            data: {
-              ...state.slides[state.currentSlide].data,
-              body: {
-                ...state.slides[state.currentSlide].data.body,
-                scale: e.target.value,
-              },
-            },
-          }),
-        })
-      }
-    />
+export default ({ state, setState }) => {
+  const currentSlide = 0;
+  return (
+    <>
+      <Input
+        propertyPath="slides[0].data.category.content"
+        state={state}
+        setState={setState}
+        label="Headline"
+      />
 
-    <button
-      className="btn btn-download"
-      onClick={() =>
-        html2image(
-          {
-            state,
-            setState,
-          },
-          `pass-the-mic-1-${state.slides[0].data.body.content}`
-        )
-      }
-    >
-      Download
-    </button>
-  </>
-);
+      <Textarea
+        propertyPath="slides[0].data.body.content"
+        state={state}
+        setState={setState}
+        label="Text"
+        rows={6}
+        cols={30}
+      />
+
+      <TextScale
+        propertyPath="slides[0].data.body.scale"
+        state={state}
+        setState={setState}
+      />
+
+      <DownloadButton
+        state={state}
+        setState={setState}
+        fileNamePath={`slides[${currentSlide}].data.statement.content`}
+      />
+    </>
+  );
+};

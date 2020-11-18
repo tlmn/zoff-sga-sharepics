@@ -23,12 +23,11 @@ export default ({ state, setState }) => {
       />
 
       <Textarea
-        label="Text"
+        label="Lokalgruppe (optional)"
         state={state}
         setState={setState}
         propertyPath={`slides[${currentSlide}].data.localBranch.content`}
         rows={2}
-        cols={60}
       />
 
       <DownloadButton

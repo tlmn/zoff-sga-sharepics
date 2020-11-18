@@ -1,113 +1,52 @@
 import BgImage from "../../components/inputs/bgImage";
+import CustomSelect from "../../components/inputs/customSelect";
+import DownloadButton from "../../components/inputs/downloadButton";
 import React from "react";
-import { html2image } from "../../lib/lib";
+import TextScale from "../../components/inputs/textScale";
+import Textarea from "../../components/inputs/textarea";
 import { textPositions } from "../../config/vars";
 
 export default ({ state, setState }) => {
+  const currentSlide = 0;
   return (
     <>
-      <BgImage state={state} setState={setState} currentSlide={0} />
-      <label>Text</label>
-      <textarea
-        onChange={(e) =>
-          setState({
-            ...state,
-            ...state.slides.splice(state.currentSlide, 1, {
-              ...state.slides[state.currentSlide],
-              data: {
-                ...state.slides[state.currentSlide].data,
-                body: {
-                  ...state.slides[state.currentSlide].data.body,
-                  content: e.target.value,
-                },
-              },
-            }),
-          })
-        }
-        value={state.slides[state.currentSlide].data.body.content}
-        className="border-1"
-        rows={2}
-        cols={30}
+      <BgImage state={state} setState={setState} currentSlide={currentSlide} />
+
+      <Textarea
+        label="Text"
+        state={state}
+        setState={setState}
+        propertyPath={`slides[${currentSlide}].data.body.content`}
+        rows={3}
       />
-      <label>Textposition</label>
-      <select
-        onChange={(e) =>
-          setState({
-            ...state,
-            ...state.slides.splice(state.currentSlide, 1, {
-              ...state.slides[state.currentSlide],
-              data: {
-                ...state.slides[state.currentSlide].data,
-                body: {
-                  ...state.slides[state.currentSlide].data.body,
-                  textPosition: e.target.value,
-                },
-              },
-            }),
-          })
-        }
-        value={state.slides[0].data.body.textPosition}
-      >
-        {textPositions.map((textPosition) => (
-          <option value={textPosition.value}>{textPosition.label}</option>
-        ))}
-      </select>
-      <label>Textgröße</label>
-      <input
-        type="range"
-        id="bodyTextScale"
-        name="bodyTextScale"
-        min={state.slides[state.currentSlide].data.body.scaleRange[0]}
-        max={state.slides[state.currentSlide].data.body.scaleRange[1]}
-        value={state.slides[state.currentSlide].data.body.scale}
-        onChange={(e) =>
-          setState({
-            ...state,
-            ...state.slides.splice(state.currentSlide, 1, {
-              ...state.slides[state.currentSlide],
-              data: {
-                ...state.slides[state.currentSlide].data,
-                body: {
-                  ...state.slides[state.currentSlide].data.body,
-                  scale: e.target.value,
-                },
-              },
-            }),
-          })
-        }
+
+      <CustomSelect
+        label="Textposition"
+        state={state}
+        setState={setState}
+        propertyPath={`slides[${currentSlide}].data.body.textPosition`}
+        availableValues={textPositions}
       />
-      <label>Lokalgruppe (optional)</label>
-      <textarea
-        onChange={(e) =>
-          setState({
-            ...state,
-            ...state.slides.splice(0, 1, {
-              ...state.slides[0],
-              data: {
-                ...state.slides[0].data,
-                localBranch: { content: e.target.value },
-              },
-            }),
-          })
-        }
+
+      <TextScale
+        state={state}
+        setState={setState}
+        propertyPath={`slides[${currentSlide}].data.body.scale`}
+      />
+
+      <Textarea
+        label="Lokalgruppe (optional)"
+        state={state}
+        setState={setState}
+        propertyPath={`slides[${currentSlide}].data.localBranch.content`}
         rows={2}
-      >
-        {state.slides[0].data.localBranch.content}
-      </textarea>
-      <button
-        className="btn btn-download"
-        onClick={() =>
-          html2image(
-            {
-              state,
-              setState,
-            },
-            state.slides[state.currentSlide].data.body.content
-          )
-        }
-      >
-        Download
-      </button>
+      />
+
+      <DownloadButton
+        state={state}
+        setState={setState}
+        fileNamePath={`slides[${currentSlide}].data.body.content`}
+      />
     </>
   );
 };

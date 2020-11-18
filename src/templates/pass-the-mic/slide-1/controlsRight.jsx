@@ -1,39 +1,26 @@
 import BgImage from "../../../components/inputs/bgImage";
+import DownloadButton from "../../../components/inputs/downloadButton";
+import Input from "../../../components/inputs/input";
 import React from "react";
-import { html2image } from "../../../lib/lib";
 
-export default ({ state, setState }) => (
-  <>
-    <BgImage state={state} setState={setState} currentSlide={1} />
-    <label>Unterzeile</label>
-    <input
-      onChange={(e) =>
-        setState({
-          ...state,
-          ...state.slides.splice(1, 1, {
-            ...state.slides[1],
-            data: {
-              ...state.slides[1].data,
-              author: { content: e.target.value },
-            },
-          }),
-        })
-      }
-      value={state.slides[1].data.author.content}
-    />
-    <button
-      className="btn btn-download"
-      onClick={() =>
-        html2image(
-          {
-            state,
-            setState,
-          },
-          `pass-the-mic-2-${state.slides[0].data.body.content}`
-        )
-      }
-    >
-      Download
-    </button>
-  </>
-);
+export default ({ state, setState }) => {
+  const currentSlide = 1;
+  return (
+    <>
+      <BgImage state={state} setState={setState} currentSlide={currentSlide} />
+
+      <Input
+        state={state}
+        setState={setState}
+        label="Unterzeile"
+        propertyPath={`slides[${currentSlide}].data.author.content`}
+      />
+      
+      <DownloadButton
+        state={state}
+        setState={setState}
+        fileNamePath={`slides[${currentSlide}].data.author.content`}
+      />
+    </>
+  );
+};
