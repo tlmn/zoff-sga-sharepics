@@ -26,7 +26,7 @@ export default ({ state }) => (
       />
       <div className="mb-3 flex-1 flex">
         <span
-          className="block // w-full // self-center // text-center font-bold font-headline leading-none"
+          className="block // w-full // self-center // text-center break-all font-bold font-headline leading-none"
           style={{
             fontSize: `${
               state.slides[state.currentSlide].data.body.scale.value

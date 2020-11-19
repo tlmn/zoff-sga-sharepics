@@ -15,7 +15,7 @@ export default ({ state, thumbnail = false }) => {
       >
         <div className="p-4 flex flex-col h-full">
           <span
-            className="flex-1 text-left font-body font-semibold text-black"
+            className="flex-1 text-left font-body font-semibold text-black break-word overflow-hidden"
             dangerouslySetInnerHTML={{
               __html: state.slides[currentSlide].data.body.content,
             }}

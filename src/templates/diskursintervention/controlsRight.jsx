@@ -30,6 +30,14 @@ export default ({ state, setState }) => {
         propertyPath={`slides[[${currentSlide}].data.body.scale`}
       />
 
+      <Textarea
+        label="Text"
+        state={state}
+        setState={setState}
+        propertyPath={`slides[${currentSlide}].data.localBranch.content`}
+        rows={3}
+      />
+
       <DownloadButton
         state={state}
         setState={setState}

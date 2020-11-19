@@ -47,7 +47,7 @@ export default ({ state }) => {
                   }}
                 />
                 <div
-                  className="mt-3 flex-1 text-left // font-headline text-lg font-bold uppercase"
+                  className="mt-3 flex-1 text-left // font-headline text-lg font-bold uppercase break-word overflow-hidden"
                   dangerouslySetInnerHTML={{
                     __html:
                       state.slides[state.currentSlide].data.speaker.content ===
@@ -67,7 +67,7 @@ export default ({ state }) => {
               />
               <div className="flex flex-col p-4 relative">
                 <span
-                  className="w-full z-20 // text-left text-lg font-bold font-headline uppercase leading-normal"
+                  className="w-full z-20 // text-left text-lg font-bold font-headline uppercase leading-normal break-word overflow-hidden"
                   style={{
                     color: getColor(state, 0),
                   }}

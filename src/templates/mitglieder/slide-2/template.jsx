@@ -13,7 +13,7 @@ export default ({ state, setState, thumbnail = false }) => (
     >
       <div className="p-4 flex flex-col h-full">
         <span
-          className="flex-1 text-left font-headline uppercase italic leading-tight"
+          className="flex-1 text-left font-headline uppercase italic leading-tight break-word overflow-hidden"
           style={{
             color: getColor(state, 0),
             fontSize: `${state.slides[2].data.body.scale.value}px`,

@@ -16,7 +16,7 @@ export default ({ state, setState, thumbnail = false }) => {
       >
         <div className="p-4 flex flex-col h-full">
           <span
-            className="flex-1 font-body font-semibold text-left text-black"
+            className="flex-1 font-body font-semibold text-left text-black break-word overflow-hidden"
             style={{
               fontSize: `${state.slides[currentSlide].data.body.scale.value}px`,
             }}

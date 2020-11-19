@@ -73,10 +73,10 @@ export default ({ state, setState }) => {
                 }%`,
               }}
             />
-            <div className="p-4 // relative // h-full w-full // flex flex-col // border-1 // z-20 ">
+            <div className="p-4 // relative // h-full w-full // flex flex-col break-all  // border-1 // z-20 ">
               <div className="flex-1 flex">
                 <div
-                  className={`h-full w-full flex items-${state.slides[0].data.body.textPosition} justify-center`}
+                  className={`h-full w-full flex items-${state.slides[0].data.body.textPosition} justify-start`}
                 >
                   <div
                     className="stripeContainer mb-4"

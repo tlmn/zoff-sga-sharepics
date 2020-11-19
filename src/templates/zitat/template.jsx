@@ -16,7 +16,7 @@ export default ({ state }) => {
           >
             <div className="flex">
               <span
-                className="block // w-full // self-center // text-left italic font-bold font-headline leading-none"
+                className="block // w-full // self-center // text-left italic font-bold font-headline leading-none break-word overflow-hidden"
                 style={{
                   fontSize: `${
                     state.slides[state.currentSlide].data.body.scale.value
@@ -34,7 +34,7 @@ export default ({ state }) => {
               />
             </div>
             <div
-              className="mt-3 flex-1 text-left // font-headline text-lg italic font-bold uppercase"
+              className="mt-3 flex-1 text-left // font-headline text-lg italic font-bold uppercase break-word overflow-hidden"
               dangerouslySetInnerHTML={{
                 __html:
                   state.slides[state.currentSlide].data.author.content === ""
