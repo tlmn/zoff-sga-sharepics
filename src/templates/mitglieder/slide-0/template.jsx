@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import Draggable from "react-draggable";
+import DraggableBg from "../../../components/inputs/draggableBg";
 import { getColor } from "../../../lib/lib";
 
 export default ({ state, setState, thumbnail = false }) => {
@@ -15,32 +15,11 @@ export default ({ state, setState, thumbnail = false }) => {
         ref={!thumbnail ? state.slides[0].ref : null}
       >
         <div className="p-4 flex flex-col items-center h-full justify-end">
-          <Draggable
-            onDrag={(e, data) => {
-              setState({
-                ...state,
-                ...state.slides.splice(0, 1, {
-                  ...state.slides[0],
-                  data: {
-                    ...state.slides[0].data,
-                    image: {
-                      ...state.slides[0].data.image,
-                      position: { x: data.x, y: data.y },
-                    },
-                  },
-                }),
-              });
-            }}
-            onStop={(e, data) => {
-              draggableRef.current.style.transform = "translate(0px, 0px)";
-            }}
-          >
-            <div
-              className="absolute top-0 left-0 right-0 w-full h-full z-20 cursor-move"
-              draggable
-              ref={draggableRef}
-            />
-          </Draggable>
+          <DraggableBg
+            state={state}
+            setState={setState}
+            propertyPath="slides[0].data.image.position"
+          />
           <div
             className="absolute // top-0 left-0 right-0 // z-10 // w-full h-full"
             style={{

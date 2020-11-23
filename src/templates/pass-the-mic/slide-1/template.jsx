@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import Draggable from "react-draggable";
+import DraggableBg from "../../../components/inputs/draggableBg";
 import { getPrimaryColor } from "../../../lib/lib";
 
 export default ({ state, setState, thumbnail = false }) => {
@@ -13,33 +13,12 @@ export default ({ state, setState, thumbnail = false }) => {
         }`}
         ref={!thumbnail ? state.slides[1].ref : null}
       >
-        <Draggable
-          onDrag={(e, data) => {
-            setState({
-              ...state,
-              ...state.slides.splice(1, 1, {
-                ...state.slides[1],
-                data: {
-                  ...state.slides[1].data,
-                  image: {
-                    ...state.slides[1].data.image,
-                    position: { x: data.x, y: data.y },
-                  },
-                },
-              }),
-            });
-          }}
-          onStop={(e, data) => {
-            draggableRef.current.style.transform = "translate(0px, 0px)";
-          }}
-        >
-          <div
-            className="absolute top-0 left-0 right-0 w-full h-full z-50 cursor-move"
-            draggable
-            ref={draggableRef}
-          />
-        </Draggable>
-        
+        <DraggableBg
+          state={state}
+          setState={setState}
+          propertyPath="slides[1].data.image.position"
+        />
+
         <div
           className="absolute // top-0 left-0 right-0 // z-10 // w-full h-full"
           style={{
@@ -50,15 +29,9 @@ export default ({ state, setState, thumbnail = false }) => {
             })`,
             height: "100%",
             filter: "grayscale(100%)",
-            backgroundPositionX: `${
-              state.slides[1].data.image.position.x
-            }px`,
-            backgroundPositionY: `${
-              state.slides[1].data.image.position.y
-            }px`,
-            backgroundSize: `${
-              state.slides[1].data.image.scale * 10 + 100
-            }%`,
+            backgroundPositionX: `${state.slides[1].data.image.position.x}px`,
+            backgroundPositionY: `${state.slides[1].data.image.position.y}px`,
+            backgroundSize: `${state.slides[1].data.image.scale * 10 + 100}%`,
           }}
         />
         <span
