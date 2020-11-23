@@ -27,7 +27,7 @@ export default ({ state, setState }) => {
       <TextScale
         state={state}
         setState={setState}
-        propertyPath={`slides[[${currentSlide}].data.body.scale`}
+        propertyPath={`slides[${currentSlide}].data.body.scale`}
       />
 
       <Textarea
