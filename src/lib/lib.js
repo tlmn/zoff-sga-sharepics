@@ -3,6 +3,7 @@ import { colorThemes, colors } from "../config/vars";
 
 import emojiRegex from "emoji-regex";
 import htmlToImage from "html-to-image";
+import { saveAs } from "file-saver";
 import slugify from "react-slugify";
 
 export const html2image = async ({ state, setState }, fileName = "solid") => {
@@ -13,11 +14,8 @@ export const html2image = async ({ state, setState }, fileName = "solid") => {
       width: 1080,
       height: 1080,
     })
-    .then(function (dataUrl) {
-      var link = document.createElement("a");
-      link.download = `sharepic-${slugify(fileName.substring(0, 20))}.jpg`;
-      link.href = dataUrl;
-      link.click();
+    .then(function (blob) {
+      saveAs(blob, `sharepic-${slugify(fileName.substring)}`);
       setState({ ...state, templateScale: true });
     });
 };
