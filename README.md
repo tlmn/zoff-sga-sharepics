@@ -2,7 +2,7 @@
 
 This project provides a sharepic generator for linksjugend ['solid] based on the 2020 corporate design created by [zoff kollektiv](https://zoff-kollektiv.net/). The generator uses 8 different templates for various content types on social media.
 
-The is based on ReactJS and GatsbyJS and uses Tailwind CSS and custom styles.
+The generator is based on ReactJS and GatsbyJS and uses Tailwind CSS and custom styles.
 
 ## Running and building the project
 1. install dependencies: `npm install`
