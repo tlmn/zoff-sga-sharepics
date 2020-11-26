@@ -1,9 +1,11 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 
 import IconReset from "../../assets/svg/reset";
+import TemplateContext from "../templateContext";
 import { updateProperty } from "../../lib/lib";
 
-export default ({ state, setState, currentSlide }) => {
+export default ({ currentSlide }) => {
+  const [state, setState] = useContext(TemplateContext);
   const inputFileRef = useRef(null);
   return (
     <>

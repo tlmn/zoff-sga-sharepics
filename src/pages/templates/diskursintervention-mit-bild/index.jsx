@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import ControlsLeft from "../../../templates/diskursintervention-mit-bild/controlsLeft";
 import ControlsRight from "../../../templates/diskursintervention-mit-bild/controlsRight";
 import Template from "../../../templates/diskursintervention-mit-bild/template";
+import TemplateContext from "../../../components/templateContext";
 import TemplateLayout from "../../../components/templateLayout";
 
 export default () => {
@@ -27,16 +28,18 @@ export default () => {
   });
 
   return (
-    <TemplateLayout>
-      <div className="col-span-3">
-        <ControlsLeft state={state} setState={setState} />
-      </div>
-      <div className="col-span-6">
-        <Template state={state} setState={setState} />
-      </div>
-      <div className="col-span-3">
-        <ControlsRight state={state} setState={setState} />
-      </div>
-    </TemplateLayout>
+    <TemplateContext.Provider value={[state, setState]}>
+      <TemplateLayout>
+        <div className="col-span-3">
+          <ControlsLeft state={state} setState={setState} />
+        </div>
+        <div className="col-span-6">
+          <Template state={state} setState={setState} />
+        </div>
+        <div className="col-span-3">
+          <ControlsRight state={state} setState={setState} />
+        </div>
+      </TemplateLayout>
+    </TemplateContext.Provider>
   );
 };

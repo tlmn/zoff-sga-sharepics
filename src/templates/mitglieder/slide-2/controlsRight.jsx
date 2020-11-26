@@ -3,36 +3,26 @@ import React from "react";
 import TextScale from "../../../components/inputs/textScale";
 import Textarea from "../../../components/inputs/textarea";
 
-export default ({ state, setState }) => {
+export default () => {
   const currentSlide = 2;
   return (
     <>
       <Textarea
         label="Text"
-        state={state}
-        setState={setState}
         propertyPath={`slides[${currentSlide}].data.body.content`}
         rows={5}
         cols={60}
       />
 
-      <TextScale
-        state={state}
-        setState={setState}
-        propertyPath={`slides[[${currentSlide}].data.body.scale`}
-      />
+      <TextScale propertyPath={`slides[[${currentSlide}].data.body.scale`} />
 
       <Textarea
         label="Lokalgruppe (optional)"
-        state={state}
-        setState={setState}
         propertyPath={`slides[${currentSlide}].data.localBranch.content`}
         rows={2}
       />
 
       <DownloadButton
-        state={state}
-        setState={setState}
         fileNamePath={`slides[${currentSlide}].data.body.content`}
       />
     </>

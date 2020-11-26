@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import ControlsLeft from "../../../templates/zitat/controlsLeft";
 import ControlsRight from "../../../templates/zitat/controlsRight";
 import Template from "../../../templates/zitat/template";
+import TemplateContext from "../../../components/templateContext";
 import TemplateLayout from "../../../components/templateLayout";
 
 export default () => {
@@ -26,16 +27,18 @@ export default () => {
   });
 
   return (
-    <TemplateLayout state={state}>
-      <div className="col-span-3">
-        <ControlsLeft state={state} setState={setState} />
-      </div>
-      <div className="col-span-6">
-        <Template state={state} />
-      </div>
-      <div className="col-span-3">
-        <ControlsRight state={state} setState={setState} />
-      </div>
-    </TemplateLayout>
+    <TemplateContext.Provider value={[state, setState]}>
+      <TemplateLayout state={state}>
+        <div className="col-span-3">
+          <ControlsLeft state={state} setState={setState} />
+        </div>
+        <div className="col-span-6">
+          <Template state={state} />
+        </div>
+        <div className="col-span-3">
+          <ControlsRight state={state} setState={setState} />
+        </div>
+      </TemplateLayout>
+    </TemplateContext.Provider>
   );
 };

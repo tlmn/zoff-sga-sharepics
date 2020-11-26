@@ -1,9 +1,12 @@
+import React, { useContext } from "react";
+
 import LogoText from "../../../assets/svg/logo-text";
-import React from "react";
+import TemplateContext from "../../../components/templateContext";
 import { getPrimaryColor } from "../../../lib/lib";
 
-export default ({ state, thumbnail = false }) => {
+export default ({ thumbnail = false }) => {
   const currentSlide = 2;
+  const [state] = useContext(TemplateContext);
   return (
     <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
       <div

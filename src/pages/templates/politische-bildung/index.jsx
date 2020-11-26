@@ -6,6 +6,7 @@ import Template from "../../../templates/politische-bildung/template";
 import Template0 from "../../../templates/politische-bildung/slide-0/template";
 import Template1 from "../../../templates/politische-bildung/slide-1/template";
 import Template2 from "../../../templates/politische-bildung/slide-2/template";
+import TemplateContext from "../../../components/templateContext";
 import TemplateLayout from "../../../components/templateLayout";
 
 export default () => {
@@ -37,7 +38,7 @@ export default () => {
           body: {
             content:
               "Die Ereignisse rund um den 4. November gehen als Kieler Matrosenaufstand in die Geschichte ein und bilden den Auftakt zur November Revolution.",
-              scale: { value: 40, range: [30, 60] },
+            scale: { value: 40, range: [30, 60] },
           },
           localBranch: { content: "" },
         },
@@ -49,64 +50,54 @@ export default () => {
   });
 
   return (
-    <TemplateLayout>
-      <div className="col-span-12 flex justify-center py-2">
-        {state.slides.map((slide, i) => {
-          switch (i) {
-            case 0:
-              return (
-                <button
-                  onClick={() => setState({ ...state, currentSlide: i })}
-                  className="is-thumbnail hover:opacity-75"
-                >
-                  <Template0
-                    state={state}
-                    setState={setState}
-                    thumbnail={true}
-                  />
-                </button>
-              );
-            case 1:
-              return (
-                <button
-                  onClick={() => setState({ ...state, currentSlide: i })}
-                  className="is-thumbnail hover:opacity-75"
-                >
-                  <Template1
-                    state={state}
-                    setState={setState}
-                    thumbnail={true}
-                  />
-                </button>
-              );
-            case 2:
-              return (
-                <button
-                  onClick={() => setState({ ...state, currentSlide: i })}
-                  className="is-thumbnail hover:opacity-75"
-                >
-                  <Template2
-                    state={state}
-                    setState={setState}
-                    thumbnail={true}
-                  />
-                </button>
-              );
-            default:
-              return null;
-          }
-        })}
-      </div>
+    <TemplateContext.Provider value={[state, setState]}>
+      <TemplateLayout>
+        <div className="col-span-12 flex justify-center py-2">
+          {state.slides.map((slide, i) => {
+            switch (i) {
+              case 0:
+                return (
+                  <button
+                    onClick={() => setState({ ...state, currentSlide: i })}
+                    className="is-thumbnail hover:opacity-75"
+                  >
+                    <Template0 thumbnail={true} />
+                  </button>
+                );
+              case 1:
+                return (
+                  <button
+                    onClick={() => setState({ ...state, currentSlide: i })}
+                    className="is-thumbnail hover:opacity-75"
+                  >
+                    <Template1 thumbnail={true} />
+                  </button>
+                );
+              case 2:
+                return (
+                  <button
+                    onClick={() => setState({ ...state, currentSlide: i })}
+                    className="is-thumbnail hover:opacity-75"
+                  >
+                    <Template2 thumbnail={true} />
+                  </button>
+                );
+              default:
+                return null;
+            }
+          })}
+        </div>
 
-      <div className="col-span-3">
-        <ControlsLeft state={state} setState={setState} />
-      </div>
-      <div className="col-span-6">
-        <Template state={state} setState={setState} />
-      </div>
-      <div className="col-span-3">
-        <ControlsRight state={state} setState={setState} />
-      </div>
-    </TemplateLayout>
+        <div className="col-span-3">
+          <ControlsLeft />
+        </div>
+        <div className="col-span-6">
+          <Template />
+        </div>
+        <div className="col-span-3">
+          <ControlsRight />
+        </div>
+      </TemplateLayout>
+    </TemplateContext.Provider>
   );
 };

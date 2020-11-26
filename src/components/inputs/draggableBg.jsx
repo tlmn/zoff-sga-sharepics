@@ -1,9 +1,11 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 
 import Draggable from "react-draggable";
+import TemplateContext from "../templateContext";
 import { updateProperty } from "../../lib/lib";
 
-export default ({ state, setState, propertyPath }) => {
+export default ({ propertyPath }) => {
+  const [state, setState] = useContext(TemplateContext);
   const refDraggable = useRef(null);
   return (
     <>
