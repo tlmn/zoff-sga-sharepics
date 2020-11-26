@@ -28,15 +28,15 @@ export default () => {
 
   return (
     <TemplateContext.Provider value={[state, setState]}>
-      <TemplateLayout state={state}>
+      <TemplateLayout>
         <div className="col-span-3">
-          <ControlsLeft state={state} setState={setState} />
+          <ControlsLeft />
         </div>
         <div className="col-span-6">
-          <Template state={state} />
+          <Template />
         </div>
         <div className="col-span-3">
-          <ControlsRight state={state} setState={setState} />
+          <ControlsRight />
         </div>
       </TemplateLayout>
     </TemplateContext.Provider>

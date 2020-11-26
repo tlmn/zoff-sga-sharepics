@@ -15,11 +15,7 @@ export default ({ thumbnail = false }) => {
         style={{ backgroundColor: getColor(state, 0) }}
         ref={!thumbnail ? state.slides[1].ref : null}
       >
-        <DraggableBg
-          state={state}
-          setState={setState}
-          propertyPath="slides[1].data.image.position"
-        />
+        <DraggableBg propertyPath="slides[1].data.image.position" />
 
         <div
           className="absolute // top-0 left-0 right-0 // z-10 // w-full h-full"
