@@ -1,28 +1,16 @@
-import React, { useContext } from "react";
-
 import BgImage from "../../../components/inputs/bgImage";
-import TemplateContext from "../../../components/templateContext";
-import { html2image } from "../../../lib/lib";
+import DownloadButton from "../../../components/inputs/downloadButton";
+import React from "react";
 
 export default () => {
-  const [state, setState] = useContext(TemplateContext);
+  const currentSlide = 1;
   return (
     <>
-      <BgImage currentSlide={1} />
-      <button
-        className="btn btn-download"
-        onClick={() =>
-          html2image(
-            {
-              state,
-              setState,
-            },
-            `selbstrepraesentation-2-${state.slides[0].data.body.content}`
-          )
-        }
-      >
-        Download
-      </button>
+      <BgImage currentSlide={currentSlide} />
+
+      <DownloadButton
+        fileNamePath={`slides[${currentSlide}].data.body.content`}
+      />
     </>
   );
 };
