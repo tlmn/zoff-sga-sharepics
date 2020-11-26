@@ -5,7 +5,7 @@ import TemplateContext from "../../../components/templateContext";
 import { getColor } from "../../../lib/lib";
 
 export default ({ thumbnail = false }) => {
-  const [state, setState] = useContext(TemplateContext);
+  const [state] = useContext(TemplateContext);
   return (
     <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
       <div
