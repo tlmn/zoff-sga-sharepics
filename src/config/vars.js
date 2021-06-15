@@ -77,43 +77,33 @@ export const primaryColors = [
 
 export const templates = [
   {
-    name: "Diskursintervention",
-    link: "templates/diskursintervention",
-    thumbnailSrc: "../assets/images/templates/diskursintervention.jpg",
-  },
-  {
-    name: "Diskursintervention mit Bild",
-    link: "templates/diskursintervention-mit-bild",
-    thumbnailSrc: "../assets/images/templates/diskursintervention-mit-bild.jpg",
-  },
-  {
-    name: "Selbstrepräsentation",
-    link: "templates/selbstrepraesentation",
-    thumbnailSrc: "../assets/images/templates/selbstrepraesentation.jpg",
-  },
-  {
-    name: "Mitglieder",
-    link: "templates/mitglieder",
-    thumbnailSrc: "../assets/images/templates/mitglieder.jpg",
+    name: "News",
+    link: "templates/news",
+    thumbnailSrc: "../assets/images/templates/news.png",
   },
   {
     name: "Zitat",
-    link: "templates/zitat",
-    thumbnailSrc: "../assets/images/templates/zitat.jpg",
+    link: "templates/quote",
+    thumbnailSrc: "../assets/images/templates/quote.png",
   },
   {
-    name: "Pass the Mic",
-    link: "templates/pass-the-mic",
-    thumbnailSrc: "../assets/images/templates/pass-the-mic.jpg",
+    name: "Aktion",
+    link: "templates/action",
+    thumbnailSrc: "../assets/images/templates/action.png",
   },
   {
-    name: "Veranstaltung",
-    link: "templates/veranstaltung",
-    thumbnailSrc: "../assets/images/templates/veranstaltung.jpg",
+    name: "Sicherer Hafen",
+    link: "templates/safe-harbour",
+    thumbnailSrc: "../assets/images/templates/safe-harbour.png",
   },
   {
-    name: "Politische Bildung",
-    link: "templates/politische-bildung",
-    thumbnailSrc: "../assets/images/templates/politische-bildung.jpg",
+    name: "Text",
+    link: "templates/text",
+    thumbnailSrc: "../assets/images/templates/text.png",
+  },
+  {
+    name: "Header",
+    link: "templates/header",
+    thumbnailSrc: "../assets/images/templates/header.png",
   },
 ];
