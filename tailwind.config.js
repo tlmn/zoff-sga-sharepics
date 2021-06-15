@@ -55,8 +55,7 @@ module.exports = {
       move: "move",
     },
     fontFamily: {
-      headline: "Gilroy ExtraBold",
-      body: "Hind",
+      sans: "Rubik",
     },
     screens: {
       sm: "576px",
