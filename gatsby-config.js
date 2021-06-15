@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    name: "Sharepic Generator – linksjugend ['solid]",
-    title: "Sharepic Generator – linksjugend ['solid]",
+    name: "Sharepic Generator – Seebrücke",
+    title: "Sharepic Generator – Seebrücke",
   },
   plugins: [
     "gatsby-plugin-resolve-src",
@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `linksjugend ['solid] – Sharepic Generator`,
-        short_name: `linksjugend ['solid] – Sharepic Generator`,
+        name: `Seebrücke – Sharepic Generator`,
+        short_name: `Seebrücke – Sharepic Generator`,
         start_url: `/`,
         background_color: `#00ffc2`,
         theme_color: `#00ffc2`,
