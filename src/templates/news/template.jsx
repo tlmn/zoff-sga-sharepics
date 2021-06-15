@@ -16,7 +16,7 @@ export default () => {
         ref={state.slides[state.currentSlide].ref}
       >
         <span
-          className="mb-3 text-center text-xl font-bold font-headline italic"
+          className="mb-3 text-center text-xl font-bold font-sans italic"
           dangerouslySetInnerHTML={{
             __html:
               state.slides[state.currentSlide].data.category.content === ""
@@ -29,7 +29,7 @@ export default () => {
         />
         <div className="mb-3 flex-1 flex">
           <span
-            className="block // w-full // self-center // text-center break-all font-bold font-headline leading-none"
+            className="block // w-full // self-center // text-center break-all font-bold font-sans leading-none"
             style={{
               fontSize: `${
                 state.slides[state.currentSlide].data.body.scale.value
@@ -62,7 +62,7 @@ export default () => {
         </div>
         <LogoText className="self-center" fillColor={getColor(state, 1)} />
         <div
-          className="uppercase font-headline text-center text-md leading-none mt-2"
+          className="uppercase font-sans text-center text-md leading-none mt-2"
           style={{
             color: getColor(state, 1),
             transform: "rotate(-6deg)",
