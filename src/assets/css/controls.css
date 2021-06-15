@@ -4,7 +4,7 @@ select {
   @apply block;
   margin-bottom: 1rem !important;
   padding: 0.8rem !important;
-  @apply font-headline;
+  @apply font-sans;
   @apply italic;
   @apply font-bold;
   @apply w-full;
@@ -28,14 +28,14 @@ label {
   @apply font-bold;
   @apply text-white;
   @apply uppercase;
-  @apply font-headline;
+  @apply font-sans;
 }
 
 .btn {
   @apply bg-turquoise;
   @apply uppercase;
   @apply text-darkGray;
-  @apply font-headline;
+  @apply font-sans;
   @apply py-1;
   @apply px-2;
   @apply italic;
@@ -56,7 +56,7 @@ label {
 h2.controls {
   @apply text-white;
   @apply uppercase;
-  @apply font-headline;
+  @apply font-sans;
   @apply italic;
   @apply text-md;
 }

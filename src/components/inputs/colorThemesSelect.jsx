@@ -11,7 +11,7 @@ export default () => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <>
-      <div className="uppercase font-headline italic text-white">
+      <div className="uppercase font-sans italic text-white">
         Corporate Design
       </div>
       <div className="grid-cols-2 grid">
@@ -61,7 +61,7 @@ export default () => {
           </div>
         ))}
       </div>
-      <div className="uppercase font-headline italic text-white">
+      <div className="uppercase font-sans italic text-white">
         Geht auch...
       </div>
       <div className="grid-cols-4 grid">

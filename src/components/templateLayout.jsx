@@ -8,7 +8,7 @@ export default ({ children }) => (
       <div className="col-span-12 py-1">
         <Link
           to="/"
-          className="hover:underline uppercase text-white font-headline italic"
+          className="hover:underline uppercase text-white font-sans italic"
         >
           ◂ zurück zur Übersicht
         </Link>

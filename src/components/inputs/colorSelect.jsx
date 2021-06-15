@@ -8,7 +8,7 @@ export default () => {
 
   return (
     <>
-      <div className="uppercase font-headline italic text-white">
+      <div className="uppercase font-sans italic text-white">
         Corporate Design
       </div>
       <div className="grid-cols-2 grid">
