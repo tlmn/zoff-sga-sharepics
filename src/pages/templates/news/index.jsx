@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 
-import ControlsLeft from "../../../templates/news/controlsLeft";
-import ControlsRight from "../../../templates/news/controlsRight";
+import Controls from "../../../templates/news/controls";
 import Template from "../../../templates/news/template";
 import TemplateContext from "../../../components/templateContext";
 import TemplateLayout from "../../../components/templateLayout";
@@ -12,16 +11,28 @@ export default () => {
     slides: [
       {
         data: {
+          images: {
+            upper: {
+              url: null,
+              position: { x: 0, y: 0 },
+              scale: 0,
+            },
+            lower: { url: null, position: { x: 0, y: 0 }, scale: 0 },
+            onlyOneImage: false,
+          },
           body: {
             options: {
               min: 1,
               max: 2,
-              defaultScale: { value: 100, range: [60, 150] },
+              lineTemplate: {
+                content: "Das Problem heißt {Rassismus!}",
+                scale: { value: 50, range: [30, 70] },
+              },
             },
             lines: [
               {
                 content: "Das Problem heißt {Rassismus!}",
-                scale: { value: 100, range: [60, 150] },
+                scale: { value: 50, range: [30, 70] },
               },
             ],
           },
@@ -38,6 +49,10 @@ export default () => {
               },
             ],
           },
+          logo: {
+            position: "top-right",
+            positions: ["top-right", "bottom-center"],
+          },
         },
         ref: useRef(null),
       },
@@ -48,14 +63,11 @@ export default () => {
   return (
     <TemplateContext.Provider value={[state, setState]}>
       <TemplateLayout>
-        <div className="col-span-3">
-          <ControlsLeft />
-        </div>
         <div className="col-span-6">
           <Template />
         </div>
-        <div className="col-span-3">
-          <ControlsRight />
+        <div className="col-span-6">
+          <Controls />
         </div>
       </TemplateLayout>
     </TemplateContext.Provider>
