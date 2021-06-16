@@ -104,6 +104,6 @@ export const templates = [
   {
     name: "Header",
     link: "templates/header",
-    thumbnailSrc: "../assets/images/templates/header.png",
+    thumbnailSrc: "../assets/images/templates/header.jpg",
   },
 ];
