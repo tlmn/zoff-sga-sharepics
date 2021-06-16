@@ -22,6 +22,12 @@ export default () => {
           },
           body: {
             options: {
+              position: "items-center",
+              positions: [
+                { value: "items-start", label: "oben" },
+                { value: "items-center", label: "mittig" },
+                { value: "items-end", label: "unten" },
+              ],
               min: 1,
               max: 2,
               lineTemplate: {
@@ -37,21 +43,17 @@ export default () => {
             ],
           },
           subline: {
-            options: {
-              min: 1,
-              max: 1,
-              defaultScale: { value: 100, range: [60, 150] },
-            },
-            lines: [
-              {
-                content: "Das Problem heißt {Rassismus!}",
-                scale: { value: 100, range: [60, 150] },
-              },
-            ],
+            content: "Das Problem heißt {Rassismus!}",
+            scale: { value: 100, range: [60, 150] },
           },
           logo: {
-            position: "top-right",
-            positions: ["top-right", "bottom-center"],
+            options: {
+              position: "top-right",
+              positions: [
+                { value: "top-right", label: "oben rechts" },
+                { value: "bottom-center", label: "unten mitte" },
+              ],
+            },
           },
         },
         ref: useRef(null),
