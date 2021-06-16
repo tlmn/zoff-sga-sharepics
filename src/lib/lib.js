@@ -1,4 +1,4 @@
-import { cloneDeepWith, get, set } from "lodash";
+import { cloneDeepWith, get, initial, set, size, unset } from "lodash";
 import { colorThemes, colors } from "../config/vars";
 
 import emojiRegex from "emoji-regex";
@@ -44,6 +44,18 @@ export const getPrimaryColor = (currentState) => {
 export const updateProperty = ({ state, setState }, path, newValue) => {
   let prevState = cloneDeepWith(state);
   set(prevState, path, newValue);
+  setState(prevState);
+};
+
+export const pushProperty = ({ state, setState }, path, newValue) => {
+  let prevState = cloneDeepWith(state);
+  get(prevState, path).push(newValue);
+  setState(prevState);
+};
+
+export const removeProperty = ({ state, setState }, path) => {
+  let prevState = cloneDeepWith(state);
+  set(prevState, path, initial(get(prevState, path)));
   setState(prevState);
 };
 
