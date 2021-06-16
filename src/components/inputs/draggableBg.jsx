@@ -4,7 +4,7 @@ import Draggable from "react-draggable";
 import TemplateContext from "../templateContext";
 import { updateProperty } from "../../lib/lib";
 
-export default ({ propertyPath }) => {
+const DraggableBG = ({ propertyPath, className }) => {
   const [state, setState] = useContext(TemplateContext);
   const refDraggable = useRef(null);
   return (
@@ -27,10 +27,12 @@ export default ({ propertyPath }) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 right-0 w-full h-full z-50 cursor-move"
+          className={`relative top-0 left-0 right-0 w-full h-full z-50 cursor-move ${className}`}
           ref={refDraggable}
         />
       </Draggable>
     </>
   );
 };
+
+export default DraggableBG;
