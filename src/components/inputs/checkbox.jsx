@@ -4,21 +4,22 @@ import React from "react";
 import TemplateContext from "../templateContext";
 import { useContext } from "react";
 
-const CheckBox = ({ propertyPath, label = "" }) => {
+const CheckBox = ({ propertyPath, label = "", disabled = false }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <div className="flex items-center">
       <input
         type="checkbox"
         id={propertyPath}
-        value={getProperty({ state }, propertyPath)}
+        checked={getProperty({ state }, propertyPath)}
         onChange={() =>
           updateProperty(
-            { state, setState },
+            { setState },
             propertyPath,
             !getProperty({ state }, propertyPath)
           )
         }
+        disabled={disabled}
       />
       {label !== "" && <label htmlFor={propertyPath}>{label}</label>}
     </div>

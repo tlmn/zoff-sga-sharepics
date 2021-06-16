@@ -5,7 +5,7 @@ import Input from "../inputs/input";
 import TemplateContext from "../templateContext";
 import TextScale from "./textScale";
 
-const InputRepeater = ({ propertyPath }) => {
+const InputRepeater = ({ propertyPath, label = "" }) => {
   const [state, setState] = useContext(TemplateContext);
   const lines = getProperty({ state }, `${propertyPath}.lines`);
   const lineTemplate = getProperty(
@@ -14,7 +14,8 @@ const InputRepeater = ({ propertyPath }) => {
   );
   return (
     <>
-      <div>
+      {label !== "" && <label htmlFor={propertyPath}>{label}</label>}
+      <div id={propertyPath}>
         {lines.map((line, index) => (
           <div className="flex">
             <Input
@@ -33,11 +34,7 @@ const InputRepeater = ({ propertyPath }) => {
           onClick={() => {
             getProperty({ state }, `${propertyPath}.options.max`) >
               lines.length &&
-              pushProperty(
-                { state, setState },
-                `${propertyPath}.lines`,
-                lineTemplate
-              );
+              pushProperty({ setState }, `${propertyPath}.lines`, lineTemplate);
           }}
           disabled={
             getProperty({ state }, `${propertyPath}.options.max`) < lines.length
@@ -50,7 +47,7 @@ const InputRepeater = ({ propertyPath }) => {
           onClick={() => {
             getProperty({ state }, `${propertyPath}.options.min`) <
               lines.length &&
-              removeProperty({ state, setState }, `${propertyPath}.lines`);
+              removeProperty({ setState }, `${propertyPath}.lines`);
           }}
           disabled={
             getProperty({ state }, `${propertyPath}.options.min`) > lines.length

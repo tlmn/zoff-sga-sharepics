@@ -19,11 +19,7 @@ export default ({ propertyPath, label = "Textgröße" }) => {
         max={getProperty({ state, setState }, `${propertyPath}.range[1]`)}
         value={getProperty({ state, setState }, `${propertyPath}.value`)}
         onChange={(e) =>
-          updateProperty(
-            { state, setState },
-            `${propertyPath}.value`,
-            e.target.value
-          )
+          updateProperty({ setState }, `${propertyPath}.value`, e.target.value)
         }
       />
     </>

@@ -4,7 +4,13 @@ import { getProperty, updateProperty } from "../../lib/lib";
 
 import TemplateContext from "../templateContext";
 
-export default ({ availableValues, propertyPath, label, ...props }) => {
+export default ({
+  availableValues,
+  propertyPath,
+  label,
+  disabled = false,
+  ...props
+}) => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <>
@@ -13,9 +19,10 @@ export default ({ availableValues, propertyPath, label, ...props }) => {
         type="text"
         value={getProperty({ state }, propertyPath)}
         onChange={(e) =>
-          updateProperty({ state, setState }, propertyPath, e.target.value)
+          updateProperty({ setState }, propertyPath, e.target.value)
         }
         id={propertyPath}
+        disabled={disabled}
         {...props}
       >
         {availableValues.map((item) => (

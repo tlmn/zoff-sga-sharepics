@@ -10,7 +10,7 @@ export default ({ propertyPath, label, ...props }) => {
       <label htmlFor={propertyPath}>{label}</label>
       <textarea
         onChange={(e) =>
-          updateProperty({ state, setState }, propertyPath, e.target.value)
+          updateProperty({ setState }, propertyPath, e.target.value)
         }
         id={propertyPath}
         {...props}

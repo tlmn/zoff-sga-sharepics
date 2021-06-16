@@ -18,7 +18,7 @@ export default ({ propertyPath, label = "Hintergrundbild" }) => {
           onChange={(e) =>
             e.target.files[0] !== null &&
             updateProperty(
-              { state, setState },
+              { setState },
               `${propertyPath}.url`,
               URL.createObjectURL(e.target.files[0])
             )
@@ -45,7 +45,7 @@ export default ({ propertyPath, label = "Hintergrundbild" }) => {
           max="30"
           onChange={(e) =>
             updateProperty(
-              { state, setState },
+              { setState },
               `${propertyPath}.scale`,
               e.target.value
             )
@@ -55,14 +55,15 @@ export default ({ propertyPath, label = "Hintergrundbild" }) => {
         <button
           className="btn flex justify-center mb-2"
           onClick={() =>
-            updateProperty({ state, setState }, `${propertyPath}.position`, {
+            updateProperty({ setState }, `${propertyPath}.position`, {
               x: 0,
               y: 0,
             })
           }
           type="button"
         >
-          <IconReset height="20" className="block mr-1" />Ausschnitt
+          <IconReset height="20" className="block mr-1" />
+          Ausschnitt
         </button>
       </div>
     </>
