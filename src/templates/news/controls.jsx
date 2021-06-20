@@ -74,7 +74,7 @@ export default () => {
       )}
 
       <CustomSelect
-        availableValues={state.slides[currentSlide].data.logo.options.positions}
+        options={state.slides[currentSlide].data.logo.options.positions}
         propertyPath={`slides[${currentSlide}].data.logo.options.position`}
         label="Position Logo"
         disabled={
@@ -87,7 +87,7 @@ export default () => {
       />
 
       <CustomSelect
-        availableValues={state.slides[currentSlide].data.body.options.positions}
+        options={state.slides[currentSlide].data.body.options.positions}
         propertyPath={`slides[${currentSlide}].data.body.options.position`}
         label="Position Text"
       />
