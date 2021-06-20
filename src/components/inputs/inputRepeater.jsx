@@ -1,11 +1,17 @@
 import React, { useContext } from "react";
 import { getProperty, pushProperty, removeProperty } from "../../lib/lib";
 
+import CustomSelect from "./customSelect";
 import Input from "../inputs/input";
 import TemplateContext from "../templateContext";
 import TextScale from "./textScale";
 
-const InputRepeater = ({ propertyPath, label = "" }) => {
+const InputRepeater = ({
+  propertyPath,
+  label = "",
+  selectPosition = false,
+  positionOptions,
+}) => {
   const [state, setState] = useContext(TemplateContext);
   const lines = getProperty({ state }, `${propertyPath}.lines`);
   const lineTemplate = getProperty(
@@ -26,6 +32,12 @@ const InputRepeater = ({ propertyPath, label = "" }) => {
               propertyPath={`${propertyPath}.lines[${index}].scale`}
               label=""
             />
+            {selectPosition && (
+              <CustomSelect
+                options={positionOptions}
+                propertyPath={`${propertyPath}.lines[${index}].position`}
+              />
+            )}
           </div>
         ))}
       </div>
