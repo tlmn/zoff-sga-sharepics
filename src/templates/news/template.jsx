@@ -45,6 +45,7 @@ export default () => {
               >
                 <LogoText
                   fillColor="#fff"
+                  hasShadow
                 />
               </div>
             </div>
