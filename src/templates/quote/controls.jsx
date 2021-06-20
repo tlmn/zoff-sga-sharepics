@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import BgImage from "../../components/inputs/bgImage";
-import CheckBox from "../../components/inputs/checkBox";
+import Checkbox from "../../components/inputs/checkbox";
 import CustomSelect from "../../components/inputs/customSelect";
 import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
@@ -15,7 +15,7 @@ export default () => {
   return (
     <>
       <FieldSet legend="Hintergrund">
-        <CheckBox
+        <Checkbox
           propertyPath={`slides[${currentSlide}].data.background.isImage`}
           value={state.slides[currentSlide].data.background.isImage}
           label="hat Hintergrundbild"
