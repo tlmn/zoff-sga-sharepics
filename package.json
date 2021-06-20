@@ -28,6 +28,7 @@
     "react-slugify": "^2.0.2"
   },
   "devDependencies": {
+    "caniuse-lite": "^1.0.30001239",
     "tailwindcss": "^1.8.10"
   },
   "keywords": [

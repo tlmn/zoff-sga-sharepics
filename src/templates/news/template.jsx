@@ -124,10 +124,7 @@ export default () => {
                       state.slides[0].data.subline.colorTheme,
                       0
                     ),
-                    color: getColor(
-                      state.slides[0].data.subline.colorTheme,
-                      1
-                    ),
+                    color: getColor(state.slides[0].data.subline.colorTheme, 1),
                   }}
                 >
                   <span

@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 
 import BgImage from "../../components/inputs/bgImage";
 import Checkbox from "../../components/inputs/checkbox";
+import ColorThemeSelector from "../../components/inputs/colorThemesSelect";
 import CustomSelect from "../../components/inputs/customSelect";
 import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
@@ -94,20 +95,28 @@ export default () => {
       </FieldSet>
 
       <FieldSet legend="Text">
+        <ColorThemeSelector
+          colorThemeOptions={["black_white", "orange_white"]}
+          propertyPath={`slides[${currentSlide}].data.body.options.colorTheme`}
+        />
+
         <CustomSelect
           options={state.slides[currentSlide].data.body.options.positions}
           propertyPath={`slides[${currentSlide}].data.body.options.position`}
           label="Position Text"
         />
 
-        <InputRepeater
-          propertyPath={`slides[${currentSlide}].data.body`}
+        <InputRepeater propertyPath={`slides[${currentSlide}].data.body`} />
+      </FieldSet>
+
+      <FieldSet legend="Unterzeile">
+        <ColorThemeSelector
+          colorThemeOptions={[ "white_black", "black_white"]}
+          propertyPath={`slides[${currentSlide}].data.subline.colorTheme`}
         />
 
-        <Input
-          propertyPath={`slides[${currentSlide}].data.subline.content`}
-          label="Unterzeile"
-        />
+        <Input propertyPath={`slides[${currentSlide}].data.subline.content`} />
+        
         <TextScale
           propertyPath={`slides[${currentSlide}].data.subline.scale`}
         />
