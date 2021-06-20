@@ -41,22 +41,28 @@ export const getPrimaryColor = (currentState) => {
     .value;
 };
 
-export const updateProperty = ({ state, setState }, path, newValue) => {
-  let prevState = cloneDeepWith(state);
-  set(prevState, path, newValue);
-  setState(prevState);
+export const updateProperty = ({ setState }, path, newValue) => {
+  setState((prev) => {
+    let prevCloned = cloneDeepWith(prev);
+    set(prevCloned, path, newValue);
+    return prevCloned;
+  });
 };
 
-export const pushProperty = ({ state, setState }, path, newValue) => {
-  let prevState = cloneDeepWith(state);
-  get(prevState, path).push(newValue);
-  setState(prevState);
+export const pushProperty = ({ setState }, path, newValue) => {
+  setState((prev) => {
+    let prevCloned = cloneDeepWith(prev);
+    get(prevCloned, path).push(newValue);
+    return prevCloned;
+  });
 };
 
-export const removeProperty = ({ state, setState }, path) => {
-  let prevState = cloneDeepWith(state);
-  set(prevState, path, initial(get(prevState, path)));
-  setState(prevState);
+export const removeProperty = ({ setState }, path) => {
+  setState((prev) => {
+    let prevCloned = cloneDeepWith(prev);
+    set(prevCloned, path, initial(get(prevCloned, path)));
+    return prevCloned;
+  });
 };
 
 export const getProperty = ({ state }, path) => {
