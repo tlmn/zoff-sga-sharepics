@@ -5,7 +5,7 @@ import { getProperty, updateProperty } from "../../lib/lib";
 import TemplateContext from "../templateContext";
 
 export default ({
-  availableValues,
+  options,
   propertyPath,
   label,
   disabled = false,
@@ -25,7 +25,7 @@ export default ({
         disabled={disabled}
         {...props}
       >
-        {availableValues.map((item) => (
+        {options.map((item) => (
           <option value={item.value}>{item.label}</option>
         ))}
       </select>
