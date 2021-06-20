@@ -57,7 +57,7 @@ export default () => {
                     backgroundImage: `url(${
                       state.slides[0].data.images.upper.url !== null
                         ? state.slides[0].data.images.upper.url
-                        : "/assets/images/defaultImages/diskursintervention-mit-bild-1.jpg"
+                        : "/assets/images/defaultImages/news-1.png"
                     })`,
                     height: "100%",
                     backgroundPositionX: `${state.slides[0].data.images.upper.position.x}px`,
@@ -76,7 +76,7 @@ export default () => {
                       backgroundImage: `url(${
                         state.slides[0].data.images.lower.url !== null
                           ? state.slides[0].data.images.lower.url
-                          : "/assets/images/defaultImages/diskursintervention-mit-bild-1.jpg"
+                          : "/assets/images/defaultImages/news-2.png"
                       })`,
                       height: "100%",
                       backgroundPositionX: `${state.slides[0].data.images.lower.position.x}px`,

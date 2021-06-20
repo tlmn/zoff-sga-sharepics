@@ -27,7 +27,7 @@ export default () => {
                   backgroundImage: `url(${
                     state.slides[0].data.image.url !== null
                       ? state.slides[0].data.image.url
-                      : "/assets/images/defaultImages/diskursintervention-mit-bild-1.jpg"
+                      : "/assets/images/defaultImages/quote.png"
                   })`,
                   height: "100%",
                   backgroundPositionX: `${state.slides[0].data.image.position.x}px`,
