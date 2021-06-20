@@ -1,4 +1,4 @@
-import CheckBox from "../../components/inputs/checkbox";
+import Checkbox from "../../components/inputs/checkbox";
 import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
 import Input from "../../components/inputs/input";
@@ -14,7 +14,7 @@ export default () => {
   return (
     <>
       <FieldSet legend="Logo">
-        <CheckBox
+        <Checkbox
           propertyPath={`slides[${currentSlide}].data.logo.show`}
           label="Logo anzeigen"
         />

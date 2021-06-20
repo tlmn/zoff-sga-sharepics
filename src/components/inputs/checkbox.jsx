@@ -4,7 +4,7 @@ import React from "react";
 import TemplateContext from "../templateContext";
 import { useContext } from "react";
 
-const CheckBox = ({ propertyPath, label = "", disabled = false }) => {
+const Checkbox = ({ propertyPath, label = "", disabled = false }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <div className="flex items-center">
@@ -31,4 +31,4 @@ const CheckBox = ({ propertyPath, label = "", disabled = false }) => {
     </div>
   );
 };
-export default CheckBox;
+export default Checkbox;

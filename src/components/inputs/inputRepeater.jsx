@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { getProperty, pushProperty, removeProperty } from "../../lib/lib";
 
-import CheckBox from "./checkBox";
+import Checkbox from "./checkbox";
 import CustomSelect from "./customSelect";
 import Input from "../inputs/input";
 import TemplateContext from "../templateContext";
@@ -40,7 +40,7 @@ const InputRepeater = ({
                 propertyPath={`${propertyPath}.lines[${index}].position`}
               />
             )}
-            {selectBold && <CheckBox propertyPath={`${propertyPath}.lines[${index}].isBold`} />}
+            {selectBold && <Checkbox propertyPath={`${propertyPath}.lines[${index}].isBold`} />}
           </div>
         ))}
       </div>

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 
 import BgImage from "../../components/inputs/bgImage";
-import CheckBox from "../../components/inputs/checkbox";
+import Checkbox from "../../components/inputs/checkbox";
 import CustomSelect from "../../components/inputs/customSelect";
 import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
@@ -50,7 +50,7 @@ export default () => {
   return (
     <>
       <FieldSet legend="Bilder">
-        <CheckBox
+        <Checkbox
           propertyPath={`slides[${currentSlide}].data.images.onlyOneImage`}
           value={state.slides[currentSlide].data.images.onlyOneImage}
           label="nur ein Bild"
