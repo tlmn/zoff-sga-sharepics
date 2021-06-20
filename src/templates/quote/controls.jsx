@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import BgImage from "../../components/inputs/bgImage";
 import Checkbox from "../../components/inputs/checkbox";
+import ColorThemeSelector from "../../components/inputs/colorThemesSelect";
 import CustomSelect from "../../components/inputs/customSelect";
 import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
@@ -34,6 +35,16 @@ export default () => {
       </FieldSet>
 
       <FieldSet legend="Text">
+        <ColorThemeSelector
+          propertyPath={`slides[${currentSlide}].data.body.options.colorTheme`}
+          colorThemeOptions={[
+            "orange_white",
+            "white_orange",
+            "black_white",
+            "white_black",
+          ]}
+        />
+
         <CustomSelect
           options={state.slides[currentSlide].data.body.options.bodyPositions}
           propertyPath={`slides[${currentSlide}].data.body.bodyPosition`}
