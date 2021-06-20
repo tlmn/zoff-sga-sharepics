@@ -33,17 +33,17 @@ export default () => {
               max: 2,
               lineTemplate: {
                 content: "Neue Textzeile",
-                scale: { value: 50, range: [30, 70] },
+                scale: { value: 50, range: [30, 140] },
               },
             },
             lines: [
               {
                 content: "Open Arms",
-                scale: { value: 100, range: [30, 70] },
+                scale: { value: 100, range: [30, 140] },
               },
               {
                 content: "rettet 120 Menschen",
-                scale: { value: 70, range: [30, 70] },
+                scale: { value: 70, range: [30, 140] },
               },
             ],
           },

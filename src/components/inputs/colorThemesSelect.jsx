@@ -50,7 +50,7 @@ const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
                   getProperty({ state }, propertyPath) ===
                     colorThemes.filter(
                       (theme) => theme.label === colorThemeOption
-                    )[0]?.label && `border-lightGray`
+                    )[0]?.label && `border-turquoise`
                 }`}
               />
             </div>
