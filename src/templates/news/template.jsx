@@ -45,7 +45,6 @@ export default () => {
               >
                 <LogoText
                   fillColor="#fff"
-                  style={{ boxShadow: "0px 4px 4px 0px #00000040" }}
                 />
               </div>
             </div>
