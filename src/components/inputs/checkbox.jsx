@@ -19,9 +19,15 @@ const CheckBox = ({ propertyPath, label = "", disabled = false }) => {
             !getProperty({ state }, propertyPath)
           )
         }
+        style={{ width: "unset", marginBottom: "0 !important" }}
         disabled={disabled}
+        className="mr-1"
       />
-      {label !== "" && <label htmlFor={propertyPath}>{label}</label>}
+      {label !== "" && (
+        <label htmlFor={propertyPath} className="flex-1">
+          {label}
+        </label>
+      )}
     </div>
   );
 };

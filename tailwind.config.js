@@ -1,8 +1,3 @@
-const Color = require("color");
-
-const lighten = (clr, val) => Color(clr).lighten(val).rgb().string();
-const darken = (clr, val) => Color(clr).darken(val).rgb().string();
-
 module.exports = {
   purge: {
     content: [
@@ -18,23 +13,20 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      darkGray: {
-        default: "#252525",
-        lighter: lighten("#252525", 0.8),
-      },
-      lightGray: "#858585",
-      red: "#E2190C",
-      turquoise: { default: "#00FFC2", lighter: darken("#00FFC2", 0.15) },
-      violet: "#C9CEFF",
-      white: "#fff",
-      black: "#000",
+      orange: "#F55511",
+      lightOrange: "#F5B511",
+      turquoise: "#45EEBF",
+      yellow: "#D79E0D",
+      white: "#FFFFFF",
+      black: "#000000",
+      darkGray: "#3E3E3E",
     },
     spacing: {
       0: "0",
       1: "8px",
       2: "20px",
-      3: "40px",
-      4: "80px",
+      3: "50px",
+      4: "90px",
     },
     lineHeight: {
       none: 1,

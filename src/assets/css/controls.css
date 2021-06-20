@@ -2,10 +2,9 @@ input,
 textarea,
 select {
   @apply block;
-  margin-bottom: 1rem !important;
-  padding: 0.8rem !important;
+  @apply mb-1 !important;
+  @apply p-1 !important;
   @apply font-sans;
-  @apply italic;
   @apply font-bold;
   @apply w-full;
 }
@@ -34,23 +33,23 @@ label {
 .btn {
   @apply bg-turquoise;
   @apply uppercase;
-  @apply text-darkGray;
+  @apply text-black;
   @apply font-sans;
   @apply py-1;
   @apply px-2;
-  @apply italic;
   @apply rounded-md;
   @apply transition-all;
   @apply ease-in-out;
   @apply duration-200;
 }
 
-.btn-download {
-  @apply w-full;
+.btn--disabled {
+  @apply bg-darkGray;
+  @apply text-white;
 }
 
-.btn:hover {
-  @apply bg-turquoise-lighter;
+.btn-download {
+  @apply w-full;
 }
 
 h2.controls {

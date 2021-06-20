@@ -1,14 +1,12 @@
 import React from "react";
 
 const LogoText = ({
-  width = 122,
-  height = 65,
+  height = 100,
   fillColor = "#fff",
   hasShadow = false,
   ...props
 }) => (
   <svg
-    width={width}
     height={height}
     viewBox="0 0 122 65"
     fill="none"

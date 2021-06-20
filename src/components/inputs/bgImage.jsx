@@ -2,15 +2,16 @@ import React, { useContext, useRef } from "react";
 import { getProperty, updateProperty } from "../../lib/lib";
 
 import IconReset from "../../assets/svg/reset";
+import IconUpload from "../../assets/svg/upload";
 import TemplateContext from "../templateContext";
 
-export default ({ propertyPath, label = "Hintergrundbild" }) => {
+export default ({ propertyPath, label }) => {
   const [state, setState] = useContext(TemplateContext);
   const inputFileRef = useRef(null);
   return (
     <>
-      <label htmlFor="bgImage__fileName">{label}</label>
-      <div class="flex">
+      {label && <label htmlFor="bgImage__fileName">{label}</label>}
+      <div className="flex">
         <input
           type="file"
           id="bgImage__fileName"
@@ -32,7 +33,7 @@ export default ({ propertyPath, label = "Hintergrundbild" }) => {
           onClick={() => inputFileRef.current.click()}
           className="btn flex justify-center mb-2"
         >
-          Datei auswählen
+          <IconUpload className="mr-1" /> Bild
         </button>
 
         <label htmlFor="bgImage__scale">Zoom</label>

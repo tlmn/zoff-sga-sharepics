@@ -1,5 +1,5 @@
 export const colors = [
-  { name: "darkGray", value: "#252525" },
+  { name: "orange", value: "#F55511" },
   { name: "red", value: "#E2190C" },
   { name: "turquoise", value: "#00FFC2" },
   { name: "violet", value: "#C9CEFF" },
@@ -12,11 +12,11 @@ export const textPositions = [
   { label: "unten", value: "end" },
 ];
 
-export const corporateThemes = [
-  "darkGray_turquoise",
-  "turquoise_darkGray",
-  "violet_red",
-  "red_violet",
+export const colorCombinations = [
+  "orange_white",
+  "white_orange",
+  "black_white",
+  "white_black",
 ];
 
 export const secondaryThemes = [
@@ -28,44 +28,24 @@ export const secondaryThemes = [
 
 export const colorThemes = [
   {
-    label: "darkGray_turquoise",
-    name: "dunkelgrau & türkis",
-    colors: ["darkGray", "turquoise"],
+    label: "orange_white",
+    name: "orange & weiß",
+    colors: ["orange", "white"],
   },
   {
-    label: "turquoise_darkGray",
-    name: "türkis & dunkelgrau",
-    colors: ["turquoise", "darkGray"],
+    label: "white_orange",
+    name: "weiß & orange",
+    colors: ["white", "orange"],
   },
   {
-    label: "violet_red",
-    name: "violett & rot",
-    colors: ["violet", "red"],
+    label: "black_white",
+    name: "schwarz & weiß",
+    colors: ["black", "white"],
   },
   {
-    label: "red_violet",
-    name: "rot & violett",
-    colors: ["red", "violet"],
-  },
-  {
-    label: "darkGray_red",
-    name: "dunkelgrau & rot",
-    colors: ["darkGray", "red"],
-  },
-  {
-    label: "red_darkGray",
-    name: "rot & dunkelgrau",
-    colors: ["red", "darkGray"],
-  },
-  {
-    label: "red_white",
-    name: "rot & weiß",
-    colors: ["red", "white"],
-  },
-  {
-    label: "white_red",
-    name: "weiß & rot",
-    colors: ["white", "red"],
+    label: "white_black",
+    name: "weiß & schwarz",
+    colors: ["white", "black"],
   },
 ];
 

@@ -1,10 +1,13 @@
-import { cloneDeepWith, get, initial, set, size, unset } from "lodash";
-import { colorThemes, colors } from "../config/vars";
+import { cloneDeepWith, get, initial, set } from "lodash";
+import { colorCombinations, colorThemes } from "../config/vars";
 
 import emojiRegex from "emoji-regex";
 import htmlToImage from "html-to-image";
 import { saveAs } from "file-saver";
 import slugify from "react-slugify";
+import { theme } from "../../tailwind.config";
+
+const { colors } = theme;
 
 export const html2image = async ({ state, setState }, fileName = "solid") => {
   setState({ ...state, templateScale: false });
@@ -26,14 +29,13 @@ export const formatEmojis = (text = "") => {
   );
 };
 
-export const getColor = (currentState, order) => {
-  return colors.filter(
-    (color) =>
-      color.name ===
-      colorThemes.filter(
-        (colorTheme) => colorTheme.label === currentState.colorTheme
-      )[0].colors[order]
-  )[0].value;
+export const getColor = (currentColorTheme, order) => {
+  return get(
+    colors,
+    colorThemes.filter(
+      (colorTheme) => colorTheme.label === currentColorTheme
+    )[0]?.colors[order]
+  );
 };
 
 export const getPrimaryColor = (currentState) => {

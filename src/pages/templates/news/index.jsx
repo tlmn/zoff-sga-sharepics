@@ -22,6 +22,7 @@ export default () => {
           },
           body: {
             options: {
+              colorTheme: "orange_white",
               position: "items-center",
               positions: [
                 { value: "items-start", label: "oben" },
@@ -31,20 +32,25 @@ export default () => {
               min: 1,
               max: 2,
               lineTemplate: {
-                content: "Das Problem heißt {Rassismus!}",
+                content: "Neue Textzeile",
                 scale: { value: 50, range: [30, 70] },
               },
             },
             lines: [
               {
-                content: "Das Problem heißt {Rassismus!}",
-                scale: { value: 50, range: [30, 70] },
+                content: "Open Arms",
+                scale: { value: 100, range: [30, 70] },
+              },
+              {
+                content: "rettet 120 Menschen",
+                scale: { value: 70, range: [30, 70] },
               },
             ],
           },
           subline: {
-            content: "Das Problem heißt {Rassismus!}",
-            scale: { value: 100, range: [60, 150] },
+            content: "zuvor 43 ertrunken",
+            colorTheme: "black_white",
+            scale: { value: 50, range: [60, 150] },
           },
           logo: {
             options: {

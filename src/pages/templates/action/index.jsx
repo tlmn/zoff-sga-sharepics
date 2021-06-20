@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 
-import Controls from "../../../templates/quote/controls";
-import Template from "../../../templates/quote/template";
+import Controls from "../../../templates/action/controls";
+import Template from "../../../templates/action/template";
 import TemplateContext from "../../../components/templateContext";
 import TemplateLayout from "../../../components/templateLayout";
 
@@ -11,71 +11,51 @@ export default () => {
     slides: [
       {
         data: {
-          background : {
-            isImage: true,
-          },
-          image: {
-            url: null,
-            position: { x: 0, y: 0 },
-            scale: 0,
-          },
           body: {
             options: {
               colorTheme: "orange_white",
-              bodyPositions: [
-                { value: "self-start", label: "oben" },
-                { value: "self-center", label: "mittig" },
-                { value: "self-end", label: "unten" },
-              ],
-              linePositions: [
-                { value: "self-start text-left", label: "links" },
-                { value: "self-center text-center", label: "mittig" },
-                { value: "self-end text-right", label: "rechts" },
-              ],
               min: 1,
               max: 6,
               lineTemplate: {
                 content: "Neue Textzeile",
                 scale: { value: 70, range: [50, 140] },
-                position: "self-start text-left",
+                isBold: false,
               },
             },
-            bodyPosition: "self-end",
             lines: [
               {
-                content: "Evakuiert",
+                content: "Stadt",
                 scale: {
                   value: 110,
                   range: [50, 140],
                 },
-                position: "self-end text-right",
+                isBold: true,
               },
               {
-                content: "sofort",
+                content: "Zeit",
                 scale: {
                   value: 110,
                   range: [50, 140],
                 },
-                position: "self-center text-center",
+                isBold: true,
               },
               {
-                content: "die Lager!",
+                content: "Veranstaltung",
                 scale: {
                   value: 90,
                   range: [50, 140],
                 },
-                position: "self-end text-right",
+                isBold: true,
+              },
+              {
+                content: "Unterzeilen",
+                scale: {
+                  value: 90,
+                  range: [50, 140],
+                },
+                isBold: false,
               },
             ],
-          },
-          logo: {
-            options: {
-              position: "self-end",
-              positions: [
-                { value: "self-end", label: "rechts" },
-                { value: "self-center", label: "mitte" },
-              ],
-            },
           },
         },
         ref: useRef(null),

@@ -13,8 +13,13 @@ export default ({
 }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
-    <>
-      <label htmlFor={propertyPath}>{label}</label>
+    <div className="flex items-center">
+      {label && (
+        <label htmlFor={propertyPath} style={{ minWidth: "12rem" }}>
+          {label}
+        </label>
+      )}
+
       <select
         type="text"
         value={getProperty({ state }, propertyPath)}
@@ -23,12 +28,13 @@ export default ({
         }
         id={propertyPath}
         disabled={disabled}
+        style={{ minWidth: "10rem", marginBottom: "0 !important" }}
         {...props}
       >
         {options.map((item) => (
           <option value={item.value}>{item.label}</option>
         ))}
       </select>
-    </>
+    </div>
   );
 };

@@ -7,6 +7,7 @@ import TemplateContext from "../../components/templateContext";
 
 export default () => {
   const [state] = useContext(TemplateContext);
+
   return (
     <>
       <div className="col-span-6 relative">
@@ -37,16 +38,15 @@ export default () => {
               <div
                 className={`flex-1 flex ${
                   state.slides[state.currentSlide].data.logo.options
-                    .position === "top-right" && `justify-end items-start`
+                    .position === "top-right" &&
+                  `justify-end items-start mr-3 mt-3`
                 } ${
                   state.slides[state.currentSlide].data.logo.options
-                    .position === "bottom-center" && `justify-center items-end`
+                    .position === "bottom-center" &&
+                  `justify-center items-end mb-3`
                 }`}
               >
-                <LogoText
-                  fillColor="#fff"
-                  hasShadow
-                />
+                <LogoText fillColor="#fff" hasShadow />
               </div>
             </div>
             <div className="flex flex-col w-full h-full absolute top-0 left-0">
@@ -93,10 +93,22 @@ export default () => {
               className={`relative z-10  w-full h-full flex justify-center ${state.slides[0].data.body.options.position}`}
             >
               <div className="w-full">
-                <div className="w-full bg-red py-3">
+                <div
+                  className="w-full py-2"
+                  style={{
+                    backgroundColor: getColor(
+                      state.slides[0].data.body.options.colorTheme,
+                      0
+                    ),
+                    color: getColor(
+                      state.slides[0].data.body.options.colorTheme,
+                      1
+                    ),
+                  }}
+                >
                   {state.slides[0].data.body.lines.map((line) => (
                     <span
-                      className="block text-center font-sans font-bold"
+                      className="block text-center font-sans font-bold px-2"
                       style={{
                         fontSize: `${line.scale.value}px`,
                       }}
@@ -105,7 +117,19 @@ export default () => {
                     </span>
                   ))}
                 </div>
-                <div className={`bg-black text-white`}>
+                <div
+                  className="py-2"
+                  style={{
+                    backgroundColor: getColor(
+                      state.slides[0].data.subline.colorTheme,
+                      0
+                    ),
+                    color: getColor(
+                      state.slides[0].data.subline.colorTheme,
+                      1
+                    ),
+                  }}
+                >
                   <span
                     className="block text-center font-sans font-bold"
                     style={{

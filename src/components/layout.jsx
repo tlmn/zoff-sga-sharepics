@@ -25,7 +25,7 @@ export default ({ children, state }) => {
     <>
       <Helmet
         bodyAttributes={{
-          class: "bg-darkGray-lighter pb-2",
+          class: "bg-darkGray pb-2",
         }}
       >
         <meta charSet="utf-8" />
