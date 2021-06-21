@@ -127,14 +127,16 @@ export default () => {
                     color: getColor(state.slides[0].data.subline.colorTheme, 1),
                   }}
                 >
-                  <span
-                    className="block text-center font-sans font-bold"
-                    style={{
-                      fontSize: `${state.slides[0].data.subline.scale.value}px`,
-                    }}
-                  >
-                    {state.slides[0].data.subline.content}
-                  </span>
+                  {state.slides[0].data.subline.content !== "" && (
+                    <span
+                      className="block text-center font-sans font-bold"
+                      style={{
+                        fontSize: `${state.slides[0].data.subline.scale.value}px`,
+                      }}
+                    >
+                      {state.slides[0].data.subline.content}
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
