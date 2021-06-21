@@ -55,7 +55,7 @@ export default () => {
                         <span
                           className={`font-sans ${
                             line.isBold ? `font-bold` : ``
-                          }`}
+                          } text-center`}
                           style={{
                             fontSize: `${line.scale.value}px`,
                           }}

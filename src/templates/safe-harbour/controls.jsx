@@ -8,11 +8,6 @@ export default () => {
 
   return (
     <>
-      <FieldSet legend="Farbe">
-        
-      </FieldSet>
-
-
       <FieldSet legend="Text">
         <InputRepeater
           propertyPath={`slides[${currentSlide}].data.body`}

@@ -12,3 +12,7 @@
   @apply gap-2;
   @apply grid;
 }
+
+span {
+  line#-height: 1.1;
+}

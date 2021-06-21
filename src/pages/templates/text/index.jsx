@@ -28,7 +28,7 @@ export default () => {
             },
             lines: [
               {
-                content: "Sicherer Hafen",
+                content: "Humanitäre Katastrophe in Bosnien!",
                 scale: {
                   value: 110,
                   range: [50, 140],
@@ -36,12 +36,12 @@ export default () => {
                 isBold: true,
               },
               {
-                content: "Leipzig",
+                content: "#wirhabenplatz",
                 scale: {
-                  value: 110,
+                  value: 80,
                   range: [50, 140],
                 },
-                isBold: true,
+                isBold: false,
               },
             ],
           },

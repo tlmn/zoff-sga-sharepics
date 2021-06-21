@@ -47,6 +47,11 @@ export const colorThemes = [
     name: "weiß & schwarz",
     colors: ["white", "black"],
   },
+  {
+    label: "turquoise_black",
+    name: "türkis & schwarz",
+    colors: ["turquoise", "black"],
+  },
 ];
 
 export const primaryColors = [

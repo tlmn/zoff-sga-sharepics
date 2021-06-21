@@ -23,10 +23,8 @@ input[type="radio"] {
 }
 
 label {
-  @apply italic;
   @apply font-bold;
   @apply text-white;
-  @apply uppercase;
   @apply font-sans;
 }
 
@@ -35,12 +33,19 @@ label {
   @apply uppercase;
   @apply text-black;
   @apply font-sans;
-  @apply py-1;
-  @apply px-2;
-  @apply rounded-md;
+
   @apply transition-all;
   @apply ease-in-out;
   @apply duration-200;
+  @apply font-bold text-small uppercase py-1 px-2 rounded-full inline-block text-center bg-white text-black;
+}
+
+.btn:hover {
+  @apply bg-black text-white;
+}
+
+.btn:hover > svg > path {
+  fill: #fff;
 }
 
 .btn--disabled {

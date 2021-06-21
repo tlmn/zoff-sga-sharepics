@@ -13,7 +13,7 @@ export default () => {
         data: {
           body: {
             options: {
-              colorTheme: "orange_white",
+              colorTheme: "turquoise_black",
               min: 1,
               max: 6,
               lineTemplate: {

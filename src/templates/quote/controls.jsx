@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import BgImage from "../../components/inputs/bgImage";
 import Checkbox from "../../components/inputs/checkbox";
@@ -8,10 +8,21 @@ import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
 import InputRepeater from "../../components/inputs/inputRepeater";
 import TemplateContext from "../../components/templateContext";
+import { updateProperty } from "../../lib/lib";
 
 export default () => {
   const currentSlide = 0;
-  const [state] = useContext(TemplateContext);
+  const [state, setState] = useContext(TemplateContext);
+
+  useEffect(() => {
+    if (state.slides[currentSlide].data.body.options.colorTheme === "orange_white") {
+      updateProperty(
+        { setState },
+        `slides[${currentSlide}].data.body.options.colorTheme`,
+        "white_orange"
+      );
+    }
+  }, [state.slides[currentSlide].data.background.isImage]);
 
   return (
     <>
@@ -38,9 +49,10 @@ export default () => {
         <ColorThemeSelector
           propertyPath={`slides[${currentSlide}].data.body.options.colorTheme`}
           colorThemeOptions={[
-            "orange_white",
+            state.slides[currentSlide].data.background.isImage
+              ? "orange_white"
+              : "",
             "white_orange",
-            "black_white",
             "white_black",
           ]}
         />

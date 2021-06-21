@@ -18,7 +18,7 @@ export default () => {
               <div className="col-span-12 sm:col-span-4 text-center">
                 <Link
                   to={template.link}
-                  className="no-underline hover:underline"
+                  className="no-underline hover:underline text-white"
                 >
                   <span className="block text-base text-white uppercase pb-1">
                     {template.name}

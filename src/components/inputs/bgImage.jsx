@@ -11,7 +11,7 @@ export default ({ propertyPath, label }) => {
   return (
     <>
       {label && <label htmlFor="bgImage__fileName">{label}</label>}
-      <div className="flex">
+      <div className="flex items-center">
         <input
           type="file"
           id="bgImage__fileName"
@@ -36,7 +36,6 @@ export default ({ propertyPath, label }) => {
           <IconUpload className="mr-1" /> Bild
         </button>
 
-        <label htmlFor="bgImage__scale">Zoom</label>
         <input
           type="range"
           id="bgImage__scale"
