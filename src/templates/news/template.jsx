@@ -117,17 +117,20 @@ export default () => {
                     </span>
                   ))}
                 </div>
-                <div
-                  className="py-2"
-                  style={{
-                    backgroundColor: getColor(
-                      state.slides[0].data.subline.colorTheme,
-                      0
-                    ),
-                    color: getColor(state.slides[0].data.subline.colorTheme, 1),
-                  }}
-                >
-                  {state.slides[0].data.subline.content !== "" && (
+                {state.slides[0].data.subline.content !== "" && (
+                  <div
+                    className="py-2"
+                    style={{
+                      backgroundColor: getColor(
+                        state.slides[0].data.subline.colorTheme,
+                        0
+                      ),
+                      color: getColor(
+                        state.slides[0].data.subline.colorTheme,
+                        1
+                      ),
+                    }}
+                  >
                     <span
                       className="block text-center font-sans font-bold"
                       style={{
@@ -136,8 +139,8 @@ export default () => {
                     >
                       {state.slides[0].data.subline.content}
                     </span>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
