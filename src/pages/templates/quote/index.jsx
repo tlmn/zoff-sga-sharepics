@@ -70,7 +70,7 @@ export default () => {
           },
           logo: {
             options: {
-              position: "self-end",
+              position: "self-center",
               positions: [
                 { value: "self-end", label: "rechts" },
                 { value: "self-center", label: "mitte" },
