@@ -22,9 +22,9 @@ export default ({
 
       <select
         type="text"
-        value={getProperty({ state }, propertyPath)}
+        value={JSON.stringify(getProperty({ state }, propertyPath))}
         onChange={(e) =>
-          updateProperty({ setState }, propertyPath, e.target.value)
+          updateProperty({ setState }, propertyPath, JSON.parse(e.target.value))
         }
         id={propertyPath}
         disabled={disabled}
@@ -32,7 +32,7 @@ export default ({
         {...props}
       >
         {options.map((item) => (
-          <option value={item.value}>{item.label}</option>
+          <option value={JSON.stringify(item.value)}>{item.label}</option>
         ))}
       </select>
     </div>
