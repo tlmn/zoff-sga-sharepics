@@ -11,10 +11,14 @@ export default () => {
     <>
       <div className="col-span-6 relative">
         <div
-          className={`flex flex-col absolute // border-1 // template ${
+          className={`flex flex-col absolute // border-1 // ${
             state.templateScale ? `template-scale` : `relative`
           } text-lg`}
           ref={state.slides[state.currentSlide].ref}
+          style={{
+            width: `${state.slides[state.currentSlide].dimensions.width}px`,
+            height: `${state.slides[state.currentSlide].dimensions.height}px`,
+          }}
         >
           {state.slides[0].data.background.isImage ? (
             <>

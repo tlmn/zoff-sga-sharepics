@@ -10,8 +10,9 @@ export default () => {
     currentSlide: 0,
     slides: [
       {
+        dimensions: { width: 1080, height: 1080 },
         data: {
-          background : {
+          background: {
             isImage: true,
           },
           image: {

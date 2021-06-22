@@ -1,8 +1,3 @@
-.template {
-  width: 1080px;
-  height: 1080px;
-}
-
 .template-scale {
   transform: scale(0.5) translate(-50%, -50%);
 }
