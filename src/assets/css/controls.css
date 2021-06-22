@@ -9,6 +9,10 @@ select {
   @apply w-full;
 }
 
+fieldset:first-of-type {
+  margin-top: 0;
+}
+
 input[type="file"] {
   padding: 0 !important;
   @apply text-white;
