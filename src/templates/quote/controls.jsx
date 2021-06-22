@@ -15,7 +15,9 @@ export default () => {
   const [state, setState] = useContext(TemplateContext);
 
   useEffect(() => {
-    if (state.slides[currentSlide].data.body.options.colorTheme === "orange_white") {
+    if (
+      state.slides[currentSlide].data.body.options.colorTheme === "orange_white"
+    ) {
       updateProperty(
         { setState },
         `slides[${currentSlide}].data.body.options.colorTheme`,
@@ -26,6 +28,15 @@ export default () => {
 
   return (
     <>
+      <FieldSet legend="Format">
+        <CustomSelect
+          options={[
+            { value: { width: 1080, height: 1920 }, label: "Instagram Story" },
+            { value: { width: 1080, height: 1080 }, label: "1:1" },
+          ]}
+          propertyPath={`slides[${currentSlide}].dimensions`}
+        />
+      </FieldSet>
       <FieldSet legend="Hintergrund">
         <Checkbox
           propertyPath={`slides[${currentSlide}].data.background.isImage`}
