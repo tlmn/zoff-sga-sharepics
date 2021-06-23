@@ -10,7 +10,7 @@ export default () => {
         <div className="container py-2">
           <div className="mx-auto grid grid-cols-12 col-gap-4 row-gap-2 py-5">
             <div className="col-span-12 text-center">
-              <h1 className="text-xl text-turquoise uppercase leading-tight font-bold">
+              <h1 className="text-xl text-white leading-tight font-bold">
                 Sharepic Generator <br /> Seebrücke
               </h1>
             </div>
