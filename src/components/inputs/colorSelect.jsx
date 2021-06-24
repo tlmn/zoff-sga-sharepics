@@ -3,16 +3,12 @@ import React, { useContext } from "react";
 import TemplateContext from "../templateContext";
 import { primaryColors } from "../../config/vars";
 
-export default () => {
+export default ({colorOptions=["orange", "black"]}) => {
   const [state, setState] = useContext(TemplateContext);
 
   return (
     <>
-      <div className="uppercase font-sans italic text-white">
-        Corporate Design
-      </div>
-      <div className="grid-cols-2 grid">
-        {primaryColors.map((primaryColor) => (
+        {colorOptions.map((primaryColor) => (
           <div className="col-span-1">
             <input
               type="radio"

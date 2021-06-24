@@ -30,6 +30,7 @@ export default ({
         disabled={disabled}
         style={{ minWidth: "10rem", marginBottom: "0 !important" }}
         {...props}
+        className="bg-lightGray"
       >
         {options.map((item) => (
           <option value={JSON.stringify(item.value)}>{item.label}</option>

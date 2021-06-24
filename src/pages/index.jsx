@@ -10,17 +10,17 @@ export default () => {
         <div className="container py-2">
           <div className="mx-auto grid grid-cols-12 col-gap-4 row-gap-2 py-5">
             <div className="col-span-12 text-center">
-              <h1 className="text-xl text-white leading-tight font-bold">
-                Sharepic Generator <br /> Seebrücke
+              <h1 className="text-lg text-white leading-tight font-bold">
+                Sharepic Generator Seebrücke
               </h1>
             </div>
             {templates.map((template) => (
               <div className="col-span-12 sm:col-span-4 text-center">
                 <Link
                   to={template.link}
-                  className="no-underline hover:underline text-white font-bold"
+                  className="no-underline hover:text-lightGray text-white font-bold"
                 >
-                  <span className="block text-base text-white uppercase pb-1">
+                  <span className="block text-base uppercase pb-1">
                     {template.name}
                   </span>
                   <img

@@ -96,7 +96,7 @@ export default () => {
 
       <FieldSet legend="Text">
         <ColorThemeSelector
-          colorThemeOptions={["black_white", "orange_white"]}
+          colorThemeOptions={["orange_white", "black_white"]}
           propertyPath={`slides[${currentSlide}].data.body.options.colorTheme`}
         />
 
@@ -111,12 +111,12 @@ export default () => {
 
       <FieldSet legend="Unterzeile">
         <ColorThemeSelector
-          colorThemeOptions={[ "white_black", "black_white"]}
+          colorThemeOptions={["white_black", "black_white"]}
           propertyPath={`slides[${currentSlide}].data.subline.colorTheme`}
         />
 
         <Input propertyPath={`slides[${currentSlide}].data.subline.content`} />
-        
+
         <TextScale
           propertyPath={`slides[${currentSlide}].data.subline.scale`}
         />

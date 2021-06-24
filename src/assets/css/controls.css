@@ -27,7 +27,7 @@ input[type="radio"] {
 }
 
 label {
-  @apply font-bold;
+  @apply font-normal;
   @apply text-white;
   @apply font-sans;
 }
@@ -41,7 +41,7 @@ label {
   @apply transition-all;
   @apply ease-in-out;
   @apply duration-200;
-  @apply font-bold text-small uppercase py-1 px-2 rounded-full inline-block text-center bg-white text-black;
+  @apply font-normal text-small uppercase py-1 px-2 rounded-full inline-block text-center bg-white text-black;
 }
 
 .btn:hover {
@@ -58,7 +58,8 @@ label {
 }
 
 .btn-download {
-  @apply w-full;
+  @apply font-bold !important;
+  @apply text-base;
 }
 
 h2.controls {
@@ -79,4 +80,9 @@ h2.controls {
 
 .colorThumbnail:hover {
   @apply opacity-75;
+}
+
+.font-bold {
+  letter-spacing: 0.02em;
+  font-weight: 700;
 }

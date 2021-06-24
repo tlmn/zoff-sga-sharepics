@@ -11,7 +11,7 @@ export default ({ propertyPath, label }) => {
   return (
     <>
       {label && <label htmlFor="bgImage__fileName">{label}</label>}
-      <div className="flex items-center">
+      <div className="flex items-center gap-1">
         <input
           type="file"
           id="bgImage__fileName"
@@ -31,7 +31,7 @@ export default ({ propertyPath, label }) => {
         <button
           type="button"
           onClick={() => inputFileRef.current.click()}
-          className="btn flex justify-center mb-2"
+          className="btn flex justify-center"
         >
           <IconUpload className="mr-1" /> Bild
         </button>
@@ -50,10 +50,11 @@ export default ({ propertyPath, label }) => {
               e.target.value
             )
           }
+          style={{ margin: "0 !important", padding: "0 !important" }}
         />
 
         <button
-          className="btn flex justify-center mb-2"
+          className="btn flex justify-center"
           onClick={() =>
             updateProperty({ setState }, `${propertyPath}.position`, {
               x: 0,

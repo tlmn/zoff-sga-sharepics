@@ -8,7 +8,7 @@ const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
   const [state, setState] = useContext(TemplateContext);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mb-2">
       {colorThemeOptions.map(
         (colorThemeOption) =>
           colorThemeOption !== "" && (

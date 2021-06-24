@@ -11,6 +11,7 @@ export default () => {
     slides: [
       {
         dimensions: { width: 1080, height: 1080 },
+        scaleFactor: 0,
         data: {
           background: {
             isImage: true,

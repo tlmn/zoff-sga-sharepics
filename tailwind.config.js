@@ -20,6 +20,7 @@ module.exports = {
       white: "#FFFFFF",
       black: "#000000",
       darkGray: "#3E3E3E",
+      lightGray: "#D7D7D7",
     },
     spacing: {
       0: "0",

@@ -14,8 +14,8 @@ export const html2image = async ({ state, setState }, fileName = "solid") => {
   htmlToImage
     .toJpeg(state.slides[state.currentSlide].ref.current, {
       quality: 1,
-      width: 1080,
-      height: 1080,
+      width: state.slides[state.currentSlide].dimensions.width,
+      height: state.slides[state.currentSlide].dimensions.height,
     })
     .then(function (blob) {
       saveAs(blob, `sharepic-${slugify(fileName.substring)}`);
@@ -69,4 +69,18 @@ export const removeProperty = ({ setState }, path) => {
 
 export const getProperty = ({ state }, path) => {
   return get(state, path);
+};
+
+export const calcTemplateScale = ({ state }) => {
+  console.log(state.slides[state.currentSlide].ref.current.clientWidth);
+  return {
+    transform:
+      state.templateScale &&
+      state.slides[state.currentSlide].ref.current !== null
+        ? `scale(${
+            state.slides[state.currentSlide].ref.current.clientWidth /
+            state.slides[state.currentSlide].dimensions.width
+          }) translate(-50%, -50%)`
+        : ``,
+  };
 };

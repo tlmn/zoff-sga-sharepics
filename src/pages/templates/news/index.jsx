@@ -31,27 +31,27 @@ export default () => {
                 { value: "items-end", label: "unten" },
               ],
               min: 1,
-              max: 2,
+              max: 3,
               lineTemplate: {
                 content: "Neue Textzeile",
-                scale: { value: 50, range: [30, 140] },
+                scale: { value: 50, range: [60, 140] },
               },
             },
             lines: [
               {
                 content: "Open Arms",
-                scale: { value: 100, range: [30, 140] },
+                scale: { value: 100, range: [60, 200] },
               },
               {
                 content: "rettet 120 Menschen",
-                scale: { value: 70, range: [30, 140] },
+                scale: { value: 70, range: [60, 140] },
               },
             ],
           },
           subline: {
             content: "zuvor 43 ertrunken",
-            colorTheme: "black_white",
-            scale: { value: 50, range: [60, 150] },
+            colorTheme: "white_black",
+            scale: { value: 50, range: [40, 90] },
           },
           logo: {
             options: {
@@ -75,7 +75,7 @@ export default () => {
         <div className="col-span-6">
           <Template />
         </div>
-        <div className="col-span-6">
+        <div className="col-span-6 mb-4">
           <Controls />
         </div>
       </TemplateLayout>

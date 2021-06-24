@@ -15,6 +15,8 @@ export default ({ propertyPath, label, ...props }) => {
           updateProperty({ setState }, propertyPath, e.target.value)
         }
         id={propertyPath}
+        className="font-normal"
+        style={{ boxShadow: "inset 2px 2px 6px -1px rgba(0,0,0,0.4)" }}
         {...props}
       />
     </>
