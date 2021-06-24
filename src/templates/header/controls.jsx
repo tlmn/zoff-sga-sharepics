@@ -1,4 +1,5 @@
 import Checkbox from "../../components/inputs/checkbox";
+import ControlsWrapper from "../../components/controlsWrapper";
 import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
 import Input from "../../components/inputs/input";
@@ -12,7 +13,7 @@ export default () => {
   const [state] = useContext(TemplateContext);
 
   return (
-    <>
+    <ControlsWrapper>
       <FieldSet legend="Logo">
         <Checkbox
           propertyPath={`slides[${currentSlide}].data.logo.show`}
@@ -36,6 +37,6 @@ export default () => {
       <DownloadButton
         fileNamePath={`slides[${currentSlide}].data.body.content`}
       />
-    </>
+    </ControlsWrapper>
   );
 };

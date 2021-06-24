@@ -5,7 +5,10 @@ select {
   @apply mb-1 !important;
   @apply p-1 !important;
   @apply font-sans;
-  @apply font-bold;
+  @apply w-full;
+}
+
+fieldset {
   @apply w-full;
 }
 
@@ -21,6 +24,12 @@ input[type="file"] {
 input[type="radio"] {
   display: none;
 }
+
+input[type="range"] {
+  @apply mb-0 !important;
+  @apply p-0 !important;
+}
+
 
 .label__radio {
   @apply cursor-pointer;

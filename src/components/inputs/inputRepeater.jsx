@@ -33,6 +33,7 @@ const InputRepeater = ({
             <TextScale
               propertyPath={`${propertyPath}.lines[${index}].scale`}
               label=""
+              className="mr-2"
             />
             {selectPosition && (
               <CustomSelect

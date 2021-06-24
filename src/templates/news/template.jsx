@@ -9,7 +9,7 @@ export default () => {
   const [state] = useContext(TemplateContext);
 
   return (
-    <div className="col-span-6 sticky" style={{ top: "2rem" }}>
+    <div className="col-span-6 sticky" style={{ top: "1rem" }}>
       <div
         className={`flex flex-col absolute // border-1 // ${
           state.templateScale ? `template-scale` : `relative`

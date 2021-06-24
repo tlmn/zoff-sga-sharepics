@@ -3,7 +3,7 @@ import { getProperty, updateProperty } from "../../lib/lib";
 
 import TemplateContext from "../templateContext";
 
-export default ({ propertyPath, label = "Textgröße" }) => {
+export default ({ propertyPath, label = "Textgröße", ...props }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <>
@@ -21,6 +21,7 @@ export default ({ propertyPath, label = "Textgröße" }) => {
         onChange={(e) =>
           updateProperty({ setState }, `${propertyPath}.value`, e.target.value)
         }
+        {...props}
       />
     </>
   );

@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import BgImage from "../../components/inputs/bgImage";
 import Checkbox from "../../components/inputs/checkbox";
 import ColorThemeSelector from "../../components/inputs/colorThemesSelect";
+import ControlsWrapper from "../../components/controlsWrapper";
 import CustomSelect from "../../components/inputs/customSelect";
 import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
@@ -49,7 +50,7 @@ export default () => {
   }, [state.slides[currentSlide].data.body.options.position]);
 
   return (
-    <>
+    <ControlsWrapper>
       <FieldSet legend="Bilder">
         <Checkbox
           propertyPath={`slides[${currentSlide}].data.images.onlyOneImage`}
@@ -110,7 +111,7 @@ export default () => {
       </FieldSet>
       {state.slides[currentSlide].data.body.options.position !==
         "items-start" &&
-        (state.slides[currentSlide].data.body.options.position !==
+        state.slides[currentSlide].data.body.options.position !==
           "items-end" && (
           <FieldSet legend="Text 2. Farbe">
             <ColorThemeSelector
@@ -129,10 +130,10 @@ export default () => {
               />
             </div>
           </FieldSet>
-        ))}
+        )}
       <DownloadButton
         fileNamePath={`slides[${currentSlide}].data.body.content`}
       />
-    </>
+    </ControlsWrapper>
   );
 };

@@ -11,7 +11,7 @@ export default () => {
       <div className="col-span-6 relative">
         <div
           className={`flex flex-col absolute // border-1 // ${
-            state.templateScale ? `template-scale` : `relative`
+            state.templateScale ? `template-scale--header` : `relative`
           } text-lg`}
           ref={state.slides[state.currentSlide].ref}
           style={{
@@ -59,7 +59,7 @@ export default () => {
                         <span
                           className={`font-sans ${
                             line.isBold ? `font-bold` : ``
-                          } text-center`}
+                          } text-center leading-tight`}
                           style={{
                             fontSize: `${line.scale.value}px`,
                           }}

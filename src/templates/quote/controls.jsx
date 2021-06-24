@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import BgImage from "../../components/inputs/bgImage";
 import Checkbox from "../../components/inputs/checkbox";
 import ColorThemeSelector from "../../components/inputs/colorThemesSelect";
+import ControlsWrapper from "../../components/controlsWrapper";
 import CustomSelect from "../../components/inputs/customSelect";
 import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
@@ -27,7 +28,7 @@ export default () => {
   }, [state.slides[currentSlide].data.background.isImage]);
 
   return (
-    <>
+    <ControlsWrapper>
       <FieldSet legend="Format">
         <CustomSelect
           options={[
@@ -86,6 +87,6 @@ export default () => {
       <DownloadButton
         fileNamePath={`slides[${currentSlide}].data.body.content`}
       />
-    </>
+    </ControlsWrapper>
   );
 };

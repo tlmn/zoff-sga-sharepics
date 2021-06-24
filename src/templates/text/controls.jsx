@@ -32,7 +32,6 @@ export default () => {
           propertyPath={`slides[${currentSlide}].data.body.options.colorTheme`}
           colorThemeOptions={["orange_white", "black_white"]}
         />
-        ƒ
         <InputRepeater
           propertyPath={`slides[${currentSlide}].data.body`}
           selectBold

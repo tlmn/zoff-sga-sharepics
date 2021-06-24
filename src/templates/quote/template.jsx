@@ -9,25 +9,26 @@ export default () => {
   const [state] = useContext(TemplateContext);
 
   return (
-    <div className="col-span-6 sticky" style={{ top: "2rem" }}>
+    <div className="col-span-6 sticky" style={{ top: "1rem" }}>
       <div
-        className={`flex flex-col absolute // border-1 // ${
+        className={`flex flex-col // border-1 // absolute ${
           state.templateScale &&
           state.slides[state.currentSlide].dimensions.height === 1080
             ? `template-scale`
-            : `relative`
+            : ``
         } 
         ${
           state.templateScale &&
           state.slides[state.currentSlide].dimensions.height !== 1080
             ? `template-scale--insta`
-            : `relative`
+            : ``
         }
-        ${!state.templateScale ? `` : `relative`} text-lg`}
+        text-lg`}
         ref={state.slides[state.currentSlide].ref}
         style={{
           width: `${state.slides[state.currentSlide].dimensions.width}px`,
           height: `${state.slides[state.currentSlide].dimensions.height}px`,
+          top: "2rem",
         }}
       >
         {state.slides[0].data.background.isImage ? (

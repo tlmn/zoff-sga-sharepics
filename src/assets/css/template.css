@@ -6,10 +6,13 @@
   transform: scale(0.3) translate(-89%, -114%);
 }
 
+.template-scale--header {
+  transform: scale(0.35) translate(-92%, -86%);
+}
+
 .is-thumbnail {
   transform: scale(0.1);
   transform-origin: 0 0;
   width: 9rem;
   height: 9rem;
 }
-
