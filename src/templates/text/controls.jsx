@@ -1,4 +1,5 @@
 import Checkbox from "../../components/inputs/checkbox";
+import ColorThemeSelector from "../../components/inputs/colorThemesSelect";
 import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
 import Input from "../../components/inputs/input";
@@ -27,6 +28,11 @@ export default () => {
       </FieldSet>
 
       <FieldSet legend="Text">
+        <ColorThemeSelector
+          propertyPath={`slides[${currentSlide}].data.body.options.colorTheme`}
+          colorThemeOptions={["orange_white", "black_white"]}
+        />
+        ƒ
         <InputRepeater
           propertyPath={`slides[${currentSlide}].data.body`}
           selectBold

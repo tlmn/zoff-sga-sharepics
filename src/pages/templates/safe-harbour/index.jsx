@@ -15,8 +15,8 @@ export default () => {
           body: {
             options: {
               colorTheme: "orange_white",
-              min: 1,
-              max: 3,
+              min: 3,
+              max: 4,
               lineTemplate: {
                 content: "Neue Textzeile",
                 scale: { value: 70, range: [50, 140] },
@@ -24,17 +24,24 @@ export default () => {
             },
             lines: [
               {
-                content: "Sicherer Hafen",
+                content: "Sicherer ",
                 scale: {
-                  value: 110,
-                  range: [50, 140],
+                  value: 90,
+                  range: [70, 115],
+                },
+              },
+              {
+                content: "Hafen",
+                scale: {
+                  value: 90,
+                  range: [70, 115],
                 },
               },
               {
                 content: "Leipzig",
                 scale: {
-                  value: 110,
-                  range: [50, 140],
+                  value: 200,
+                  range: [160, 220],
                 },
               },
             ],

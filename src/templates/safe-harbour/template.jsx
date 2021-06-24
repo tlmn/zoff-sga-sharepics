@@ -34,7 +34,7 @@ export default () => {
                   (line) =>
                     line.content !== "" && (
                       <span
-                        className="font-sans font-bold text-center"
+                        className="font-sans font-bold text-center leading-tight"
                         style={{
                           fontSize: `${line.scale.value}px`,
                         }}

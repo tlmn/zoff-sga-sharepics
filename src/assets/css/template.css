@@ -2,6 +2,10 @@
   transform: scale(0.5) translate(-50%, -50%);
 }
 
+.template-scale--insta {
+  transform: scale(0.3) translate(-89%, -114%);
+}
+
 .is-thumbnail {
   transform: scale(0.1);
   transform-origin: 0 0;

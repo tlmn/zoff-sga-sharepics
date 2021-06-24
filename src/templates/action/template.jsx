@@ -29,14 +29,14 @@ export default () => {
         >
           <div className="flex-1 flex">
             <div className={`flex w-full items-center`}>
-              <div className="flex flex-col w-full items-center">
+              <div className="flex flex-col w-full items-center p-3">
                 {state.slides[state.currentSlide].data.body.lines.map(
                   (line) =>
                     line.content !== "" && (
                       <span
                         className={`font-sans ${
                           line.isBold ? `font-bold` : ``
-                        }`}
+                        } leading-tight text-center`}
                         style={{
                           fontSize: `${line.scale.value}px`,
                           backgroundColor: getColor(

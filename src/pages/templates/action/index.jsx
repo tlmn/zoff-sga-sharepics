@@ -27,21 +27,21 @@ export default () => {
               {
                 content: "Stadt",
                 scale: {
-                  value: 110,
-                  range: [50, 140],
+                  value: 150,
+                  range: [120, 220],
                 },
                 isBold: true,
               },
               {
-                content: "Zeit",
+                content: "30. Januar 2021",
                 scale: {
-                  value: 110,
-                  range: [50, 140],
+                  value: 90,
+                  range: [70, 100],
                 },
                 isBold: true,
               },
               {
-                content: "Veranstaltung",
+                content: "Demo",
                 scale: {
                   value: 90,
                   range: [50, 140],
@@ -49,10 +49,10 @@ export default () => {
                 isBold: true,
               },
               {
-                content: "Unterzeilen",
+                content: "#wirhabenplatz",
                 scale: {
-                  value: 90,
-                  range: [50, 140],
+                  value: 50,
+                  range: [40, 65],
                 },
                 isBold: false,
               },

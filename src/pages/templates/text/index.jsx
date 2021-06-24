@@ -32,15 +32,15 @@ export default () => {
                 content: "Humanitäre Katastrophe in Bosnien!",
                 scale: {
                   value: 110,
-                  range: [50, 140],
+                  range: [80, 300],
                 },
                 isBold: true,
               },
               {
                 content: "#wirhabenplatz",
                 scale: {
-                  value: 80,
-                  range: [50, 140],
+                  value: 70,
+                  range: [50, 100],
                 },
                 isBold: false,
               },

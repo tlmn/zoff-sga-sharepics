@@ -28,28 +28,6 @@ export default () => {
               ),
             }}
           >
-            {state.slides[0].data.logo.show && (
-              <div className="flex flex-col justify-center items-center bg-orange p-3">
-                <LogoText fillColor="#fff" />
-                {state.slides[0].data.logo.branch !== "" && (
-                  <span
-                    style={{
-                      backgroundColor: getColor(
-                        state.slides[0].data.body.options.colorTheme,
-                        1
-                      ),
-                      color: getColor(
-                        state.slides[0].data.body.options.colorTheme,
-                        0
-                      ),
-                    }}
-                    className="px-2 text-md"
-                  >
-                    {state.slides[0].data.logo.branch}
-                  </span>
-                )}
-              </div>
-            )}
             <div className="flex-1 flex px-3 text-white">
               <div className={`flex w-full items-center`}>
                 <div className="flex flex-col w-full items-center">
@@ -59,7 +37,7 @@ export default () => {
                         <span
                           className={`font-sans ${
                             line.isBold ? `font-bold` : ``
-                          } text-center`}
+                          } text-center leading-tight`}
                           style={{
                             fontSize: `${line.scale.value}px`,
                           }}
@@ -71,6 +49,29 @@ export default () => {
                 </div>
               </div>
             </div>
+            {state.slides[0].data.logo.show && (
+              <div className="flex flex-col justify-center items-center p-3 mb-2">
+                <LogoText fillColor="#fff" hasShadow />
+                {state.slides[0].data.logo.branch !== "" && (
+                  <span
+                    style={{
+                      backgroundColor: getColor(
+                        state.slides[0].data.body.options.colorTheme,
+                        1
+                      ),
+                      color: getColor(
+                        state.slides[0].data.body.options.colorTheme,
+                        0
+                      ),
+                      boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+                    }}
+                    className="px-2 text-md tracking-wider"
+                  >
+                    {state.slides[0].data.logo.branch}
+                  </span>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

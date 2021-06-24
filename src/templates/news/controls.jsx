@@ -94,7 +94,7 @@ export default () => {
         />
       </FieldSet>
 
-      <FieldSet legend="Text">
+      <FieldSet legend="Text 1. Farbe">
         <ColorThemeSelector
           colorThemeOptions={["orange_white", "black_white"]}
           propertyPath={`slides[${currentSlide}].data.body.options.colorTheme`}
@@ -108,20 +108,28 @@ export default () => {
 
         <InputRepeater propertyPath={`slides[${currentSlide}].data.body`} />
       </FieldSet>
+      {state.slides[currentSlide].data.body.options.position !==
+        "items-start" &&
+        (state.slides[currentSlide].data.body.options.position !==
+          "items-end" && (
+          <FieldSet legend="Text 2. Farbe">
+            <ColorThemeSelector
+              colorThemeOptions={["white_black", "black_white"]}
+              propertyPath={`slides[${currentSlide}].data.subline.colorTheme`}
+            />
+            <div className="flex">
+              <Input
+                propertyPath={`slides[${currentSlide}].data.subline.content`}
+                className="mr-2"
+              />
 
-      <FieldSet legend="Unterzeile">
-        <ColorThemeSelector
-          colorThemeOptions={["white_black", "black_white"]}
-          propertyPath={`slides[${currentSlide}].data.subline.colorTheme`}
-        />
-
-        <Input propertyPath={`slides[${currentSlide}].data.subline.content`} />
-
-        <TextScale
-          propertyPath={`slides[${currentSlide}].data.subline.scale`}
-        />
-      </FieldSet>
-
+              <TextScale
+                propertyPath={`slides[${currentSlide}].data.subline.scale`}
+                label=""
+              />
+            </div>
+          </FieldSet>
+        ))}
       <DownloadButton
         fileNamePath={`slides[${currentSlide}].data.body.content`}
       />

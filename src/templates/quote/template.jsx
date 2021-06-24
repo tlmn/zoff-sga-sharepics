@@ -12,8 +12,18 @@ export default () => {
     <div className="col-span-6 sticky" style={{ top: "2rem" }}>
       <div
         className={`flex flex-col absolute // border-1 // ${
-          state.templateScale ? `template-scale` : `relative`
-        } text-lg`}
+          state.templateScale &&
+          state.slides[state.currentSlide].dimensions.height === 1080
+            ? `template-scale`
+            : `relative`
+        } 
+        ${
+          state.templateScale &&
+          state.slides[state.currentSlide].dimensions.height !== 1080
+            ? `template-scale--insta`
+            : `relative`
+        }
+        ${!state.templateScale ? `` : `relative`} text-lg`}
         ref={state.slides[state.currentSlide].ref}
         style={{
           width: `${state.slides[state.currentSlide].dimensions.width}px`,

@@ -95,7 +95,14 @@ export default () => {
           >
             <div className="w-full">
               <div
-                className="w-full py-2"
+                className={`w-full ${
+                  state.slides[0].data.body.options.position !==
+                    "items-start" &&
+                  state.slides[0].data.body.options.position !==
+                    "items-end"
+                    ? `py-2`
+                    : `py-3`
+                }`}
                 style={{
                   backgroundColor: getColor(
                     state.slides[0].data.body.options.colorTheme,
@@ -118,27 +125,32 @@ export default () => {
                   </span>
                 ))}
               </div>
-              {state.slides[0].data.subline.content !== "" && (
-                <div
-                  className="py-2"
-                  style={{
-                    backgroundColor: getColor(
-                      state.slides[0].data.subline.colorTheme,
-                      0
-                    ),
-                    color: getColor(state.slides[0].data.subline.colorTheme, 1),
-                  }}
-                >
-                  <span
-                    className="block text-center font-sans font-bold leading-tight"
+              {state.slides[0].data.subline.content !== "" &&
+                state.slides[0].data.body.options.position !== "items-start" &&
+                state.slides[0].data.body.options.position !== "items-end" && (
+                  <div
+                    className="py-2"
                     style={{
-                      fontSize: `${state.slides[0].data.subline.scale.value}px`,
+                      backgroundColor: getColor(
+                        state.slides[0].data.subline.colorTheme,
+                        0
+                      ),
+                      color: getColor(
+                        state.slides[0].data.subline.colorTheme,
+                        1
+                      ),
                     }}
                   >
-                    {state.slides[0].data.subline.content}
-                  </span>
-                </div>
-              )}
+                    <span
+                      className="block text-center font-sans font-bold leading-tight"
+                      style={{
+                        fontSize: `${state.slides[0].data.subline.scale.value}px`,
+                      }}
+                    >
+                      {state.slides[0].data.subline.content}
+                    </span>
+                  </div>
+                )}
             </div>
           </div>
         </div>

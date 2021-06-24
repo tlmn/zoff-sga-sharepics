@@ -47,7 +47,7 @@ export default () => {
               {
                 content: "Evakuiert",
                 scale: {
-                  value: 110,
+                  value: 100,
                   range: [50, 140],
                 },
                 position: "self-end text-right",
@@ -55,7 +55,7 @@ export default () => {
               {
                 content: "sofort",
                 scale: {
-                  value: 110,
+                  value: 100,
                   range: [50, 140],
                 },
                 position: "self-center text-center",
@@ -63,7 +63,7 @@ export default () => {
               {
                 content: "die Lager!",
                 scale: {
-                  value: 90,
+                  value: 100,
                   range: [50, 140],
                 },
                 position: "self-end text-right",
