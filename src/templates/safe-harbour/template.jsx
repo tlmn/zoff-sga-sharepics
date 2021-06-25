@@ -46,7 +46,7 @@ export default () => {
               </div>
             </div>
           </div>
-          <div className="mt-3 flex justify-center bg-orange p-3">
+          <div className="flex justify-center bg-orange p-3">
             <LogoText fillColor="#fff" />
           </div>
         </div>
