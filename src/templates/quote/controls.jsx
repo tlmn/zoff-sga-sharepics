@@ -14,6 +14,15 @@ import { updateProperty } from "../../lib/lib";
 export default () => {
   const currentSlide = 0;
   const [state, setState] = useContext(TemplateContext);
+  const {
+    slides: {
+      0: {
+        data: {
+          background: { isImage },
+        },
+      },
+    },
+  } = state;
 
   useEffect(() => {
     if (
@@ -25,7 +34,7 @@ export default () => {
         "white_orange"
       );
     }
-  }, [state.slides[currentSlide].data.background.isImage]);
+  }, [isImage]);
 
   return (
     <ControlsWrapper>

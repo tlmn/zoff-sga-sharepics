@@ -33,22 +33,26 @@ export default () => {
               min: 1,
               max: 3,
               lineTemplate: {
+                inputType: "input",
                 content: "Neue Textzeile",
                 scale: { value: 50, range: [60, 140] },
               },
             },
             lines: [
               {
+                inputType: "input",
                 content: "Open Arms",
                 scale: { value: 100, range: [60, 200] },
               },
               {
+                inputType: "input",
                 content: "rettet 120 Menschen",
                 scale: { value: 70, range: [60, 140] },
               },
             ],
           },
           subline: {
+            inputType: "input",
             content: "zuvor 43 ertrunken",
             colorTheme: "white_black",
             scale: { value: 50, range: [40, 90] },

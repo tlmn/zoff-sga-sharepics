@@ -18,12 +18,14 @@ export default () => {
               min: 3,
               max: 4,
               lineTemplate: {
+                inputType: "input",
                 content: "Neue Textzeile",
                 scale: { value: 70, range: [50, 140] },
               },
             },
             lines: [
               {
+                inputType: "input",
                 content: "Sicherer ",
                 scale: {
                   value: 90,
@@ -31,6 +33,7 @@ export default () => {
                 },
               },
               {
+                inputType: "input",
                 content: "Hafen",
                 scale: {
                   value: 90,
@@ -38,6 +41,7 @@ export default () => {
                 },
               },
               {
+                inputType: "input",
                 content: "Leipzig",
                 scale: {
                   value: 200,

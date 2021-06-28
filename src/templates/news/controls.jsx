@@ -17,6 +17,18 @@ export default () => {
   const currentSlide = 0;
   const [state, setState] = useContext(TemplateContext);
 
+  const {
+    slides: {
+      0: {
+        data: {
+          body: {
+            options: { position },
+          },
+        },
+      },
+    },
+  } = state;
+
   useEffect(() => {
     if (
       state.slides[currentSlide].data.body.options.position === "items-start"
@@ -47,7 +59,7 @@ export default () => {
         "top-right"
       );
     }
-  }, [state.slides[currentSlide].data.body.options.position]);
+  }, [position]);
 
   return (
     <ControlsWrapper>

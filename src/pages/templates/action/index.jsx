@@ -20,6 +20,7 @@ export default () => {
               lineTemplate: {
                 content: "Neue Textzeile",
                 scale: { value: 70, range: [50, 140] },
+                inputType: "input",
                 isBold: false,
               },
             },
@@ -30,6 +31,7 @@ export default () => {
                   value: 150,
                   range: [120, 220],
                 },
+                inputType: "input",
                 isBold: true,
               },
               {
@@ -38,6 +40,7 @@ export default () => {
                   value: 90,
                   range: [70, 100],
                 },
+                inputType: "input",
                 isBold: true,
               },
               {
@@ -46,6 +49,7 @@ export default () => {
                   value: 90,
                   range: [50, 140],
                 },
+                inputType: "input",
                 isBold: true,
               },
               {
@@ -54,6 +58,7 @@ export default () => {
                   value: 50,
                   range: [40, 65],
                 },
+                inputType: "input",
                 isBold: false,
               },
             ],

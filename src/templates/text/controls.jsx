@@ -4,6 +4,7 @@ import DownloadButton from "../../components/inputs/downloadButton";
 import FieldSet from "../../components/inputs/fieldSet";
 import Input from "../../components/inputs/input";
 import InputRepeater from "../../components/inputs/inputRepeater";
+import OptionsSelector from "../../components/inputs/options";
 import React from "react";
 import TemplateContext from "../../components/templateContext";
 import { useContext } from "react";
@@ -28,6 +29,10 @@ export default () => {
       </FieldSet>
 
       <FieldSet legend="Text">
+        <OptionsSelector
+          propertyPath={`slides[${currentSlide}].data.body.options.textAlign`}
+          options={["textLeft", "textCenter"]}
+        />
         <ColorThemeSelector
           propertyPath={`slides[${currentSlide}].data.body.options.colorTheme`}
           colorThemeOptions={["orange_white", "black_white"]}
@@ -35,6 +40,7 @@ export default () => {
         <InputRepeater
           propertyPath={`slides[${currentSlide}].data.body`}
           selectBold
+          selectInputType
         />
       </FieldSet>
 

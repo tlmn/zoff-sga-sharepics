@@ -30,14 +30,26 @@ export default () => {
           >
             <div className="flex-1 flex px-3 text-white">
               <div className={`flex w-full items-center`}>
-                <div className="flex flex-col w-full items-center">
+                <div
+                  className={`flex flex-col w-full items-${
+                    state.slides[state.currentSlide].data.body.options
+                      .textAlign === "textCenter"
+                      ? `center`
+                      : `start`
+                  }`}
+                >
                   {state.slides[state.currentSlide].data.body.lines.map(
                     (line) =>
                       line.content !== "" && (
                         <span
                           className={`font-sans ${
                             line.isBold ? `font-bold` : ``
-                          } text-center leading-tight`}
+                          } ${
+                            state.slides[state.currentSlide].data.body.options
+                              .textAlign === "textCenter"
+                              ? `text-center`
+                              : `text-left`
+                          } leading-tight`}
                           style={{
                             fontSize: `${line.scale.value}px`,
                           }}

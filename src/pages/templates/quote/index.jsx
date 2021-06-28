@@ -37,6 +37,7 @@ export default () => {
               min: 1,
               max: 6,
               lineTemplate: {
+                inputType: "input",
                 content: "Neue Textzeile",
                 scale: { value: 70, range: [50, 140] },
                 position: "self-start text-left",
@@ -45,6 +46,7 @@ export default () => {
             bodyPosition: "self-end",
             lines: [
               {
+                inputType: "input",
                 content: "Evakuiert",
                 scale: {
                   value: 100,
@@ -53,6 +55,7 @@ export default () => {
                 position: "self-end text-right",
               },
               {
+                inputType: "input",
                 content: "sofort",
                 scale: {
                   value: 100,
@@ -61,6 +64,7 @@ export default () => {
                 position: "self-center text-center",
               },
               {
+                inputType: "input",
                 content: "die Lager!",
                 scale: {
                   value: 100,

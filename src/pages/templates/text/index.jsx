@@ -19,12 +19,14 @@ export default () => {
           body: {
             options: {
               colorTheme: "orange_white",
+              textAlign: "textCenter",
               min: 1,
               max: 3,
               lineTemplate: {
                 content: "Neue Textzeile",
                 scale: { value: 70, range: [50, 140] },
                 isBold: false,
+                inputType: "input",
               },
             },
             lines: [
@@ -35,6 +37,7 @@ export default () => {
                   range: [80, 300],
                 },
                 isBold: true,
+                inputType: "input",
               },
               {
                 content: "#wirhabenplatz",
@@ -43,6 +46,7 @@ export default () => {
                   range: [50, 100],
                 },
                 isBold: false,
+                inputType: "input",
               },
             ],
           },

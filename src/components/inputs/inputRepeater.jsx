@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { getProperty, pushProperty, removeProperty } from "../../lib/lib";
 
-import Checkbox from "./checkbox";
+import CheckBoxImage from "./checkBoxImage";
 import CustomSelect from "./customSelect";
 import Input from "../inputs/input";
+import OptionsSelector from "./options";
 import TemplateContext from "../templateContext";
+import TextArea from "./textarea";
 import TextScale from "./textScale";
 
 const InputRepeater = ({
@@ -12,6 +14,7 @@ const InputRepeater = ({
   label = "",
   selectPosition = false,
   selectBold = false,
+  selectInputType = false,
   positionOptions,
 }) => {
   const [state, setState] = useContext(TemplateContext);
@@ -26,10 +29,25 @@ const InputRepeater = ({
       <div id={propertyPath}>
         {lines.map((line, index) => (
           <div className="flex">
-            <Input
-              propertyPath={`${propertyPath}.lines[${index}].content`}
-              className="mr-2"
-            />
+            {getProperty(
+              { state },
+              `${propertyPath}.lines[${index}].inputType`
+            ) === "input" && (
+                <Input
+                  propertyPath={`${propertyPath}.lines[${index}].content`}
+                  className="mr-2"
+                />
+              )}
+            {getProperty(
+              { state },
+              `${propertyPath}.lines[${index}].inputType`
+            ) === "textArea" && (
+              <TextArea
+                propertyPath={`${propertyPath}.lines[${index}].content`}
+                className="mr-2"
+              />
+            )}
+
             <TextScale
               propertyPath={`${propertyPath}.lines[${index}].scale`}
               label=""
@@ -41,7 +59,19 @@ const InputRepeater = ({
                 propertyPath={`${propertyPath}.lines[${index}].position`}
               />
             )}
-            {selectBold && <Checkbox propertyPath={`${propertyPath}.lines[${index}].isBold`} />}
+            <div className="flex items-center gap-1">
+              {selectBold && (
+                <CheckBoxImage
+                  propertyPath={`${propertyPath}.lines[${index}].isBold`}
+                />
+              )}
+              {selectInputType && (
+                <OptionsSelector
+                  options={["textArea", "input"]}
+                  propertyPath={`${propertyPath}.lines[${index}].inputType`}
+                />
+              )}
+            </div>
           </div>
         ))}
       </div>
