@@ -22,6 +22,7 @@ export default () => {
               min: 1,
               max: 3,
               lineTemplate: {
+                inputType: "input",
                 content: "Neue Textzeile",
                 scale: { value: 70, range: [50, 140] },
                 isBold: false,
@@ -29,18 +30,20 @@ export default () => {
             },
             lines: [
               {
+                inputType: "input",
                 content: "Humanitäre Katastrophe in Bosnien!",
                 scale: {
-                  value: 110,
-                  range: [50, 140],
+                  value: 70,
+                  range: [50, 100],
                 },
                 isBold: true,
               },
               {
+                inputType: "input",
                 content: "#wirhabenplatz",
                 scale: {
-                  value: 80,
-                  range: [50, 140],
+                  value: 50,
+                  range: [50, 70],
                 },
                 isBold: false,
               },

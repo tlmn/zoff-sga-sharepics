@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
+import { formatText, getColor } from "../../lib/lib";
 
 import DraggableBG from "../../components/inputs/draggableBg";
 import LogoText from "../../assets/svg/logo-text";
 import TemplateContext from "../../components/templateContext";
-import { getColor } from "../../lib/lib";
 
 export default () => {
   const [state] = useContext(TemplateContext);
@@ -98,8 +98,7 @@ export default () => {
                 className={`w-full ${
                   state.slides[0].data.body.options.position !==
                     "items-start" &&
-                  state.slides[0].data.body.options.position !==
-                    "items-end"
+                  state.slides[0].data.body.options.position !== "items-end"
                     ? `py-2`
                     : `py-3`
                 }`}
@@ -120,9 +119,10 @@ export default () => {
                     style={{
                       fontSize: `${line.scale.value}px`,
                     }}
-                  >
-                    {line.content}
-                  </span>
+                    dangerouslySetInnerHTML={{
+                      __html: formatText(line.content),
+                    }}
+                  />
                 ))}
               </div>
               {state.slides[0].data.subline.content !== "" &&
@@ -146,9 +146,12 @@ export default () => {
                       style={{
                         fontSize: `${state.slides[0].data.subline.scale.value}px`,
                       }}
-                    >
-                      {state.slides[0].data.subline.content}
-                    </span>
+                      dangerouslySetInnerHTML={{
+                        __html: formatText(
+                          state.slides[0].data.subline.content
+                        ),
+                      }}
+                    />
                   </div>
                 )}
             </div>

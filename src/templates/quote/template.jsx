@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
+import { formatText, getColor } from "../../lib/lib";
 
 import DraggableBG from "../../components/inputs/draggableBg";
 import LogoText from "../../assets/svg/logo-text";
 import TemplateContext from "../../components/templateContext";
-import { getColor } from "../../lib/lib";
 
 export default () => {
   const [state] = useContext(TemplateContext);
@@ -95,9 +95,8 @@ export default () => {
                       1
                     ),
                   }}
-                >
-                  {line.content}
-                </span>
+                  dangerouslySetInnerHTML={{ __html: formatText(line.content) }}
+                />
               ))}
             </div>
           </div>

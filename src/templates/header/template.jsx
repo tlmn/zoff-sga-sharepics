@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
+import { formatText, getColor } from "../../lib/lib";
 
 import LogoText from "../../assets/svg/logo-text";
 import TemplateContext from "../../components/templateContext";
-import { getColor } from "../../lib/lib";
 
 export default () => {
   const [state] = useContext(TemplateContext);
@@ -29,7 +29,7 @@ export default () => {
             }}
           >
             {state.slides[0].data.logo.show && (
-              <div className="flex flex-col justify-center items-center bg-orange p-3">
+              <div className="flex flex-col justify-center items-center bg-orange px-3 pt-3">
                 <LogoText fillColor="#fff" />
                 {state.slides[0].data.logo.branch !== "" && (
                   <span
@@ -63,9 +63,10 @@ export default () => {
                           style={{
                             fontSize: `${line.scale.value}px`,
                           }}
-                        >
-                          {line.content}
-                        </span>
+                          dangerouslySetInnerHTML={{
+                            __html: formatText(line.content),
+                          }}
+                        />
                       )
                   )}
                 </div>

@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
+import { formatText, getColor } from "../../lib/lib";
 
 import LogoText from "../../assets/svg/logo-text";
 import TemplateContext from "../../components/templateContext";
-import { getColor } from "../../lib/lib";
 
 export default () => {
   const [state] = useContext(TemplateContext);
@@ -38,9 +38,10 @@ export default () => {
                         style={{
                           fontSize: `${line.scale.value}px`,
                         }}
-                      >
-                        {line.content}
-                      </span>
+                        dangerouslySetInnerHTML={{
+                          __html: formatText(line.content),
+                        }}
+                      />
                     )
                 )}
               </div>
