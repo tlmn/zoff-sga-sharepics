@@ -9,8 +9,8 @@ import { theme } from "../../tailwind.config";
 
 const { colors } = theme;
 
-export const html2image = async ({ state, setState }, fileName = "solid") => {
-  setState({ ...state, templateScale: false });
+export const html2image = async ({ state, setState }, fileName = "") => {
+  setState((prev) => ({ ...prev, templateScale: false }));
   htmlToImage
     .toJpeg(state.slides[state.currentSlide].ref.current, {
       quality: 1,
@@ -18,8 +18,8 @@ export const html2image = async ({ state, setState }, fileName = "solid") => {
       height: state.slides[state.currentSlide].dimensions.height,
     })
     .then(function (blob) {
-      saveAs(blob, `sharepic-${slugify(fileName.substring)}`);
-      setState({ ...state, templateScale: true });
+      saveAs(blob, `sharepic-seebruecke-${slugify(fileName.substring)}`);
+      setState((prev) => ({ ...prev, templateScale: true }));
     });
 };
 export const formatText = (text = "") => {
