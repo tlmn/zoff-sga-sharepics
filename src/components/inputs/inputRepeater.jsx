@@ -85,7 +85,7 @@ const InputRepeater = ({
           disabled={
             getProperty({ state }, `${propertyPath}.options.max`) < lines.length
           }
-          className="btn not-italic"
+          className="btn not-italic font-bold"
         >
           +
         </button>
@@ -98,7 +98,7 @@ const InputRepeater = ({
           disabled={
             getProperty({ state }, `${propertyPath}.options.min`) > lines.length
           }
-          className="btn not-italic"
+          className="btn not-italic font-bold"
         >
           -
         </button>
