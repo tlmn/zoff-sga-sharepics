@@ -66,13 +66,17 @@ export default () => {
         )}
 
         <div className="w-full h-full absolute top-0 left-0 flex flex-col z-20 p-3">
-          <div
-            className={`${
-              state.slides[state.currentSlide].data.logo.options.position
-            } mb-3`}
-          >
-            <LogoText hasShadow />
-          </div>
+          {state.slides[0].data.background.isImage &&
+            state.slides[state.currentSlide].dimensions.height === 1080 && (
+              <div
+                className={`${
+                  state.slides[state.currentSlide].data.logo.options.position
+                } mb-3`}
+              >
+                <LogoText hasShadow />
+              </div>
+            )}
+
           <div className="flex-1 flex">
             <div
               className={`flex flex-col w-full ${state.slides[0].data.body.bodyPosition}`}
@@ -97,6 +101,39 @@ export default () => {
               ))}
             </div>
           </div>
+
+          {state.slides[state.currentSlide].dimensions.height !== 1080 && (
+            <div
+              className={`${
+                state.slides[state.currentSlide].data.logo.options.position
+              }`}
+              style={{
+                marginTop:
+                  state.slides[state.currentSlide].dimensions.height !== 1080
+                    ? `350px`
+                    : `50px`,
+              }}
+            >
+              <LogoText hasShadow />
+            </div>
+          )}
+
+          {state.slides[state.currentSlide].dimensions.height === 1080 &&
+            !state.slides[0].data.background.isImage && (
+              <div
+                className={`${
+                  state.slides[state.currentSlide].data.logo.options.position
+                }`}
+                style={{
+                  marginTop:
+                    state.slides[state.currentSlide].dimensions.height !== 1080
+                      ? `350px`
+                      : `50px`,
+                }}
+              >
+                <LogoText hasShadow />
+              </div>
+            )}
         </div>
       </div>
     </div>
