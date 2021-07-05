@@ -1,6 +1,6 @@
-# Sharepic Generator for Seebrücke
+# Sharepic Generator for Solidarisch geht anders
 
-This project provides a sharepic generator for Seebrücke based on the 2021 corporate design created by [zoff kollektiv](https://zoff-kollektiv.net/). The generator uses 8 different templates for various content types on social media.
+This project provides a sharepic generator for Solidarisch geht anders based on the 2021 corporate design created by [zoff kollektiv](https://zoff-kollektiv.net/). The generator uses 8 different templates for various content types on social media.
 
 The generator is based on ReactJS and GatsbyJS and uses Tailwind CSS and custom styles.
 

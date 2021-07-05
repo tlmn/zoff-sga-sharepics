@@ -11,7 +11,7 @@ export default () => {
           <div className="mx-auto grid grid-cols-12 col-gap-4 row-gap-2 py-5">
             <div className="col-span-12 text-center">
               <h1 className="text-lg text-white leading-tight font-bold">
-                Sharepic Generator Seebrücke
+                Sharepic Generator Solidarisch geht anders
               </h1>
             </div>
             {templates.map((template) => (

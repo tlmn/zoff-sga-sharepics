@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    name: "Sharepic Generator – Seebrücke",
-    title: "Sharepic Generator – Seebrücke",
+    name: "Sharepic Generator – Solidarisch geht anders",
+    title: "Sharepic Generator – Solidarisch geht anders",
   },
   plugins: [
     "gatsby-plugin-resolve-src",
@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Seebrücke – Sharepic Generator`,
-        short_name: `Seebrücke – Sharepic Generator`,
+        name: `Solidarisch geht anders – Sharepic Generator`,
+        short_name: `Solidarisch geht anders – Sharepic Generator`,
         start_url: `/`,
         background_color: `#00ffc2`,
         theme_color: `#00ffc2`,

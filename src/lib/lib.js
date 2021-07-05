@@ -18,7 +18,7 @@ export const html2image = async ({ state, setState }, fileName = "") => {
       height: state.slides[state.currentSlide].dimensions.height,
     })
     .then(function (blob) {
-      saveAs(blob, `sharepic-seebruecke-${slugify(fileName.substring)}`);
+      saveAs(blob, `sharepic-sga-${slugify(fileName.substring)}`);
       setState((prev) => ({ ...prev, templateScale: true }));
     });
 };
