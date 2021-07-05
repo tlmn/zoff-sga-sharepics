@@ -13,22 +13,20 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      orange: "#F55511",
-      lightOrange: "#F5B511",
-      turquoise: "#45EEBF",
-      yellow: "#D79E0D",
-      white: "#FFFFFF",
-      black: "#000000",
-      darkGray: "#3E3E3E",
-      lightGray: "#D7D7D7",
+      red: "#FF5858",
+      green: "#56E5A1",
+      yellow: "#FFE81D",
+      purple: "#C738B8",
+      blue: "#0094FF",
+      black: "#1D1D1D",
+      white: "#FFFFFF"
     },
     spacing: {
       0: "0",
       1: "8px",
-      "1.5": "16px",
       2: "20px",
-      3: "50px",
-      4: "90px",
+      3: "40px",
+      4: "80px",
     },
     lineHeight: {
       none: 1,
@@ -36,11 +34,14 @@ module.exports = {
       normal: 1.2,
     },
     fontSize: {
-      small: "12px",
-      base: "18px",
-      md: "30px",
-      lg: "40px",
-      xl: "48px",
+      small: "40px",
+      base: "50px",
+      md: "60px",
+      lg: "70px",
+      xl: "80px",
+      "2xl": "90px",
+      "3xl": "120px",
+      "4xl": "240px",
     },
     cursor: {
       auto: "auto",
@@ -49,7 +50,8 @@ module.exports = {
       move: "move",
     },
     fontFamily: {
-      sans: "Rubik",
+      kapra: "Kapra Neue",
+      ttnorms: "TT Norms",
     },
     screens: {
       sm: "576px",
