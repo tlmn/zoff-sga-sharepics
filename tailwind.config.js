@@ -50,8 +50,8 @@ module.exports = {
       move: "move",
     },
     fontFamily: {
-      kapra: "Kapra Neue",
-      ttnorms: "TT Norms",
+      kapra: "KapraNeuePro",
+      ttnorms: "TT Norms W01",
     },
     screens: {
       sm: "576px",
