@@ -1,10 +1,14 @@
 export const colors = [
-  { name: "orange", value: "#F55511" },
-  { name: "red", value: "#E2190C" },
-  { name: "turquoise", value: "#00FFC2" },
-  { name: "violet", value: "#C9CEFF" },
-  { name: "white", value: "#fff" },
+  { name: "red", value: "#FF5858" },
+  { name: "green", value: "#56E5A1" },
+  { name: "yellow", value: "#FFE81D" },
+  { name: "purple", value: "#C738B8" },
+  { name: "blue", value: "#0094FF" },
+  { name: "black", value: "#1D1D1D" },
+  { name: "white", value: "#FFFFFF" }
 ];
+
+
 
 export const textPositions = [
   { label: "oben", value: "start" },
@@ -20,8 +24,8 @@ export const colorCombinations = [
 ];
 
 export const secondaryThemes = [
-  "darkGray_red",
-  "red_darkGray",
+  "black_red",
+  "red_black",
   "red_white",
   "white_red",
 ];
@@ -48,23 +52,23 @@ export const colorThemes = [
     colors: ["white", "black"],
   },
   {
-    label: "turquoise_black",
+    label: "green_black",
     name: "türkis & schwarz",
-    colors: ["turquoise", "black"],
+    colors: ["green", "black"],
   },
 ];
 
 export const primaryColors = [
-  { label: "turquoise", name: "türkis" },
+  { label: "green", name: "türkis" },
   { label: "violet", name: "violet" },
   { label: "red", name: "rot" },
 ];
 
 export const templates = [
   {
-    name: "News",
-    link: "templates/news",
-    thumbnailSrc: "../assets/images/templates/news.png",
+    name: "Statement",
+    link: "templates/statement",
+    thumbnailSrc: "../assets/images/templates/statement.png",
   },
   {
     name: "Zitat",
@@ -72,23 +76,13 @@ export const templates = [
     thumbnailSrc: "../assets/images/templates/quote.png",
   },
   {
-    name: "Aktion",
-    link: "templates/action",
-    thumbnailSrc: "../assets/images/templates/action.png",
+    name: "Termin",
+    link: "templates/event",
+    thumbnailSrc: "../assets/images/templates/event.png",
   },
   {
-    name: "Sicherer Hafen",
-    link: "templates/safe-harbour",
-    thumbnailSrc: "../assets/images/templates/safe-harbour.png",
-  },
-  {
-    name: "Text",
-    link: "templates/text",
-    thumbnailSrc: "../assets/images/templates/text.png",
-  },
-  {
-    name: "Header",
-    link: "templates/header",
-    thumbnailSrc: "../assets/images/templates/header.jpg",
+    name: "Bild + Statement",
+    link: "templates/image-statement",
+    thumbnailSrc: "../assets/images/templates/image-statement.png",
   },
 ];
