@@ -1,11 +1,11 @@
-import { getProperty, updateProperty } from "../../lib/lib";
+import { getProperty, updateProperty } from '../../lib/lib'
 
-import React from "react";
-import TemplateContext from "../templateContext";
-import { useContext } from "react";
+import React from 'react'
+import TemplateContext from '../templateContext'
+import { useContext } from 'react'
 
-const Checkbox = ({ propertyPath, label = "", disabled = false }) => {
-  const [state, setState] = useContext(TemplateContext);
+const Checkbox = ({ propertyPath, label = '', disabled = false }) => {
+  const [state, setState] = useContext(TemplateContext)
   return (
     <div className="flex items-center">
       <input
@@ -19,16 +19,16 @@ const Checkbox = ({ propertyPath, label = "", disabled = false }) => {
             !getProperty({ state }, propertyPath)
           )
         }
-        style={{ width: "unset", marginBottom: "0 !important" }}
+        style={{ width: 'unset', marginBottom: '0 !important' }}
         disabled={disabled}
         className="mr-1"
       />
-      {label !== "" && (
+      {label !== '' && (
         <label htmlFor={propertyPath} className="flex-1">
           {label}
         </label>
       )}
     </div>
-  );
-};
-export default Checkbox;
+  )
+}
+export default Checkbox

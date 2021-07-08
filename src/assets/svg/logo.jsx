@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Logo = () => {
   return (
@@ -26,7 +26,7 @@ const Logo = () => {
         d="M1.571 55.71l162.942 10.562-20.175 63.111L1.571 55.711z"
       />
     </svg>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

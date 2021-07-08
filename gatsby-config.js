@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    name: "Sharepic Generator – Solidarisch geht anders",
-    title: "Sharepic Generator – Solidarisch geht anders",
+    name: 'Sharepic Generator – Solidarisch geht anders',
+    title: 'Sharepic Generator – Solidarisch geht anders',
   },
   plugins: [
-    "gatsby-plugin-resolve-src",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-postcss",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    'gatsby-plugin-resolve-src',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-postcss',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -22,4 +22,4 @@ module.exports = {
       },
     },
   ],
-};
+}

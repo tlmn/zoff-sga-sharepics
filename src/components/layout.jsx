@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from 'gatsby'
 
-import { Helmet } from "react-helmet";
-import React from "react";
+import { Helmet } from 'react-helmet'
+import React from 'react'
 
 export default ({ children, state }) => {
   const {
@@ -17,15 +17,15 @@ export default ({ children, state }) => {
         }
       }
     }
-  `);
+  `)
 
-  const longTitle = `${name} – ${title}`;
+  const longTitle = `${name} – ${title}`
 
   return (
     <>
       <Helmet
         bodyAttributes={{
-          class: "bg-red pb-2",
+          class: 'bg-red pb-2',
         }}
       >
         <meta charSet="utf-8" />
@@ -35,5 +35,5 @@ export default ({ children, state }) => {
       </Helmet>
       {children}
     </>
-  );
-};
+  )
+}

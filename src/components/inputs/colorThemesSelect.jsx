@@ -1,17 +1,17 @@
-import React, { useContext } from "react";
-import { getProperty, updateProperty } from "../../lib/lib";
+import React, { useContext } from 'react'
+import { getProperty, updateProperty } from '../../lib/lib'
 
-import TemplateContext from "../templateContext";
-import { colorThemes } from "../../config/vars";
+import TemplateContext from '../templateContext'
+import { colorThemes } from '../../config/vars'
 
 const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
-  const [state, setState] = useContext(TemplateContext);
+  const [state, setState] = useContext(TemplateContext)
 
   return (
     <div className="flex justify-center mb-2">
       {colorThemeOptions.map(
         (colorThemeOption) =>
-          colorThemeOption !== "" && (
+          colorThemeOption !== '' && (
             <div>
               <input
                 type="radio"
@@ -40,7 +40,7 @@ const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
               >
                 <div className="px-2">
                   <img
-                    style={{ maxHeight: "4rem" }}
+                    style={{ maxHeight: '4rem' }}
                     alt={`Farbschema Vorschau für ${
                       colorThemes.filter(
                         (theme) => theme.label === colorThemeOption
@@ -64,7 +64,7 @@ const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
           )
       )}
     </div>
-  );
-};
+  )
+}
 
-export default ColorThemeSelector;
+export default ColorThemeSelector

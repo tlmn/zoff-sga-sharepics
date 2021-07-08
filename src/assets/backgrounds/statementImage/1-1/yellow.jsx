@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const BGStatementImage11Yellow = () => {
   return (
@@ -9,9 +9,8 @@ const BGStatementImage11Yellow = () => {
       fill="none"
       viewBox="0 0 1080 1080"
     >
-      
       <g mask="url(#mask0)">
-        <path fill="#FFE81D" d="M0 0H1080V1080H0z"/>
+        <path fill="#FFE81D" d="M0 0H1080V1080H0z" />
         <g filter="url(#filter0_d)">
           <path
             fill="#0094FF"
@@ -25,7 +24,7 @@ const BGStatementImage11Yellow = () => {
           />
         </g>
         <g filter="url(#filter2_d)">
-          <path fill="#FF5858" d="M1080 858L0 903.5V1080h1080V858z"/>
+          <path fill="#FF5858" d="M1080 858L0 903.5V1080h1080V858z" />
         </g>
       </g>
       <defs>
@@ -112,7 +111,7 @@ const BGStatementImage11Yellow = () => {
         </filter>
       </defs>
     </svg>
-  );
+  )
 }
 
-export default BGStatementImage11Yellow;
+export default BGStatementImage11Yellow

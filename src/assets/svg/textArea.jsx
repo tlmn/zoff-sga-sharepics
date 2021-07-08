@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-const TextAreaIcon = ({ fillColor = "#fff" }) => (
+const TextAreaIcon = ({ fillColor = '#fff' }) => (
   <svg width="20" height="20" viewBox="0 0 400 400" fill="none">
     <rect width="400" height="400" fill={fillColor} />
     <line
@@ -49,6 +49,6 @@ const TextAreaIcon = ({ fillColor = "#fff" }) => (
       strokeWidth="10"
     />
   </svg>
-);
+)
 
-export default TextAreaIcon;
+export default TextAreaIcon

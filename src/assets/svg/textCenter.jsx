@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-const TextCenterIcon = ({ fillColor = "#fff" }) => (
+const TextCenterIcon = ({ fillColor = '#fff' }) => (
   <svg width="20" height="20" viewBox="0 0 400 400" fill={fillColor}>
     <rect width="400" height="400" fill={fillColor} />
     <path
@@ -43,6 +43,6 @@ const TextCenterIcon = ({ fillColor = "#fff" }) => (
       strokeLinecap="round"
     />
   </svg>
-);
+)
 
-export default TextCenterIcon;
+export default TextCenterIcon

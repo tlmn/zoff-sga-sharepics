@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default ({ height, ...props }) => (
   <svg x="0px" y="0px" viewBox="0 0 426.667 426.667" height={height} {...props}>
@@ -7,4 +7,4 @@ export default ({ height, ...props }) => (
 			H42.667c0,94.293,76.373,170.667,170.667,170.667S384,350.293,384,256S307.627,85.333,213.333,85.333z"
     />
   </svg>
-);
+)

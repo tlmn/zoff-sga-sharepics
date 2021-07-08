@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { getProperty, updateProperty } from "../../lib/lib";
+import React, { useContext } from 'react'
+import { getProperty, updateProperty } from '../../lib/lib'
 
-import TemplateContext from "../templateContext";
+import TemplateContext from '../templateContext'
 
 export default ({ propertyPath, label, ...props }) => {
-  const [state, setState] = useContext(TemplateContext);
+  const [state, setState] = useContext(TemplateContext)
   return (
     <>
       <label htmlFor={propertyPath}>{label}</label>
@@ -19,5 +19,5 @@ export default ({ propertyPath, label, ...props }) => {
         {getProperty({ state }, propertyPath)}
       </textarea>
     </>
-  );
-};
+  )
+}

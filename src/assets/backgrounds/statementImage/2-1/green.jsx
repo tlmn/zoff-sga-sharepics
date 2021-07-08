@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const BGStatementImage21Green = () => {
   return (
@@ -141,7 +141,7 @@ const BGStatementImage21Green = () => {
         </filter>
       </defs>
     </svg>
-  );
+  )
 }
 
-export default BGStatementImage21Green;
+export default BGStatementImage21Green

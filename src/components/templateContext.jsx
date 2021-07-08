@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react'
 
-const TemplateContext = React.createContext(null);
+const TemplateContext = React.createContext(null)
 
-export default TemplateContext;
+export default TemplateContext

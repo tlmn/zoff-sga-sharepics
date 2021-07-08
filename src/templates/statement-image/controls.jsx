@@ -9,57 +9,57 @@ import React from 'react'
 import TextScale from '../../components/inputs/textScale'
 
 export default () => {
-    const currentSlide = 0
-    return (
-        <ControlsWrapper>
-            <FieldSet legend="Format">
-                <CustomSelect
-                    propertyPath={`slides[${currentSlide}].options.dimensions`}
-                    options={[
-                        {
-                            value: { width: 1080, height: 1080 },
-                            label: 'Instagram / Facebook (1:1)',
-                        },
-                        {
-                            value: { width: 1012, height: 506 },
-                            label: 'Twitter (2:1)',
-                        },
-                    ]}
-                />
-            </FieldSet>
+  const currentSlide = 0
+  return (
+    <ControlsWrapper>
+      <FieldSet legend="Format">
+        <CustomSelect
+          propertyPath={`slides[${currentSlide}].options.dimensions`}
+          options={[
+            {
+              value: { width: 1080, height: 1080 },
+              label: 'Instagram / Facebook (1:1)',
+            },
+            {
+              value: { width: 1012, height: 506 },
+              label: 'Twitter (2:1)',
+            },
+          ]}
+        />
+      </FieldSet>
 
-            <FieldSet>
-                <Image propertyPath={`slides[${currentSlide}].data.image`} />
-            </FieldSet>
+      <FieldSet>
+        <Image propertyPath={`slides[${currentSlide}].data.image`} />
+      </FieldSet>
 
-            <FieldSet legend="Text">
-                <InputRepeater
-                    propertyPath={`slides[${currentSlide}].data.body`}
-                    selectScale={false}
-                />
-                <TextScale
-                    propertyPath={`slides[${currentSlide}].data.body.options.scale`}
-                />
-            </FieldSet>
+      <FieldSet legend="Text">
+        <InputRepeater
+          propertyPath={`slides[${currentSlide}].data.body`}
+          selectScale={false}
+        />
+        <TextScale
+          propertyPath={`slides[${currentSlide}].data.body.options.scale`}
+        />
+      </FieldSet>
 
-            <FieldSet legend="Farbe">
-                <ColorThemeSelector
-                    colorThemeOptions={['green', 'blue', 'purple', 'yellow']}
-                    propertyPath={`slides[${currentSlide}].options.colorTheme`}
-                />
-            </FieldSet>
+      <FieldSet legend="Farbe">
+        <ColorThemeSelector
+          colorThemeOptions={['green', 'blue', 'purple', 'yellow']}
+          propertyPath={`slides[${currentSlide}].options.colorTheme`}
+        />
+      </FieldSet>
 
-            <FieldSet legend="Partnerlogo">
-                <Image
-                    propertyPath={`slides[${currentSlide}].data.partnerLogo`}
-                    scale={false}
-                    reset={false}
-                />
-            </FieldSet>
+      <FieldSet legend="Partnerlogo">
+        <Image
+          propertyPath={`slides[${currentSlide}].data.partnerLogo`}
+          scale={false}
+          reset={false}
+        />
+      </FieldSet>
 
-            <DownloadButton
-                fileNamePath={`slides[${currentSlide}].data.body.content`}
-            />
-        </ControlsWrapper>
-    )
+      <DownloadButton
+        fileNamePath={`slides[${currentSlide}].data.body.content`}
+      />
+    </ControlsWrapper>
+  )
 }

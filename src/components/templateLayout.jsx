@@ -1,6 +1,6 @@
-import Layout from "../components/layout";
-import { Link } from "gatsby";
-import React from "react";
+import Layout from '../components/layout'
+import { Link } from 'gatsby'
+import React from 'react'
 
 export default ({ children }) => (
   <Layout>
@@ -16,4 +16,4 @@ export default ({ children }) => (
       {children}
     </div>
   </Layout>
-);
+)

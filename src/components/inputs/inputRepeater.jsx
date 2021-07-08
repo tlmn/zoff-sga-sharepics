@@ -1,33 +1,36 @@
-import React, { useContext } from "react";
-import { getProperty, pushProperty, removeProperty } from "../../lib/lib";
+import React, { useContext } from 'react'
+import { getProperty, pushProperty, removeProperty } from '../../lib/lib'
 
-import CheckBoxImage from "./checkBoxImage";
-import CustomSelect from "./customSelect";
-import Input from "../inputs/input";
-import OptionsSelector from "./options";
-import TemplateContext from "../templateContext";
-import TextArea from "./textarea";
-import TextScale from "./textScale";
+import CheckBoxImage from './checkBoxImage'
+import CustomSelect from './customSelect'
+import Input from '../inputs/input'
+import OptionsSelector from './options'
+import TemplateContext from '../templateContext'
+import TextArea from './textarea'
+import TextScale from './textScale'
 
 const InputRepeater = ({
   propertyPath,
-  label = "",
+  label = '',
   selectPosition = false,
   selectBold = false,
   selectInputType = false,
   selectScale = true,
   positionOptions,
 }) => {
-  const [state, setState] = useContext(TemplateContext);
-  const lines = getProperty({ state }, `${propertyPath}.lines`);
+  const [state, setState] = useContext(TemplateContext)
+  const lines = getProperty({ state }, `${propertyPath}.lines`)
   const lineTemplate = getProperty(
     { state },
     `${propertyPath}.options.lineTemplate`
-  );
+  )
   return (
     <>
-      {label !== "" && (
-        <label htmlFor={propertyPath} className="uppercase text-black font-bold">
+      {label !== '' && (
+        <label
+          htmlFor={propertyPath}
+          className="uppercase text-black font-bold"
+        >
           {label}
         </label>
       )}
@@ -37,7 +40,7 @@ const InputRepeater = ({
             {getProperty(
               { state },
               `${propertyPath}.lines[${index}].inputType`
-            ) === "input" && (
+            ) === 'input' && (
               <Input
                 propertyPath={`${propertyPath}.lines[${index}].content`}
                 className="mr-2"
@@ -46,7 +49,7 @@ const InputRepeater = ({
             {getProperty(
               { state },
               `${propertyPath}.lines[${index}].inputType`
-            ) === "textArea" && (
+            ) === 'textArea' && (
               <TextArea
                 propertyPath={`${propertyPath}.lines[${index}].content`}
                 className="mr-2"
@@ -73,7 +76,7 @@ const InputRepeater = ({
               )}
               {selectInputType && (
                 <OptionsSelector
-                  options={["textArea", "input"]}
+                  options={['textArea', 'input']}
                   propertyPath={`${propertyPath}.lines[${index}].inputType`}
                 />
               )}
@@ -86,7 +89,7 @@ const InputRepeater = ({
           onClick={() => {
             getProperty({ state }, `${propertyPath}.options.max`) >
               lines.length &&
-              pushProperty({ setState }, `${propertyPath}.lines`, lineTemplate);
+              pushProperty({ setState }, `${propertyPath}.lines`, lineTemplate)
           }}
           disabled={
             getProperty({ state }, `${propertyPath}.options.max`) < lines.length
@@ -99,7 +102,7 @@ const InputRepeater = ({
           onClick={() => {
             getProperty({ state }, `${propertyPath}.options.min`) <
               lines.length &&
-              removeProperty({ setState }, `${propertyPath}.lines`);
+              removeProperty({ setState }, `${propertyPath}.lines`)
           }}
           disabled={
             getProperty({ state }, `${propertyPath}.options.min`) > lines.length
@@ -110,7 +113,7 @@ const InputRepeater = ({
         </button>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default InputRepeater;
+export default InputRepeater

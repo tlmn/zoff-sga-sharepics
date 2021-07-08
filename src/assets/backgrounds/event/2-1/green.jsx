@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const BGEvent21Green = () => {
   return (
@@ -9,9 +9,8 @@ const BGEvent21Green = () => {
       fill="none"
       viewBox="0 0 1012 506"
     >
-      
       <g mask="url(#mask0)">
-        <path fill="#FF5858" d="M0 0H1012V506H0z"/>
+        <path fill="#FF5858" d="M0 0H1012V506H0z" />
         <g filter="url(#filter0_d)">
           <path
             fill="#56E5A1"
@@ -49,7 +48,7 @@ const BGEvent21Green = () => {
         </filter>
       </defs>
     </svg>
-  );
+  )
 }
 
-export default BGEvent21Green;
+export default BGEvent21Green

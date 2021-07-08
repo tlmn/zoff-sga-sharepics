@@ -1,7 +1,7 @@
-import Layout from "../components/layout";
-import { Link } from "gatsby";
-import React from "react";
-import { templates } from "../config/vars";
+import Layout from '../components/layout'
+import { Link } from 'gatsby'
+import React from 'react'
+import { templates } from '../config/vars'
 
 export default () => {
   return (
@@ -36,5 +36,5 @@ export default () => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}

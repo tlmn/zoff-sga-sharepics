@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { getProperty, html2image } from "../../lib/lib";
+import React, { useContext } from 'react'
+import { getProperty, html2image } from '../../lib/lib'
 
-import TemplateContext from "../templateContext";
+import TemplateContext from '../templateContext'
 
-export default ({ fileNamePath, buttonText = "Download" }) => {
-  const [state, setState] = useContext(TemplateContext);
+export default ({ fileNamePath, buttonText = 'Download' }) => {
+  const [state, setState] = useContext(TemplateContext)
   return (
     <button
       className="btn btn-download"
@@ -20,5 +20,5 @@ export default ({ fileNamePath, buttonText = "Download" }) => {
     >
       {buttonText}
     </button>
-  );
-};
+  )
+}

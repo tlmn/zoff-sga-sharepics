@@ -1,13 +1,13 @@
-import { useStaticQuery, graphql } from "gatsby";
-import React from "react";
-import Img from "gatsby-image";
+import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react'
+import Img from 'gatsby-image'
 
 const Image = ({ name: fileName, ...props }) => {
-  const { width, centered } = props;
+  const { width, centered } = props
   const styles = {
-    width: width ? `${width}` : "unset",
-    margin: centered ? "0 auto" : "unset",
-  };
+    width: width ? `${width}` : 'unset',
+    margin: centered ? '0 auto' : 'unset',
+  }
   const {
     allImageSharp: { images },
   } = useStaticQuery(graphql`
@@ -23,7 +23,7 @@ const Image = ({ name: fileName, ...props }) => {
         }
       }
     }
-  `);
+  `)
 
   const image = images.find(
     ({
@@ -31,11 +31,9 @@ const Image = ({ name: fileName, ...props }) => {
         fluid: { originalName: name },
       },
     }) => name === fileName
-  );
+  )
 
-  return image ? (
-    <Img style={styles} {...image.node} {...props} />
-  ) : null;
-};
+  return image ? <Img style={styles} {...image.node} {...props} /> : null
+}
 
-export default Image;
+export default Image

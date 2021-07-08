@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { getProperty, updateProperty } from "../../lib/lib";
+import React, { useContext } from 'react'
+import { getProperty, updateProperty } from '../../lib/lib'
 
-import TemplateContext from "../templateContext";
+import TemplateContext from '../templateContext'
 
-export default ({ propertyPath, label = "Textgröße", ...props }) => {
-  const [state, setState] = useContext(TemplateContext);
+export default ({ propertyPath, label = 'Textgröße', ...props }) => {
+  const [state, setState] = useContext(TemplateContext)
   return (
     <div className="flex flex-col">
       <label
@@ -25,5 +25,5 @@ export default ({ propertyPath, label = "Textgröße", ...props }) => {
         {...props}
       />
     </div>
-  );
-};
+  )
+}

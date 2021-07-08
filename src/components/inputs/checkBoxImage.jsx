@@ -1,22 +1,22 @@
-import { getProperty, updateProperty } from "../../lib/lib";
-import { useContext, useRef } from "react";
+import { getProperty, updateProperty } from '../../lib/lib'
+import { useContext, useRef } from 'react'
 
-import FontBoldIcon from "../../assets/svg/fontBold";
-import React from "react";
-import TemplateContext from "../templateContext";
-import { theme } from "../../../tailwind.config";
+import FontBoldIcon from '../../assets/svg/fontBold'
+import React from 'react'
+import TemplateContext from '../templateContext'
+import { theme } from '../../../tailwind.config'
 
 const CheckBoxImage = ({
   propertyPath,
   disabled = false,
-  type = "fontBold",
+  type = 'fontBold',
 }) => {
-  const { colors } = theme;
-  const [state, setState] = useContext(TemplateContext);
-  const ref = useRef(null);
+  const { colors } = theme
+  const [state, setState] = useContext(TemplateContext)
+  const ref = useRef(null)
   const icons = {
     fontBold: (fillColor) => <FontBoldIcon fillColor={fillColor} />,
-  };
+  }
   return (
     <div className="flex items-center">
       <input
@@ -40,6 +40,6 @@ const CheckBoxImage = ({
         )}
       </label>
     </div>
-  );
-};
-export default CheckBoxImage;
+  )
+}
+export default CheckBoxImage

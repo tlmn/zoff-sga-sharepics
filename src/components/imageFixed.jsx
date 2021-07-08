@@ -1,9 +1,9 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from 'gatsby'
 
-import Img from "gatsby-image";
-import React from "react";
+import Img from 'gatsby-image'
+import React from 'react'
 
-const ImageFixed = ({ name: fileName, width = "100%", ...props }) => {
+const ImageFixed = ({ name: fileName, width = '100%', ...props }) => {
   const {
     allImageSharp: { images },
   } = useStaticQuery(graphql`
@@ -20,7 +20,7 @@ const ImageFixed = ({ name: fileName, width = "100%", ...props }) => {
         }
       }
     }
-  `);
+  `)
 
   const imageFixed = images.find(
     ({
@@ -28,21 +28,21 @@ const ImageFixed = ({ name: fileName, width = "100%", ...props }) => {
         fixed: { originalName: name },
       },
     }) => name === fileName
-  );
+  )
 
   return imageFixed ? (
     <Img
       {...props}
       {...imageFixed.node}
-      style={{ position: "unset", height: "100%" }}
+      style={{ position: 'unset', height: '100%' }}
       imgStyle={{
-        objectFit: "cover",
-        objectPosition: "50% 50%",
-        position: "relative",
+        objectFit: 'cover',
+        objectPosition: '50% 50%',
+        position: 'relative',
         width: width,
       }}
     />
-  ) : null;
-};
+  ) : null
+}
 
-export default ImageFixed;
+export default ImageFixed

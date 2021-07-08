@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const BGEvent11Blue = () => (
   <svg
@@ -53,6 +53,6 @@ const BGEvent11Blue = () => (
       </filter>
     </defs>
   </svg>
-);
+)
 
-export default BGEvent11Blue;
+export default BGEvent11Blue

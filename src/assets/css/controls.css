@@ -16,20 +16,19 @@ fieldset:first-of-type {
   margin-top: 0;
 }
 
-input[type="file"] {
+input[type='file'] {
   padding: 0 !important;
   @apply text-white;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   display: none;
 }
 
-input[type="range"] {
+input[type='range'] {
   @apply mb-0 !important;
   @apply p-0 !important;
 }
-
 
 .label__radio {
   @apply cursor-pointer;

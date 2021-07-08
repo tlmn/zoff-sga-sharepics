@@ -2,9 +2,9 @@
 @tailwind utilities;
 @tailwind components;
 
-@import "./fonts.css";
-@import "./controls.css";
-@import "./template.css";
+@import './fonts.css';
+@import './controls.css';
+@import './template.css';
 
 .grid-12 {
   @apply grid-cols-12;

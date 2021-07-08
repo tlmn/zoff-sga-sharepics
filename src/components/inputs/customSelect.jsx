@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react'
 /* eslint-disable jsx-a11y/no-onchange */
-import { getProperty, updateProperty } from "../../lib/lib";
+import { getProperty, updateProperty } from '../../lib/lib'
 
-import TemplateContext from "../templateContext";
+import TemplateContext from '../templateContext'
 
 export default ({
   options,
@@ -11,11 +11,11 @@ export default ({
   disabled = false,
   ...props
 }) => {
-  const [state, setState] = useContext(TemplateContext);
+  const [state, setState] = useContext(TemplateContext)
   return (
     <div className="flex items-center">
       {label && (
-        <label htmlFor={propertyPath} style={{ minWidth: "12rem" }}>
+        <label htmlFor={propertyPath} style={{ minWidth: '12rem' }}>
           {label}
         </label>
       )}
@@ -28,7 +28,7 @@ export default ({
         }
         id={propertyPath}
         disabled={disabled}
-        style={{ minWidth: "10rem", marginBottom: "0 !important" }}
+        style={{ minWidth: '10rem', marginBottom: '0 !important' }}
         {...props}
         className="bg-lightGray"
       >
@@ -37,5 +37,5 @@ export default ({
         ))}
       </select>
     </div>
-  );
-};
+  )
+}

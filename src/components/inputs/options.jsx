@@ -1,25 +1,25 @@
-import { getProperty, updateProperty } from "../../lib/lib";
+import { getProperty, updateProperty } from '../../lib/lib'
 
-import FontBoldIcon from "../../assets/svg/fontBold";
-import InputIcon from "../../assets/svg/input";
-import React from "react";
-import TemplateContext from "../templateContext";
-import TextAreaIcon from "../../assets/svg/textArea";
-import TextCenterIcon from "../../assets/svg/textCenter";
-import TextLeftIcon from "../../assets/svg/textLeft";
-import { theme } from "../../../tailwind.config";
-import { useContext } from "react";
+import FontBoldIcon from '../../assets/svg/fontBold'
+import InputIcon from '../../assets/svg/input'
+import React from 'react'
+import TemplateContext from '../templateContext'
+import TextAreaIcon from '../../assets/svg/textArea'
+import TextCenterIcon from '../../assets/svg/textCenter'
+import TextLeftIcon from '../../assets/svg/textLeft'
+import { theme } from '../../../tailwind.config'
+import { useContext } from 'react'
 
 const OptionsSelector = ({ propertyPath, options = [], disabled = false }) => {
-  const { colors } = theme;
-  const [state, setState] = useContext(TemplateContext);
+  const { colors } = theme
+  const [state, setState] = useContext(TemplateContext)
   const icons = {
     fontBold: (fillColor) => <FontBoldIcon fillColor={fillColor} />,
     textLeft: (fillColor) => <TextLeftIcon fillColor={fillColor} />,
     textCenter: (fillColor) => <TextCenterIcon fillColor={fillColor} />,
     textArea: (fillColor) => <TextAreaIcon fillColor={fillColor} />,
     input: (fillColor) => <InputIcon fillColor={fillColor} />,
-  };
+  }
   return (
     <div
       onChange={(event) =>
@@ -44,7 +44,7 @@ const OptionsSelector = ({ propertyPath, options = [], disabled = false }) => {
         </>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default OptionsSelector;
+export default OptionsSelector

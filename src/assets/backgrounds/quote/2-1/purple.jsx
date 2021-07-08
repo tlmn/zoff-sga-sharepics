@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-const BGQuote21Purple = ()=> {
+const BGQuote21Purple = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ const BGQuote21Purple = ()=> {
         </filter>
       </defs>
     </svg>
-  );
+  )
 }
 
-export default BGQuote21Purple;
+export default BGQuote21Purple
