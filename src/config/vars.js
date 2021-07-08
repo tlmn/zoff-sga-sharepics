@@ -17,10 +17,10 @@ export const textPositions = [
 ];
 
 export const colorCombinations = [
-  "orange_white",
-  "white_orange",
-  "black_white",
-  "white_black",
+  "yellow",
+  "green",
+  "purple",
+  "blue",
 ];
 
 export const secondaryThemes = [
@@ -32,22 +32,22 @@ export const secondaryThemes = [
 
 export const colorThemes = [
   {
-    label: "orange_white",
+    label: "yellow",
     name: "orange & weiß",
     colors: ["orange", "white"],
   },
   {
-    label: "white_orange",
+    label: "green",
     name: "weiß & orange",
     colors: ["white", "orange"],
   },
   {
-    label: "black_white",
+    label: "blue",
     name: "schwarz & weiß",
     colors: ["black", "white"],
   },
   {
-    label: "white_black",
+    label: "purple",
     name: "weiß & schwarz",
     colors: ["white", "black"],
   },

@@ -1,111 +1,272 @@
 @font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-SemiBoldItalic.woff") format("woff");
+  font-family: 'KapraNeuePro';
+  src: url('/assets/fonts/kapra/KapraNeuePro-SemiBoldItalic.woff2') format('woff2'),
+      url('/assets/fonts/kapra/KapraNeuePro-SemiBoldItalic.woff') format('woff');
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-BoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Bold.woff") format("woff");
-  font-weight: bold;
+  font-family: 'KapraNeuePro';
+  src: url('/assets/fonts/kapra/KapraNeuePro-SemiBold.woff2') format('woff2'),
+      url('/assets/fonts/kapra/KapraNeuePro-SemiBold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-MediumItalic.woff") format("woff");
+  font-family: 'KapraNeuePro';
+  src: url('/assets/fonts/kapra/KapraNeuePro-MediumItalic.woff2') format('woff2'),
+      url('/assets/fonts/kapra/KapraNeuePro-MediumItalic.woff') format('woff');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-ExtraBold.woff") format("woff");
+  font-family: 'KapraNeuePro';
+  src: url('/assets/fonts/kapra/KapraNeuePro-Bold.woff2') format('woff2'),
+      url('/assets/fonts/kapra/KapraNeuePro-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-ExtraBoldItalic.woff") format("woff");
-  font-weight: bold;
+  font-family: 'KapraNeuePro-RegularItalic';
+  src: url('/assets/fonts/kapra/KapraNeuePro-RegularItalic.woff2') format('woff2'),
+      url('/assets/fonts/kapra/KapraNeuePro-RegularItalic.woff') format('woff');
+  font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Medium.woff") format("woff");
+  font-family: 'KapraNeuePro';
+  src: url('/assets/fonts/kapra/KapraNeuePro-BlackItalic.woff2') format('woff2'),
+      url('/assets/fonts/kapra/KapraNeuePro-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KapraNeuePro';
+  src: url('/assets/fonts/kapra/KapraNeuePro-Medium.woff2') format('woff2'),
+      url('/assets/fonts/kapra/KapraNeuePro-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Regular.woff") format("woff");
+  font-family: 'KapraNeuePro';
+  src: url('/assets/fonts/kapra/KapraNeuePro-Regular.woff2') format('woff2'),
+      url('/assets/fonts/kapra/KapraNeuePro-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-BlackItalic.woff") format("woff");
+  font-family: 'KapraNeuePro';
+  src: url('/assets/fonts/kapra/KapraNeuePro-Black.woff2') format('woff2'),
+      url('/assets/fonts/kapra/KapraNeuePro-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KapraNeuePro';
+  src: url('/assets/fonts/kapra/KapraNeuePro-BoldItalic.woff2') format('woff2'),
+      url('/assets/fonts/kapra/KapraNeuePro-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-DemiBold.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-DemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-Thin.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-Normal.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-Normal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-MediumItalic.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-DemiBoldItalic.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-DemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-Bold.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-Medium.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-Heavy.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-NormalItalic.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-NormalItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-Black.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-ExtraBold.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-ExtraLightItalic.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-ExtraLightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-HeavyItalic.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-HeavyItalic.woff') format('woff');
   font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
-  src: url("/assets/fonts/rubik/Rubik-Black.woff") format("woff");
-  font-weight: 900;
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-BoldItalic.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-Light.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-Light.woff') format('woff');
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-ExtraLight.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-ThinItalic.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-ExtraBoldItalic.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-ExtraBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-BlackItalic.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms W01';
+  src: url('/assets/fonts/ttnorms/TTNormsW01-LightItalic.woff2') format('woff2'),
+      url('/assets/fonts/ttnorms/TTNormsW01-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+

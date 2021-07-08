@@ -1,6 +1,13 @@
 import React from "react";
 
 const FieldSet = ({ legend = "", children }) => (
-  <fieldset className="border-white border-2 p-1 my-2">{legend && <legend className="text-white px-1 font-sans font-bold uppercase">{legend}</legend>}{children}</fieldset>
+  <fieldset>
+    {legend && (
+      <legend className="text-white bg-black uppercase font-kapra font-bold p-1 w-full shadow">
+        {legend}
+      </legend>
+    )}
+    <div className="p-2">{children}</div>
+  </fieldset>
 );
 export default FieldSet;

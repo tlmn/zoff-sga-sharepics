@@ -5,7 +5,6 @@
 @import "./fonts.css";
 @import "./controls.css";
 @import "./template.css";
-@import "./stripes.css";
 
 .grid-12 {
   @apply grid-cols-12;
@@ -14,5 +13,9 @@
 }
 
 span {
-  line#-height: 1.1;
+  line-height: 1.1;
+}
+
+.shadow {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
 }

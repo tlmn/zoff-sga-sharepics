@@ -51,11 +51,11 @@ const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
                         (theme) => theme.label === colorThemeOption
                       )[0]?.label
                     }.png`}
-                    className={`colorThumbnail ${
+                    className={`colorThumbnail shadow ${
                       getProperty({ state }, propertyPath) ===
                         colorThemes.filter(
                           (theme) => theme.label === colorThemeOption
-                        )[0]?.label && `border-turquoise`
+                        )[0]?.label && `border-black`
                     }`}
                   />
                 </div>

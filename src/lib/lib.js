@@ -14,8 +14,8 @@ export const html2image = async ({ state, setState }, fileName = "") => {
   htmlToImage
     .toJpeg(state.slides[state.currentSlide].ref.current, {
       quality: 1,
-      width: state.slides[state.currentSlide].dimensions.width,
-      height: state.slides[state.currentSlide].dimensions.height,
+      width: state.slides[state.currentSlide].options.dimensions.width,
+      height: state.slides[state.currentSlide].options.dimensions.height,
     })
     .then(function (blob) {
       saveAs(blob, `sharepic-sga-${slugify(fileName.substring)}`);

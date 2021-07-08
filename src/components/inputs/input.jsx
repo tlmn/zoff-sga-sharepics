@@ -6,8 +6,10 @@ import TemplateContext from "../templateContext";
 export default ({ propertyPath, label, ...props }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
-    <>
-      <label htmlFor={propertyPath}>{label}</label>
+    <div className="w-full mt-1">
+      <label htmlFor={propertyPath} className="uppercase font-bold text-black">
+        {label}
+      </label>
       <input
         type="text"
         value={getProperty({ state }, propertyPath)}
@@ -19,6 +21,6 @@ export default ({ propertyPath, label, ...props }) => {
         style={{ boxShadow: "inset 2px 2px 6px -1px rgba(0,0,0,0.4)" }}
         {...props}
       />
-    </>
+    </div>
   );
 };

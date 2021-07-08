@@ -6,10 +6,11 @@ import TemplateContext from "../templateContext";
 export default ({ propertyPath, label = "Textgröße", ...props }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
-    <>
+    <div className="flex flex-col">
       <label
         htmlFor={propertyPath}
         dangerouslySetInnerHTML={{ __html: label }}
+        className="uppercase text-black font-bold"
       />
       <input
         type="range"
@@ -23,6 +24,6 @@ export default ({ propertyPath, label = "Textgröße", ...props }) => {
         }
         {...props}
       />
-    </>
+    </div>
   );
 };

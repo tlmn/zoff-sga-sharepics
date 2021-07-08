@@ -1,105 +1,60 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState } from 'react'
 
-import Controls from "../../../templates/quote/controls";
-import Template from "../../../templates/quote/template";
-import TemplateContext from "../../../components/templateContext";
-import TemplateLayout from "../../../components/templateLayout";
+import Controls from '../../../templates/quote/controls'
+import Template from '../../../templates/quote/template'
+import TemplateContext from '../../../components/templateContext'
+import TemplateLayout from '../../../components/templateLayout'
 
 export default () => {
-  const [state, setState] = useState({
-    currentSlide: 0,
-    slides: [
-      {
-        dimensions: { width: 1080, height: 1080 },
-        scaleFactor: 0,
-        data: {
-          background: {
-            isImage: true,
-          },
-          image: {
-            url: null,
-            position: { x: 0, y: 0 },
-            scale: 0,
-          },
-          body: {
-            options: {
-              colorTheme: "orange_white",
-              bodyPositions: [
-                { value: "self-start", label: "oben" },
-                { value: "self-center", label: "mittig" },
-                { value: "self-end", label: "unten" },
-              ],
-              linePositions: [
-                { value: "self-start text-left", label: "links" },
-                { value: "self-center text-center", label: "mittig" },
-                { value: "self-end text-right", label: "rechts" },
-              ],
-              min: 1,
-              max: 6,
-              lineTemplate: {
-                inputType: "input",
-                content: "Neue Textzeile",
-                scale: { value: 70, range: [50, 140] },
-                position: "self-start text-left",
-              },
+    const [state, setState] = useState({
+        currentSlide: 0,
+        slides: [
+            {
+                options: {
+                    dimensions: { width: 1080, height: 1080 },
+                    colorTheme: 'green',
+                },
+                data: {
+                    image: {
+                        url: '',
+                        position: { x: 0, y: 0 },
+                        scale: 0,
+                    },
+                    body: {
+                        options: {
+                            scale: { value: 40, range: [35, 70] },
+                        },
+                        content: 'Arme Menschen und Familien eiden am meisten unter der Corona-Pandemie. Solidarisch wäre es, wenn Reiche ihren fairen Anteil zur Bewältigung der Corona- und der Klimakrise leisten würden',
+                    },
+                    description: {
+                        options: {
+                            scale: { value: 70, range: [50, 140] },
+                        },
+                        content: 'Autor:in / Quelle',
+                    },
+                    position: {
+                        options: {
+                            scale: { value: 70, range: [50, 140] },
+                        },
+                        content: 'Organisation',
+                    },
+                },
+                ref: useRef(null),
             },
-            bodyPosition: "self-end",
-            lines: [
-              {
-                inputType: "input",
-                content: "Evakuiert",
-                scale: {
-                  value: 100,
-                  range: [50, 140],
-                },
-                position: "self-end text-right",
-              },
-              {
-                inputType: "input",
-                content: "sofort",
-                scale: {
-                  value: 100,
-                  range: [50, 140],
-                },
-                position: "self-center text-center",
-              },
-              {
-                inputType: "input",
-                content: "die Lager!",
-                scale: {
-                  value: 100,
-                  range: [50, 140],
-                },
-                position: "self-end text-right",
-              },
-            ],
-          },
-          logo: {
-            options: {
-              position: "self-center",
-              positions: [
-                { value: "self-end", label: "rechts" },
-                { value: "self-center", label: "mitte" },
-              ],
-            },
-          },
-        },
-        ref: useRef(null),
-      },
-    ],
-    templateScale: true,
-  });
+        ],
+        templateScale: true,
+    })
 
-  return (
-    <TemplateContext.Provider value={[state, setState]}>
-      <TemplateLayout>
-        <div className="col-span-6">
-          <Template />
-        </div>
-        <div className="col-span-6">
-          <Controls />
-        </div>
-      </TemplateLayout>
-    </TemplateContext.Provider>
-  );
-};
+    return (
+        <TemplateContext.Provider value={[state, setState]}>
+            <TemplateLayout>
+                <div className="col-span-6">
+                    <Template />
+                </div>
+                <div className="col-span-6">
+                    <Controls />
+                </div>
+            </TemplateLayout>
+        </TemplateContext.Provider>
+    )
+}

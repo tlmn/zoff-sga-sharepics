@@ -15,6 +15,7 @@ const InputRepeater = ({
   selectPosition = false,
   selectBold = false,
   selectInputType = false,
+  selectScale = true,
   positionOptions,
 }) => {
   const [state, setState] = useContext(TemplateContext);
@@ -25,7 +26,11 @@ const InputRepeater = ({
   );
   return (
     <>
-      {label !== "" && <label htmlFor={propertyPath}>{label}</label>}
+      {label !== "" && (
+        <label htmlFor={propertyPath} className="uppercase text-black font-bold">
+          {label}
+        </label>
+      )}
       <div id={propertyPath}>
         {lines.map((line, index) => (
           <div className="flex">
@@ -33,11 +38,11 @@ const InputRepeater = ({
               { state },
               `${propertyPath}.lines[${index}].inputType`
             ) === "input" && (
-                <Input
-                  propertyPath={`${propertyPath}.lines[${index}].content`}
-                  className="mr-2"
-                />
-              )}
+              <Input
+                propertyPath={`${propertyPath}.lines[${index}].content`}
+                className="mr-2"
+              />
+            )}
             {getProperty(
               { state },
               `${propertyPath}.lines[${index}].inputType`
@@ -47,12 +52,13 @@ const InputRepeater = ({
                 className="mr-2"
               />
             )}
-
-            <TextScale
-              propertyPath={`${propertyPath}.lines[${index}].scale`}
-              label=""
-              className="mr-2"
-            />
+            {selectScale && (
+              <TextScale
+                propertyPath={`${propertyPath}.lines[${index}].scale`}
+                label=""
+                className="mr-2"
+              />
+            )}
             {selectPosition && (
               <CustomSelect
                 options={positionOptions}

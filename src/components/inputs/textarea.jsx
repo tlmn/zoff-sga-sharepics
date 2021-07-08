@@ -14,6 +14,7 @@ export default ({ propertyPath, label, ...props }) => {
         }
         id={propertyPath}
         {...props}
+        rows={5}
       >
         {getProperty({ state }, propertyPath)}
       </textarea>

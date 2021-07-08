@@ -34,7 +34,11 @@ module.exports = {
       normal: 1.2,
     },
     fontSize: {
-      small: "40px",
+      "input-small": "12px",
+      "input-base": "16px",
+      "input-md": "20px",
+      xs: "24px",
+      s: "40px",
       base: "50px",
       md: "60px",
       lg: "70px",

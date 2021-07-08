@@ -1,9 +1,9 @@
-.template-scale {
+.template-scale--1-1 {
   transform: scale(0.5) translate(-50%, -50%);
 }
 
-.template-scale--insta {
-  transform: scale(0.3) translate(-89%, -114%);
+.template-scale--2-1 {
+  transform: scale(0.5) translate(-50%, -50%);
 }
 
 .template-scale--header {
