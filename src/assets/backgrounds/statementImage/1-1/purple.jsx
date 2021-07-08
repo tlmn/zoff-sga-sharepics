@@ -1,43 +1,40 @@
 import React from "react";
 
-const BGStatement21Purple = () => {
+const BGStatementImage11Purple = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1012"
-      height="506"
+      width="1080"
+      height="1080"
       fill="none"
-      viewBox="0 0 1012 506"
+      viewBox="0 0 1080 1080"
     >
       
       <g mask="url(#mask0)">
-        <path fill="#C738B8" d="M0 0H1012V506H0z"/>
+        <path fill="#C738B8" d="M0 0H1080V1080H0z"/>
         <g filter="url(#filter0_d)">
-          <path fill="#FF5858" d="M1016 392L-4 409l-8 99h1028V392z"/>
-        </g>
-        <g filter="url(#filter1_d)">
-          <path fill="#FFE81D" d="M0 506h287.5L0 352v154z"/>
-        </g>
-        <g filter="url(#filter2_d)">
           <path
             fill="#56E5A1"
-            d="M854.149 127.091l214.001 327.5 162.86-374.034-376.861 46.534z"
+            d="M869.956 776.53L1397.2 251.606l-265.55-146.172L869.956 776.53z"
           />
         </g>
-        <g filter="url(#filter3_d)">
+        <g filter="url(#filter1_d)">
           <path
-            fill="#0094FF"
-            d="M367.199-138.702L-134-149.175l275.251 306.547 225.948-296.074z"
+            fill="#FFE81D"
+            d="M-241.355 439.945l371.223-388.31-316.501-107.49-54.722 495.8z"
           />
+        </g>
+        <g filter="url(#filter2_d)">
+          <path fill="#FF5858" d="M1080 858L0 903.5V1080h1080V858z"/>
         </g>
       </g>
       <defs>
         <filter
           id="filter0_d"
-          width="1036"
-          height="124"
-          x="-16"
-          y="392"
+          width="535.246"
+          height="679.096"
+          x="865.956"
+          y="105.434"
           colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -61,37 +58,10 @@ const BGStatement21Purple = () => {
         </filter>
         <filter
           id="filter1_d"
-          width="295.5"
-          height="162"
-          x="0"
-          y="348"
-          colorInterpolationFilters="sRGB"
-          filterUnits="userSpaceOnUse"
-        >
-          <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
-          <feColorMatrix
-            in="SourceAlpha"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          ></feColorMatrix>
-          <feOffset dx="4"></feOffset>
-          <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
-          <feBlend
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          ></feBlend>
-          <feBlend
-            in="SourceGraphic"
-            in2="effect1_dropShadow"
-            result="shape"
-          ></feBlend>
-        </filter>
-        <filter
-          id="filter2_d"
-          width="384.86"
-          height="382.034"
-          x="850.149"
-          y="80.557"
+          width="379.223"
+          height="503.799"
+          x="-245.355"
+          y="-55.854"
           colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -114,11 +84,11 @@ const BGStatement21Purple = () => {
           ></feBlend>
         </filter>
         <filter
-          id="filter3_d"
-          width="509.199"
-          height="314.546"
-          x="-138"
-          y="-149.175"
+          id="filter2_d"
+          width="1088"
+          height="230.001"
+          x="-4"
+          y="858"
           colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -145,4 +115,4 @@ const BGStatement21Purple = () => {
   );
 }
 
-export default BGStatement21Purple;
+export default BGStatementImage11Purple;

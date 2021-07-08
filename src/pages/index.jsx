@@ -10,7 +10,7 @@ export default () => {
         <div className="container py-2">
           <div className="mx-auto grid grid-cols-12 col-gap-4 row-gap-2 py-5">
             <div className="col-span-12 text-center">
-              <h1 className="text-md text-yellow leading-tight font-bold font-ttnorms">
+              <h1 className="text-md text-yellow leading-none font-bold font-ttnorms">
                 Sharepic Generator <br />
                 Solidarisch geht anders
               </h1>
@@ -21,7 +21,7 @@ export default () => {
                   to={template.link}
                   className="no-underline hover:text-lightGray text-white font-bold"
                 >
-                  <span className="block text-base uppercase pb-1">
+                  <span className="block text-s uppercase pb-1">
                     {template.name}
                   </span>
                   <img

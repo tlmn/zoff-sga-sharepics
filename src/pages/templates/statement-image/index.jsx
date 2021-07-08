@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 
-import Controls from '../../../templates/statement/controls'
-import Template from '../../../templates/statement/template'
+import Controls from '../../../templates/statement-image/controls'
+import Template from '../../../templates/statement-image/template'
 import TemplateContext from '../../../components/templateContext'
 import TemplateLayout from '../../../components/templateLayout'
 
@@ -15,6 +15,11 @@ export default () => {
                     colorTheme: 'green',
                 },
                 data: {
+                    image: {
+                        url: '',
+                        position: { x: 0, y: 0 },
+                        scale: 0,
+                    },
                     body: {
                         options: {
                             min: 1,
@@ -27,15 +32,11 @@ export default () => {
                         },
                         lines: [
                             {
-                                content: 'Umverteilung',
+                                content: 'Raus aus der Krise!',
                                 inputType: 'input',
                             },
                             {
-                                content: 'statt zurück zum',
-                                inputType: 'input',
-                            },
-                            {
-                                content: 'kaputt sparen',
+                                content: 'Nicht zurück!',
                                 inputType: 'input',
                             },
                         ],
@@ -44,10 +45,13 @@ export default () => {
                         options: {
                             scale: { value: 70, range: [50, 140] },
                         },
-                        content: 'Beschreibung / Autor:in / Quelle',
+                        content: 'Autor:in / Quelle',
                     },
-                    partnerLogo: {
-                        url: '',
+                    position: {
+                        options: {
+                            scale: { value: 70, range: [50, 140] },
+                        },
+                        content: 'Organisation',
                     },
                 },
                 ref: useRef(null),

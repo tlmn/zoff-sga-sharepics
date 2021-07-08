@@ -1,6 +1,6 @@
 import React from "react";
 
-const BGQuote21Green = () => {
+const BGQuote21Green = ()=> {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,23 +9,22 @@ const BGQuote21Green = () => {
       fill="none"
       viewBox="0 0 1012 506"
     >
-      
       <g mask="url(#mask0)">
-        <path fill="#56E5A1" d="M0 0H1012V506H0z"/>
+        <path fill="#56E5A1" d="M0 0H1012V506H0z"></path>
         <g filter="url(#filter0_d)">
-          <path fill="#FF5858" d="M1016 392L-4 409l-8 99h1028V392z"/>
+          <path fill="#FF5858" d="M1016 392L-4 409l-8 99h1028V392z"></path>
         </g>
         <g filter="url(#filter1_d)">
-          <path fill="#0094FF" d="M0 506h287.5L0 352v154z"/>
+          <path fill="#0094FF" d="M0 506h287.5L0 352v154z"></path>
         </g>
       </g>
       <defs>
         <filter
           id="filter0_d"
-          width="1036"
-          height="124"
-          x="-16"
-          y="392"
+          width="1062.76"
+          height="452.621"
+          x="-24.119"
+          y="228.558"
           colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >

@@ -71,6 +71,16 @@ export const templates = [
     thumbnailSrc: "../assets/images/templates/statement.png",
   },
   {
+    name: "Statement + Bild",
+    link: "templates/statement-image",
+    thumbnailSrc: "../assets/images/templates/statement-image.png",
+  },
+  {
+    name: "Zitat + Bild",
+    link: "templates/quote-image",
+    thumbnailSrc: "../assets/images/templates/quote-image.png",
+  },
+  {
     name: "Zitat",
     link: "templates/quote",
     thumbnailSrc: "../assets/images/templates/quote.png",
@@ -80,9 +90,5 @@ export const templates = [
     link: "templates/event",
     thumbnailSrc: "../assets/images/templates/event.png",
   },
-  {
-    name: "Bild + Statement",
-    link: "templates/image-statement",
-    thumbnailSrc: "../assets/images/templates/image-statement.png",
-  },
+
 ];

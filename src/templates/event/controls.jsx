@@ -1,139 +1,69 @@
-import React, { useContext, useEffect } from "react";
-
-import Checkbox from "../../components/inputs/checkbox";
-import ColorThemeSelector from "../../components/inputs/colorThemesSelect";
-import ControlsWrapper from "../../components/controlsWrapper";
-import CustomSelect from "../../components/inputs/customSelect";
-import DownloadButton from "../../components/inputs/downloadButton";
-import FieldSet from "../../components/inputs/fieldSet";
-import Input from "../../components/inputs/input";
-import InputRepeater from "../../components/inputs/inputRepeater";
-import TemplateContext from "../../components/templateContext";
-import TextScale from "../../components/inputs/textScale";
-import { updateProperty } from "../../lib/lib";
+import ColorThemeSelector from '../../components/inputs/colorThemesSelect'
+import ControlsWrapper from '../../components/controlsWrapper'
+import CustomSelect from '../../components/inputs/customSelect'
+import DownloadButton from '../../components/inputs/downloadButton'
+import FieldSet from '../../components/inputs/fieldSet'
+import Image from '../../components/inputs/image'
+import Input from '../../components/inputs/input'
+import React from 'react'
+import TextScale from '../../components/inputs/textScale'
+import Textarea from '../../components/inputs/textarea'
 
 export default () => {
-  const currentSlide = 0;
-  const [state, setState] = useContext(TemplateContext);
+    const currentSlide = 0
 
-  const {
-    slides: {
-      0: {
-        data: {
-          body: {
-            options: { position },
-          },
-        },
-      },
-    },
-  } = state;
+    return (
+        <ControlsWrapper>
+            <FieldSet legend="Format">
+                <CustomSelect
+                    propertyPath={`slides[${currentSlide}].options.dimensions`}
+                    options={[
+                        {
+                            value: { width: 1080, height: 1080 },
+                            label: 'Instagram / Facebook (1:1)',
+                        },
+                        {
+                            value: { width: 1012, height: 506 },
+                            label: 'Twitter (2:1)',
+                        },
+                    ]}
+                />
+            </FieldSet>
+            <FieldSet legend="Text">
+                <Input
+                    propertyPath={`slides[${currentSlide}].data.category.content`}
+                    label="Kategorie"
+                />
+                <Input
+                    propertyPath={`slides[${currentSlide}].data.meta.content`}
+                    label="Ort &amp; Zeit"
+                />
+                <Textarea
+                    propertyPath={`slides[${currentSlide}].data.body.content`}
+                />
+                <TextScale
+                    propertyPath={`slides[${currentSlide}].data.body.options.scale`}
+                />
+            </FieldSet>
 
-  useEffect(() => {
-    if (
-      state.slides[currentSlide].data.body.options.position === "items-start"
-    ) {
-      updateProperty(
-        { setState },
-        `slides[${currentSlide}].data.images.onlyOneImage`,
-        true
-      );
+            <FieldSet legend="Farbe">
+                <ColorThemeSelector
+                    colorThemeOptions={['green', 'blue', 'purple', 'yellow']}
+                    propertyPath={`slides[${currentSlide}].options.colorTheme`}
+                />
+            </FieldSet>
 
-      updateProperty(
-        { setState },
-        `slides[${currentSlide}].data.logo.options.position`,
-        "bottom-center"
-      );
-    }
+            <FieldSet legend="Partnerlogo">
+                <Image
+                    propertyPath={`slides[${currentSlide}].data.partnerLogo`}
+                    scale={false}
+                    reset={false}
+                />
+            </FieldSet>
 
-    if (state.slides[currentSlide].data.body.options.position === "items-end") {
-      updateProperty(
-        { setState },
-        `slides[${currentSlide}].data.images.onlyOneImage`,
-        true
-      );
-
-      updateProperty(
-        { setState },
-        `slides[${currentSlide}].data.logo.options.position`,
-        "top-right"
-      );
-    }
-  }, [position]);
-
-  return (
-    <ControlsWrapper>
-      <FieldSet legend="Bilder">
-        <Checkbox
-          propertyPath={`slides[${currentSlide}].data.images.onlyOneImage`}
-          value={state.slides[currentSlide].data.images.onlyOneImage}
-          label="nur ein Bild"
-          disabled={
-            state.slides[currentSlide].data.body.options.position ===
-              "items-start" ||
-            state.slides[currentSlide].data.body.options.position ===
-              "items-end"
-              ? true
-              : false
-          }
-        />
-
-      </FieldSet>
-
-      <FieldSet legend="Logo">
-        <CustomSelect
-          options={state.slides[currentSlide].data.logo.options.positions}
-          propertyPath={`slides[${currentSlide}].data.logo.options.position`}
-          label="Position Logo"
-          disabled={
-            state.slides[currentSlide].data.body.options.position ===
-              "items-start" ||
-            state.slides[currentSlide].data.body.options.position ===
-              "items-end"
-              ? true
-              : false
-          }
-        />
-      </FieldSet>
-
-      <FieldSet legend="Text 1. Farbe">
-        <ColorThemeSelector
-          colorThemeOptions={["orange_white", "black_white"]}
-          propertyPath={`slides[${currentSlide}].data.body.options.colorTheme`}
-        />
-
-        <CustomSelect
-          options={state.slides[currentSlide].data.body.options.positions}
-          propertyPath={`slides[${currentSlide}].data.body.options.position`}
-          label="Position Text"
-        />
-
-        <InputRepeater propertyPath={`slides[${currentSlide}].data.body`} />
-      </FieldSet>
-      {state.slides[currentSlide].data.body.options.position !==
-        "items-start" &&
-        state.slides[currentSlide].data.body.options.position !==
-          "items-end" && (
-          <FieldSet legend="Text 2. Farbe">
-            <ColorThemeSelector
-              colorThemeOptions={["white_black", "black_white"]}
-              propertyPath={`slides[${currentSlide}].data.subline.colorTheme`}
+            <DownloadButton
+                fileNamePath={`slides[${currentSlide}].data.body.content`}
             />
-            <div className="flex">
-              <Input
-                propertyPath={`slides[${currentSlide}].data.subline.content`}
-                className="mr-2"
-              />
-
-              <TextScale
-                propertyPath={`slides[${currentSlide}].data.subline.scale`}
-                label=""
-              />
-            </div>
-          </FieldSet>
-        )}
-      <DownloadButton
-        fileNamePath={`slides[${currentSlide}].data.body.content`}
-      />
-    </ControlsWrapper>
-  );
-};
+        </ControlsWrapper>
+    )
+}

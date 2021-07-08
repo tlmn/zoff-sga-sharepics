@@ -1,88 +1,46 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState } from 'react'
 
-import Controls from "../../../templates/event/controls";
-import Template from "../../../templates/event/template";
-import TemplateContext from "../../../components/templateContext";
-import TemplateLayout from "../../../components/templateLayout";
+import Controls from '../../../templates/event/controls'
+import Template from '../../../templates/event/template'
+import TemplateContext from '../../../components/templateContext'
+import TemplateLayout from '../../../components/templateLayout'
 
 export default () => {
-  const [state, setState] = useState({
-    currentSlide: 0,
-    slides: [
-      {
-        dimensions: { width: 1080, height: 1080 },
-        data: {
-          images: {
-            upper: {
-              url: null,
-              position: { x: 0, y: 0 },
-              scale: 0,
+    const [state, setState] = useState({
+        currentSlide: 0,
+        slides: [
+            {
+                options: {
+                    dimensions: { width: 1080, height: 1080 },
+                    colorTheme: 'green',
+                },
+                data: {
+                    category: { content: 'Kundgebung' },
+                    meta: { content: 'SO. 12.6. 18 Uhr | Rathaus Lüneburg' },
+                    partnerLogo: { url: '' },
+                    body: {
+                        options: {
+                            scale: { value: 80, range: [70, 120] },
+                        },
+                        content: "Solidarität mit dem Gesundheitssektor",
+                    },
+                },
+                ref: useRef(null),
             },
-            lower: { url: null, position: { x: 0, y: 0 }, scale: 0 },
-            onlyOneImage: false,
-          },
-          body: {
-            options: {
-              colorTheme: "orange_white",
-              position: "items-center",
-              positions: [
-                { value: "items-start", label: "oben" },
-                { value: "items-center", label: "mittig" },
-                { value: "items-end", label: "unten" },
-              ],
-              min: 1,
-              max: 3,
-              lineTemplate: {
-                inputType: "input",
-                content: "Neue Textzeile",
-                scale: { value: 50, range: [60, 140] },
-              },
-            },
-            lines: [
-              {
-                inputType: "input",
-                content: "Open Arms",
-                scale: { value: 100, range: [60, 200] },
-              },
-              {
-                inputType: "input",
-                content: "rettet 120 Menschen",
-                scale: { value: 70, range: [60, 140] },
-              },
-            ],
-          },
-          subline: {
-            inputType: "input",
-            content: "zuvor 43 ertrunken",
-            colorTheme: "white_black",
-            scale: { value: 50, range: [40, 90] },
-          },
-          logo: {
-            options: {
-              position: "top-right",
-              positions: [
-                { value: "top-right", label: "oben rechts" },
-                { value: "bottom-center", label: "unten mitte" },
-              ],
-            },
-          },
-        },
-        ref: useRef(null),
-      },
-    ],
-    templateScale: true,
-  });
+        ],
+        templateScale: true,
+    })
 
-  return (
-    <TemplateContext.Provider value={[state, setState]}>
-      <TemplateLayout>
-        <div className="col-span-6">
-          <Template />
-        </div>
-        <div className="col-span-6 mb-4">
-          <Controls />
-        </div>
-      </TemplateLayout>
-    </TemplateContext.Provider>
-  );
-};
+    return (
+        <TemplateContext.Provider value={[state, setState]}>
+            <TemplateLayout>
+                <div className="col-span-6">
+                    <Template />
+                </div>
+                <div className="col-span-6">
+                    <Controls />
+                </div>
+            </TemplateLayout>
+        </TemplateContext.Provider>
+    )
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const BGQuote11Blue = ()=> {
+const BGQuoteImage11Purple = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,12 +11,12 @@ const BGQuote11Blue = ()=> {
     >
       
       <g mask="url(#mask0)">
-        <path fill="#0094FF" d="M0 0H1080V1080H0z"></path>
+        <path fill="#C738B8" d="M0 0H1080V1080H0z"/>
         <g filter="url(#filter0_d)">
-          <path fill="#FFE81D" d="M0 1079.5h808.5L0 759v320.5z"></path>
+          <path fill="#56E5A1" d="M0 1079.5h808.5L0 759v320.5z"/>
         </g>
         <g filter="url(#filter1_d)">
-          <path fill="#FF5858" d="M1080 858L0 903.5V1080h1080V858z"></path>
+          <path fill="#FF5858" d="M1080 858L0 903.5V1080h1080V858z"/>
         </g>
       </g>
       <defs>
@@ -79,4 +79,4 @@ const BGQuote11Blue = ()=> {
   );
 }
 
-export default BGQuote11Blue;
+export default BGQuoteImage11Purple;

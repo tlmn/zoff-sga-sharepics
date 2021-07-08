@@ -1,6 +1,6 @@
 import React from "react";
 
-const BGStatement21Green = () => {
+const BGStatementImage21Purple = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,34 +9,35 @@ const BGStatement21Green = () => {
       fill="none"
       viewBox="0 0 1012 506"
     >
+      
       <g mask="url(#mask0)">
-        <path fill="#56E5A1" d="M0 0H1012V506H0z"></path>
+        <path fill="#C738B8" d="M0 0H1012V506H0z"/>
         <g filter="url(#filter0_d)">
-          <path fill="#FF5858" d="M1016 392L-4 409l-8 99h1028V392z"></path>
+          <path fill="#FF5858" d="M1016 392L-4 409l-8 99h1028V392z"/>
         </g>
         <g filter="url(#filter1_d)">
-          <path fill="#C738B8" d="M0 506h287.5L0 352v154z"></path>
+          <path fill="#FFE81D" d="M0 506h287.5L0 352v154z"/>
         </g>
         <g filter="url(#filter2_d)">
           <path
-            fill="#FFE81D"
-            d="M1377.87-22.034L886 74.78l334.37 240.686 157.5-337.5z"
-          ></path>
+            fill="#56E5A1"
+            d="M854.149 127.091l214.001 327.5 162.86-374.034-376.861 46.534z"
+          />
         </g>
         <g filter="url(#filter3_d)">
           <path
             fill="#0094FF"
-            d="M213.871-177.034L-278-80.22 56.371 160.466l157.5-337.5z"
-          ></path>
+            d="M367.199-138.702L-134-149.175l275.251 306.547 225.948-296.074z"
+          />
         </g>
       </g>
       <defs>
         <filter
           id="filter0_d"
-          width="1062.76"
-          height="452.621"
-          x="-24.119"
-          y="228.558"
+          width="1036"
+          height="124"
+          x="-16"
+          y="392"
           colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -87,10 +88,10 @@ const BGStatement21Green = () => {
         </filter>
         <filter
           id="filter2_d"
-          width="576.518"
-          height="574.881"
-          x="882"
-          y="-224"
+          width="384.86"
+          height="382.034"
+          x="850.149"
+          y="80.557"
           colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -114,10 +115,10 @@ const BGStatement21Green = () => {
         </filter>
         <filter
           id="filter3_d"
-          width="576.518"
-          height="574.881"
-          x="-282"
-          y="-379"
+          width="509.199"
+          height="314.546"
+          x="-138"
+          y="-149.175"
           colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -144,4 +145,4 @@ const BGStatement21Green = () => {
   );
 }
 
-export default BGStatement21Green;
+export default BGStatementImage21Purple;

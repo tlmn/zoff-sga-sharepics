@@ -4,14 +4,12 @@ import CustomSelect from '../../components/inputs/customSelect'
 import DownloadButton from '../../components/inputs/downloadButton'
 import FieldSet from '../../components/inputs/fieldSet'
 import Image from '../../components/inputs/image'
-import Input from '../../components/inputs/input'
+import InputRepeater from '../../components/inputs/inputRepeater'
 import React from 'react'
 import TextScale from '../../components/inputs/textScale'
-import Textarea from '../../components/inputs/textarea'
 
 export default () => {
     const currentSlide = 0
-
     return (
         <ControlsWrapper>
             <FieldSet legend="Format">
@@ -30,21 +28,17 @@ export default () => {
                 />
             </FieldSet>
 
+            <FieldSet>
+                <Image propertyPath={`slides[${currentSlide}].data.image`} />
+            </FieldSet>
+
             <FieldSet legend="Text">
-                <Textarea
-                    propertyPath={`slides[${currentSlide}].data.body.content`}
+                <InputRepeater
+                    propertyPath={`slides[${currentSlide}].data.body`}
                     selectScale={false}
                 />
                 <TextScale
                     propertyPath={`slides[${currentSlide}].data.body.options.scale`}
-                />
-                <Input
-                    propertyPath={`slides[${currentSlide}].data.author.content`}
-                    label="Autor:in / Quelle"
-                />
-                <Input
-                    propertyPath={`slides[${currentSlide}].data.position.content`}
-                    label="Organisation"
                 />
             </FieldSet>
 

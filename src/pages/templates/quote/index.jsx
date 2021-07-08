@@ -15,29 +15,20 @@ export default () => {
                     colorTheme: 'green',
                 },
                 data: {
-                    image: {
-                        url: '',
-                        position: { x: 0, y: 0 },
-                        scale: 0,
-                    },
                     body: {
                         options: {
-                            scale: { value: 40, range: [35, 70] },
+                            scale: { value: 60, range: [40, 70] },
                         },
-                        content: 'Arme Menschen und Familien eiden am meisten unter der Corona-Pandemie. Solidarisch wäre es, wenn Reiche ihren fairen Anteil zur Bewältigung der Corona- und der Klimakrise leisten würden',
+                        content:
+                            'Arme Menschen und Familien eiden am meisten unter der Corona-Pandemie. Solidarisch wäre es, wenn Reiche ihren fairen Anteil zur Bewältigung der Corona- und der Klimakrise leisten würden',
                     },
-                    description: {
-                        options: {
-                            scale: { value: 70, range: [50, 140] },
-                        },
-                        content: 'Autor:in / Quelle',
+                    author: {
+                        content: 'Matthias Hiksch',
                     },
                     position: {
-                        options: {
-                            scale: { value: 70, range: [50, 140] },
-                        },
-                        content: 'Organisation',
+                        content: 'Naturfreunde Deutschland e.V.',
                     },
+                    partnerLogo: { url: '' },
                 },
                 ref: useRef(null),
             },

@@ -30,6 +30,10 @@ export default () => {
                 />
             </FieldSet>
 
+            <FieldSet>
+                <Image propertyPath={`slides[${currentSlide}].data.image`} />
+            </FieldSet>
+
             <FieldSet legend="Text">
                 <Textarea
                     propertyPath={`slides[${currentSlide}].data.body.content`}
@@ -39,7 +43,7 @@ export default () => {
                     propertyPath={`slides[${currentSlide}].data.body.options.scale`}
                 />
                 <Input
-                    propertyPath={`slides[${currentSlide}].data.author.content`}
+                    propertyPath={`slides[${currentSlide}].data.description.content`}
                     label="Autor:in / Quelle"
                 />
                 <Input

@@ -1,31 +1,31 @@
 import React from "react";
 
-const BGQuote11Blue = ()=> {
+const BGQuoteImage21Green = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1080"
-      height="1080"
+      width="1012"
+      height="506"
       fill="none"
-      viewBox="0 0 1080 1080"
+      viewBox="0 0 1012 506"
     >
       
       <g mask="url(#mask0)">
-        <path fill="#0094FF" d="M0 0H1080V1080H0z"></path>
+        <path fill="#56E5A1" d="M0 0H1012V506H0z"/>
         <g filter="url(#filter0_d)">
-          <path fill="#FFE81D" d="M0 1079.5h808.5L0 759v320.5z"></path>
+          <path fill="#FF5858" d="M1016 392L-4 409l-8 99h1028V392z"/>
         </g>
         <g filter="url(#filter1_d)">
-          <path fill="#FF5858" d="M1080 858L0 903.5V1080h1080V858z"></path>
+          <path fill="#0094FF" d="M0 506h287.5L0 352v154z"/>
         </g>
       </g>
       <defs>
         <filter
           id="filter0_d"
-          width="816.5"
-          height="328.5"
-          x="-4"
-          y="759"
+          width="1036"
+          height="124"
+          x="-16"
+          y="392"
           colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -49,10 +49,10 @@ const BGQuote11Blue = ()=> {
         </filter>
         <filter
           id="filter1_d"
-          width="1088"
-          height="230.001"
-          x="-4"
-          y="858"
+          width="295.5"
+          height="162"
+          x="0"
+          y="348"
           colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -61,7 +61,7 @@ const BGQuote11Blue = ()=> {
             in="SourceAlpha"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
           ></feColorMatrix>
-          <feOffset dy="4"></feOffset>
+          <feOffset dx="4"></feOffset>
           <feGaussianBlur stdDeviation="2"></feGaussianBlur>
           <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
           <feBlend
@@ -79,4 +79,4 @@ const BGQuote11Blue = ()=> {
   );
 }
 
-export default BGQuote11Blue;
+export default BGQuoteImage21Green;

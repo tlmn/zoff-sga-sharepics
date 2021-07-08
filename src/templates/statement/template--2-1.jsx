@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
-import { formatText, getColor } from '../../lib/lib'
 
-import BGStatement21Blue from '../../assets/backgrounds/statement/2-1/blue'
-import BGStatement21Green from '../../assets/backgrounds/statement/2-1/green'
-import BGStatement21Purple from '../../assets/backgrounds/statement/2-1/purple'
-import BGStatement21Yellow from '../../assets/backgrounds/statement/2-1/yellow'
+import BGStatement21Blue from '../../assets/backgrounds/statementImage/2-1/blue'
+import BGStatement21Green from '../../assets/backgrounds/statementImage/2-1/green'
+import BGStatement21Purple from '../../assets/backgrounds/statementImage/2-1/purple'
+import BGStatement21Yellow from '../../assets/backgrounds/statementImage/2-1/yellow'
 import LogoText from '../../assets/svg/logo-text'
+import PartnerLogo21 from '../../components/templates/partnerLogo21'
 import TemplateContext from '../../components/templateContext'
+import { formatText } from '../../lib/lib'
 
 const TemplateStatement21 = () => {
     const [state] = useContext(TemplateContext)
@@ -86,9 +87,7 @@ const TemplateStatement21 = () => {
                         <LogoText />
                     </div>
                 </div>
-                <div className="absolute flex w-full items-center justify-end hidden">
-                    <div className="self-end">PartnerLogo</div>
-                </div>
+                <PartnerLogo21 />
             </div>
         </div>
     )

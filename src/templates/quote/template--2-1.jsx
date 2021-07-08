@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
-import { formatText, getColor } from '../../lib/lib'
 
 import BGQuote21Blue from '../../assets/backgrounds/quote/2-1/blue'
 import BGQuote21Green from '../../assets/backgrounds/quote/2-1/green'
 import BGQuote21Purple from '../../assets/backgrounds/quote/2-1/purple'
 import BGQuote21Yellow from '../../assets/backgrounds/quote/2-1/yellow'
-import DraggableImage from '../../components/inputs/draggableImage'
 import LogoText from '../../assets/svg/logo-text'
+import PartnerLogo21 from '../../components/templates/partnerLogo21'
 import TemplateContext from '../../components/templateContext'
 
 const TemplateQuote21 = () => {
@@ -32,51 +31,6 @@ const TemplateQuote21 = () => {
                 }}
             >
                 <div className="w-full h-full absolute top-0 left-0">
-                    <div
-                        className="w-full h-full absolute z-10"
-                        style={{
-                            clipPath:
-                                'polygon(0px 0px, 46% 0%, 52% 79.1%, 10.2% 80.5%, 0% 71%)',
-                        }}
-                    >
-                        <DraggableImage
-                            propertyPath={`slides[${state.currentSlide}].data.image.position`}
-                        />
-                        <div
-                            className="w-full h-full absolute top-0 left-0 z-30"
-                            style={{
-                                background:
-                                    'linear-gradient(179.99deg, rgba(0, 0, 0, 0) 47.98%, #000000 77.8%)',
-                                mixBlendMode: 'multiply',
-                            }}
-                        />
-                        <div
-                            className="absolute top-0 left-0 z-20 object-cover h-full w-full"
-                            style={{
-                                backgroundImage: `url(${
-                                    state.slides[state.currentSlide].data.image
-                                        .url !== ''
-                                        ? state.slides[state.currentSlide].data
-                                              .image.url
-                                        : `/assets/images/defaultImages/quote-1.jpg`
-                                })`,
-                                backgroundSize: `${
-                                    state.slides[state.currentSlide].data.image
-                                        .scale *
-                                        10 +
-                                    50
-                                }%`,
-                                backgroundRepeat: 'repeat',
-                                backgroundPosition: `${
-                                    state.slides[state.currentSlide].data.image
-                                        .position.x
-                                }px ${
-                                    state.slides[state.currentSlide].data.image
-                                        .position.y
-                                }px`,
-                            }}
-                        />
-                    </div>
                     {state.slides[state.currentSlide].options.colorTheme ===
                         'green' && <BGQuote21Green />}
                     {state.slides[state.currentSlide].options.colorTheme ===
@@ -87,7 +41,7 @@ const TemplateQuote21 = () => {
                         'blue' && <BGQuote21Blue />}
                 </div>
 
-                <div className="absolute top-0 right-0 h-full z-30 px-3 pt-3 pb-1 flex flex-col w-1/2">
+                <div className="absolute top-0 right-0 h-full z-30 px-4 pt-4 pb-1 flex flex-col w-full font-bold">
                     {state.slides[state.currentSlide].data.body.content !==
                         '' && (
                         <span
@@ -97,7 +51,7 @@ const TemplateQuote21 = () => {
                                         .content
                                 }“`,
                             }}
-                            className="font-ttnorms leading-normal"
+                            className="font-ttnorms font-medium leading-normal"
                             style={{
                                 fontSize: `${
                                     state.slides[state.currentSlide].data.body
@@ -108,15 +62,15 @@ const TemplateQuote21 = () => {
                     )}
 
                     <div
-                        className="mt-3 flex flex-col items-center text-xs"
+                        className="mt-1 font-medium flex flex-col items-center text-xs"
                         style={{ transform: 'rotate(-3deg)' }}
                     >
-                        {state.slides[state.currentSlide].data.description
+                        {state.slides[state.currentSlide].data.author
                             .content !== '' && (
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: state.slides[state.currentSlide]
-                                        .data.description.content,
+                                        .data.author.content,
                                 }}
                                 className="font-kapra uppercase font-bold italic text-white bg-black inline p-2 my-1 shadow leading-none"
                             />
@@ -133,12 +87,10 @@ const TemplateQuote21 = () => {
                         )}
                     </div>
                 </div>
-                <div
-                    className="absolute bottom-0 left-0 w-full justify-center px-2 pb-1"
-                    style={{ height: '6rem' }}
-                >
-                    <LogoText className="mx-auto" />
+                <div className="absolute bottom-0 left-0 w-full justify-center px-2 pb-1">
+                    <LogoText />
                 </div>
+                <PartnerLogo21 />
             </div>
         </div>
     )

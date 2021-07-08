@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 
-import Controls from '../../../templates/statement/controls'
-import Template from '../../../templates/statement/template'
+import Controls from '../../../templates/quote-image/controls'
+import Template from '../../../templates/quote-image/template'
 import TemplateContext from '../../../components/templateContext'
 import TemplateLayout from '../../../components/templateLayout'
 
@@ -15,40 +15,31 @@ export default () => {
                     colorTheme: 'green',
                 },
                 data: {
+                    image: {
+                        url: '',
+                        position: { x: 0, y: 0 },
+                        scale: 0,
+                    },
                     body: {
                         options: {
-                            min: 1,
-                            max: 4,
-                            scale: { value: 70, range: [60, 100] },
-                            lineTemplate: {
-                                content: 'Neue Textzeile',
-                                inputType: 'input',
-                            },
+                            scale: { value: 40, range: [35, 70] },
                         },
-                        lines: [
-                            {
-                                content: 'Umverteilung',
-                                inputType: 'input',
-                            },
-                            {
-                                content: 'statt zurück zum',
-                                inputType: 'input',
-                            },
-                            {
-                                content: 'kaputt sparen',
-                                inputType: 'input',
-                            },
-                        ],
+                        content:
+                            'Arme Menschen und Familien eiden am meisten unter der Corona-Pandemie. Solidarisch wäre es, wenn Reiche ihren fairen Anteil zur Bewältigung der Corona- und der Klimakrise leisten würden',
                     },
                     description: {
                         options: {
                             scale: { value: 70, range: [50, 140] },
                         },
-                        content: 'Beschreibung / Autor:in / Quelle',
+                        content: 'Autor:in / Quelle',
                     },
-                    partnerLogo: {
-                        url: '',
+                    position: {
+                        options: {
+                            scale: { value: 70, range: [50, 140] },
+                        },
+                        content: 'Organisation',
                     },
+                    partnerLogo: { url: '' },
                 },
                 ref: useRef(null),
             },
