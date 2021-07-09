@@ -8,6 +8,9 @@ select {
   @apply w-full;
 }
 
+textarea {
+  box-shadow: inset 2px 2px 6px -1px rgba(0, 0, 0, 0.4);
+}
 fieldset {
   @apply w-full;
 }
