@@ -86,7 +86,7 @@ const TemplateStatement11 = () => {
                     {/* FOOTER */}
                     <div className="flex">
                         <div
-                            className={`absolute bottom-0 left-0 w-full flex ${
+                            className={`w-full flex ${
                                 state.slides[state.currentSlide].data
                                     .partnerLogo.url === ''
                                     ? `justify-center`
