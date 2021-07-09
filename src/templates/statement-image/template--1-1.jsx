@@ -33,10 +33,11 @@ const TemplateStatementImage11 = () => {
             >
                 <div className="w-full h-full absolute top-0 left-0">
                     <div
-                        className="w-full h-full absolute z-40"
+                        className="w-full h-full absolute"
                         style={{
                             clipPath:
                                 'polygon(0px 0px, 100% 0%, 100% 79.5%, 0% 84%',
+                            zIndex: 40,
                         }}
                     >
                         <DraggableImage
@@ -87,25 +88,28 @@ const TemplateStatementImage11 = () => {
                         'blue' && <BGStatementImage11Blue />}
                 </div>
 
-                <div className="flex-1 top-0 right-0 z-50 px-3 pt-3 pb-1 flex flex-col items-center justify-end mb-4">
-                    {state.slides[state.currentSlide].data.body.lines.map(
-                        (line) =>
-                            line.content !== '' && (
-                                <span
-                                    className="font-kapra uppercase font-bold italic text-black bg-green inline p-2 my-1 shadow leading-none"
-                                    style={{
-                                        transform: 'rotate(-3deg)',
-                                        fontSize: `${
-                                            state.slides[state.currentSlide]
-                                                .data.body.options.scale.value
-                                        }px`,
-                                        width: 'max-content',
-                                    }}
-                                >
-                                    {line.content}
-                                </span>
-                            )
-                    )}
+                <div className="flex-1 top-0 right-0 px-3 pt-3 pb-1 flex flex-col justify-end mb-4">
+                    <div className="z-50 flex flex-col items-center">
+                        {state.slides[state.currentSlide].data.body.lines.map(
+                            (line) =>
+                                line.content !== '' && (
+                                    <span
+                                        className="font-kapra uppercase font-bold italic text-black bg-green inline p-2 my-1 shadow leading-none"
+                                        style={{
+                                            transform: 'rotate(-3deg)',
+                                            fontSize: `${
+                                                state.slides[state.currentSlide]
+                                                    .data.body.options.scale
+                                                    .value
+                                            }px`,
+                                            width: 'max-content',
+                                        }}
+                                    >
+                                        {line.content}
+                                    </span>
+                                )
+                        )}
+                    </div>
                 </div>
                 <div
                     className={`w-full flex ${

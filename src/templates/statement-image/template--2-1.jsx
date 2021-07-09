@@ -33,7 +33,7 @@ const TemplateStatementImage21 = () => {
             >
                 <div className="w-full h-full absolute top-0 left-0">
                     <div
-                        className="w-full h-full absolute z-10"
+                        className="w-full h-full absolute z-30"
                         style={{
                             clipPath:
                                 'polygon(0px 0px, 100% 0%, 100% 77.5%, 10.2% 80.5%, 0% 71%)',
@@ -87,26 +87,31 @@ const TemplateStatementImage21 = () => {
                         'blue' && <BGStatementImage21Blue />}
                 </div>
                 <div className="flex flex-col w-full h-full px-3 pt-3 pb-1">
-                    <div className="flex flex-1 flex-col items-center justify-center z-30">
-                        {state.slides[state.currentSlide].data.body.lines.map(
-                            (line) =>
-                                line.content !== '' && (
-                                    <span
-                                        className="font-kapra uppercase font-bold italic text-black bg-green inline p-2 my-1 shadow leading-none"
-                                        style={{
-                                            transform: 'rotate(-3deg)',
-                                            fontSize: `${
-                                                state.slides[state.currentSlide]
-                                                    .data.body.options.scale
-                                                    .value / 2
-                                            }px`,
-                                            width: 'max-content',
-                                        }}
-                                    >
-                                        {line.content}
-                                    </span>
-                                )
-                        )}
+                    <div className="flex flex-1 flex-col items-center justify-center">
+                        <div className="flex flex-col items-center z-30">
+                            {state.slides[
+                                state.currentSlide
+                            ].data.body.lines.map(
+                                (line) =>
+                                    line.content !== '' && (
+                                        <span
+                                            className="font-kapra uppercase font-bold italic text-black bg-green inline p-2 my-1 shadow leading-none"
+                                            style={{
+                                                transform: 'rotate(-3deg)',
+                                                fontSize: `${
+                                                    state.slides[
+                                                        state.currentSlide
+                                                    ].data.body.options.scale
+                                                        .value / 2
+                                                }px`,
+                                                width: 'max-content',
+                                            }}
+                                        >
+                                            {line.content}
+                                        </span>
+                                    )
+                            )}
+                        </div>
                     </div>
                     <div
                         className="w-full flex justify-center px-2 pb-1"
