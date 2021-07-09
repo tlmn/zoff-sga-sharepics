@@ -1,14 +1,6 @@
 module.exports = {
   purge: {
-    content: [
-      './src/**/*.js',
-      './src/**/*.jsx',
-      './src/**/*.ts',
-      './src/**/*.tsx',
-    ],
-    options: {
-      whitelist: ['items-start', 'items-center', 'items-end'],
-    },
+    enabled: false,
   },
   theme: {
     extend: {},
