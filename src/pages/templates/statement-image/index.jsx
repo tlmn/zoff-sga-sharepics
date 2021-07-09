@@ -51,7 +51,7 @@ export default () => {
                         options: {
                             scale: { value: 70, range: [50, 140] },
                         },
-                        content: 'Organisation',
+                        content: '',
                     },
                     partnerLogo: { url: '' },
                 },

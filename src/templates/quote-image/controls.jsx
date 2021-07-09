@@ -51,7 +51,7 @@ export default () => {
                 />
                 <Input
                     propertyPath={`slides[${currentSlide}].data.position.content`}
-                    label="Organisation"
+                    label="Organisation (optional)"
                 />
             </FieldSet>
 
