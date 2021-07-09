@@ -49,7 +49,7 @@ label {
   @apply transition-all;
   @apply ease-in-out;
   @apply duration-200;
-  @apply font-normal text-input-md uppercase rounded-md inline-block text-center bg-white text-black px-1;
+  @apply font-normal text-input-md uppercase rounded-md inline-block text-center text-black px-1;
 }
 
 .btn:hover {
