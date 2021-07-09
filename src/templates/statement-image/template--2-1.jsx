@@ -58,7 +58,7 @@ const TemplateStatementImage21 = () => {
                                         .url !== ''
                                         ? state.slides[state.currentSlide].data
                                               .image.url
-                                        : `/assets/images/defaultImages/quote-1.jpg`
+                                        : `/assets/images/defaultImages/crowd.jpg`
                                 })`,
                                 backgroundSize: `${
                                     state.slides[state.currentSlide].data.image
