@@ -16,6 +16,7 @@ const PartnerLogo21 = () => {
             <img
               src={state.slides[state.currentSlide].data.partnerLogo.url}
               className="object-cover"
+              alt=""
             />
           </div>
           <PartnerLogoOverlay21 className="absolute bottom-0 right-0 z-10" />

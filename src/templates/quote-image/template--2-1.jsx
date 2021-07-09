@@ -124,7 +124,7 @@ const TemplateQuoteImage21 = () => {
           </div>
         </div>
         <div
-          className="absolute bottom-0 left-0 w-full justify-center px-2 pb-1"
+          className="absolute bottom-0 left-0 w-full flex justify-center px-2 pb-1"
           style={{ height: '6rem' }}
         >
           <LogoText className="mx-auto" />

@@ -1,6 +1,6 @@
 import { cloneDeepWith, get, initial, set } from 'lodash'
-import { colorCombinations, colorThemes } from '../config/vars'
 
+import { colorThemes } from '../config/vars'
 import emojiRegex from 'emoji-regex'
 import htmlToImage from 'html-to-image'
 import { saveAs } from 'file-saver'
@@ -18,7 +18,7 @@ export const html2image = async ({ state, setState }, fileName = '') => {
       height: state.slides[state.currentSlide].options.dimensions.height,
     })
     .then(function (blob) {
-      saveAs(blob, `sharepic-sga-${slugify(fileName.substring)}`)
+      saveAs(blob, `sharepic-sga-${slugify(fileName)}`)
       setState((prev) => ({ ...prev, templateScale: true }))
     })
 }

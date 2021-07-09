@@ -34,6 +34,7 @@ const OptionsSelector = ({ propertyPath, options = [], disabled = false }) => {
             htmlFor={propertyPath}
             onClick={() => updateProperty({ setState }, propertyPath, option)}
             className="cursor-pointer"
+            onKeyDown={() => updateProperty({ setState }, propertyPath, option)}
           >
             {icons[option](
               getProperty({ state }, propertyPath) === option

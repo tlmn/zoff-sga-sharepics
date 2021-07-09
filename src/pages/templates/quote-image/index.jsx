@@ -25,7 +25,7 @@ export default () => {
               scale: { value: 40, range: [35, 70] },
             },
             content:
-              'Arme Menschen und Familien eiden am meisten unter der Corona-Pandemie. Solidarisch wäre es, wenn Reiche ihren fairen Anteil zur Bewältigung der Corona- und der Klimakrise leisten würden',
+              'Arme Menschen und Familien leiden am meisten unter der Corona-Pandemie. Solidarisch wäre es, wenn Reiche ihren fairen Anteil zur Bewältigung der Corona- und der Klimakrise leisten würden',
           },
           description: {
             options: {
