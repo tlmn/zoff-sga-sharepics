@@ -24,11 +24,11 @@ export const html2image = async ({ state, setState }, fileName = '') => {
 }
 export const formatText = (text = '') => {
   return text
+    .replace(/\n/gi, `<br/>`)
     .replace(
       emojiRegex(),
       (m) => `<span class="not-italic" role="img">${m}</span>`
     )
-    .replace(/\n/gi, `<br/>`)
 }
 
 export const getColor = (currentColorTheme, order) => {
