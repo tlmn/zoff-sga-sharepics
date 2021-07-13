@@ -26,28 +26,23 @@ export const secondaryThemes = [
 export const colorThemes = [
   {
     label: 'yellow',
-    name: 'orange & weiß',
-    colors: ['orange', 'white'],
+    name: 'gelb',
+    topic: 'Materielle Sicherheit',
   },
   {
     label: 'green',
-    name: 'weiß & orange',
-    colors: ['white', 'orange'],
+    name: 'grün',
+    topic: 'Gleiche Rechte',
   },
   {
     label: 'blue',
-    name: 'schwarz & weiß',
-    colors: ['black', 'white'],
+    name: 'blau',
+    topic: 'Gesundheit',
   },
   {
     label: 'purple',
-    name: 'weiß & schwarz',
-    colors: ['white', 'black'],
-  },
-  {
-    label: 'green_black',
-    name: 'türkis & schwarz',
-    colors: ['green', 'black'],
+    name: 'violett',
+    topic: 'Sorgearbeit',
   },
 ]
 

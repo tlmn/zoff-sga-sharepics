@@ -8,7 +8,7 @@ const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
   const [state, setState] = useContext(TemplateContext)
 
   return (
-    <div className="flex justify-center mb-2">
+    <div className="flex justify-center items-end">
       {colorThemeOptions.map(
         (colorThemeOption) =>
           colorThemeOption !== '' && (
@@ -38,14 +38,22 @@ const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
                 }`}
                 className="label__radio"
               >
-                <div className="px-2">
+                <div className="flex flex-col items-center px-2 text-center">
+                  <span
+                    className="text-black text-center mb-1"
+                    dangerouslySetInnerHTML={{
+                      __html: colorThemes.filter(
+                        (theme) => theme.label === colorThemeOption
+                      )[0]?.topic,
+                    }}
+                  />
                   <img
                     style={{ maxHeight: '4rem' }}
-                    alt={`Farbschema Vorschau für ${
+                    alt={`Farbschema Vorschau für Farbe "${
                       colorThemes.filter(
                         (theme) => theme.label === colorThemeOption
-                      )[0]?.name
-                    }`}
+                      )[0]?.topic
+                    }"`}
                     src={`/assets/images/colorThemes/${
                       colorThemes.filter(
                         (theme) => theme.label === colorThemeOption

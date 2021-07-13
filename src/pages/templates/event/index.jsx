@@ -20,7 +20,7 @@ export default () => {
           partnerLogo: { url: '' },
           body: {
             options: {
-              scale: { value: 80, range: [70, 120] },
+              scale: { value: 100, range: [70, 120] },
             },
             content: 'Solidarität mit dem Gesundheitssektor',
           },

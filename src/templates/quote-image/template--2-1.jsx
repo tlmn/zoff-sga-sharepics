@@ -8,23 +8,29 @@ import DraggableImage from '../../components/inputs/draggableImage'
 import LogoText from '../../assets/svg/logo-text'
 import PartnerLogo21 from '../../components/templates/partnerLogo21'
 import TemplateContext from '../../components/templateContext'
+import { formatText } from '../../lib/lib'
 
 const TemplateQuoteImage21 = () => {
   const [state] = useContext(TemplateContext)
+  const { currentSlide, templateScale } = state
+  const {
+    options: {
+      dimensions: { width, height },
+      colorTheme,
+    },
+    data: { image, description, position, body },
+    ref,
+  } = state.slides[state.currentSlide]
   return (
     <div className="">
       <div
         className={`flex flex-col ${
-          state.templateScale ? `absolute template-scale--2-1` : `relative`
+          templateScale ? `absolute template-scale--2-1` : `relative`
         }  text-lg`}
-        ref={state.slides[state.currentSlide].ref}
+        ref={ref}
         style={{
-          width: `${
-            state.slides[state.currentSlide].options.dimensions.width
-          }px`,
-          height: `${
-            state.slides[state.currentSlide].options.dimensions.height
-          }px`,
+          width: `${width}px`,
+          height: `${height}px`,
         }}
       >
         <div className="w-full h-full absolute top-0 left-0">
@@ -36,7 +42,7 @@ const TemplateQuoteImage21 = () => {
             }}
           >
             <DraggableImage
-              propertyPath={`slides[${state.currentSlide}].data.image.position`}
+              propertyPath={`slides[${currentSlide}].data.image.position`}
             />
             <div
               className="w-full h-full absolute top-0 left-0 z-30"
@@ -50,75 +56,54 @@ const TemplateQuoteImage21 = () => {
               className="absolute top-0 left-0 z-20 object-cover h-full w-full"
               style={{
                 backgroundImage: `url(${
-                  state.slides[state.currentSlide].data.image.url !== ''
-                    ? state.slides[state.currentSlide].data.image.url
+                  image.url !== ''
+                    ? image.url
                     : `/assets/images/defaultImages/quote-1.jpg`
                 })`,
-                backgroundSize: `${
-                  state.slides[state.currentSlide].data.image.scale * 10 + 50
-                }%`,
+                backgroundSize: `${image.scale * 10 + 50}%`,
                 backgroundRepeat: 'repeat',
-                backgroundPosition: `${
-                  state.slides[state.currentSlide].data.image.position.x
-                }px ${
-                  state.slides[state.currentSlide].data.image.position.y
-                }px`,
+                backgroundPosition: `${image.position.x}px ${image.position.y}px`,
               }}
             />
           </div>
-          {state.slides[state.currentSlide].options.colorTheme === 'green' && (
-            <BGQuoteImage21Green />
-          )}
-          {state.slides[state.currentSlide].options.colorTheme === 'yellow' && (
-            <BGQuoteImage21Yellow />
-          )}
-          {state.slides[state.currentSlide].options.colorTheme === 'purple' && (
-            <BGQuoteImage21Purple />
-          )}
-          {state.slides[state.currentSlide].options.colorTheme === 'blue' && (
-            <BGQuoteImage21Blue />
-          )}
+          {colorTheme === 'green' && <BGQuoteImage21Green />}
+          {colorTheme === 'yellow' && <BGQuoteImage21Yellow />}
+          {colorTheme === 'purple' && <BGQuoteImage21Purple />}
+          {colorTheme === 'blue' && <BGQuoteImage21Blue />}
         </div>
 
         <div className="absolute top-0 right-0 h-full z-30 px-3 pt-3 pb-1 flex flex-col w-1/2">
-          {state.slides[state.currentSlide].data.body.content !== '' && (
+          {body.content !== '' && (
             <span
               dangerouslySetInnerHTML={{
-                __html: `„${
-                  state.slides[state.currentSlide].data.body.content
-                }“`,
+                __html: `„${formatText(body.content)}“`,
               }}
-              className="font-ttnorms leading-normal"
+              className="font-ttnorms leading-normal overflow-hidden"
               style={{
-                fontSize: `${
-                  state.slides[state.currentSlide].data.body.options.scale
-                    .value / 2
-                }px`,
+                fontSize: `${body.options.scale.value / 1.5}px`,
+                maxHeight: '16rem',
               }}
             />
           )}
 
           <div
-            className="mt-3 flex flex-col items-center text-xs"
+            className="mt-2 flex flex-col items-center"
             style={{ transform: 'rotate(-3deg)' }}
           >
-            {state.slides[state.currentSlide].data.description.content !==
-              '' && (
+            {description.content !== '' && (
               <span
                 dangerouslySetInnerHTML={{
-                  __html:
-                    state.slides[state.currentSlide].data.description.content,
+                  __html: formatText(description.content),
                 }}
-                className="font-kapra uppercase font-bold italic text-white bg-black inline p-2 my-1 shadow leading-none"
+                className="font-kapra uppercase font-bold italic text-white bg-black inline p-1 mb-1 shadow leading-none text-s"
               />
             )}
-            {state.slides[state.currentSlide].data.position.content !== '' && (
+            {position.content !== '' && (
               <span
                 dangerouslySetInnerHTML={{
-                  __html:
-                    state.slides[state.currentSlide].data.position.content,
+                  __html: formatText(position.content),
                 }}
-                className="font-kapra uppercase font-bold italic text-black bg-white inline p-2 my-1 shadow leading-none"
+                className="font-kapra uppercase font-bold italic text-black bg-white inline p-1 my-1 shadow leading-none text-xs"
               />
             )}
           </div>

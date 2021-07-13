@@ -12,129 +12,113 @@ import { formatText } from '../../lib/lib'
 
 const TemplateQuoteImage11 = () => {
   const [state] = useContext(TemplateContext)
+  const { currentSlide, templateScale } = state
+  const {
+    options: {
+      dimensions: { width, height },
+      colorTheme,
+    },
+    data: { image, description, position, body, partnerLogo },
+    ref,
+  } = state.slides[state.currentSlide]
   return (
-    <div className="">
-      <div
-        className={`flex flex-col ${
-          state.templateScale ? `absolute template-scale--1-1` : `relative`
-        }  text-lg`}
-        ref={state.slides[state.currentSlide].ref}
-        style={{
-          width: `${
-            state.slides[state.currentSlide].options.dimensions.width
-          }px`,
-          height: `${
-            state.slides[state.currentSlide].options.dimensions.height
-          }px`,
-        }}
-      >
-        <div className="w-full h-full absolute top-0 left-0">
+    <div
+      className={`flex flex-col ${
+        templateScale ? `absolute template-scale--1-1` : `relative`
+      }  text-lg`}
+      ref={ref}
+      style={{
+        width: `${width}px`,
+        height: `${height}px`,
+      }}
+    >
+      <div className="w-full h-full absolute top-0 left-0">
+        <div
+          className="w-full h-full absolute z-10"
+          style={{
+            clipPath: 'polygon(0 0, 46% 0%, 52% 81.5%, 30% 82.4%,0% 71%)',
+          }}
+        >
+          <DraggableImage
+            propertyPath={`slides[${currentSlide}].data.image.position`}
+          />
           <div
-            className="w-full h-full absolute z-10"
+            className="w-full h-full absolute top-0 left-0 z-30"
             style={{
-              clipPath: 'polygon(0 0, 46% 0%, 52% 81.5%, 30% 82.4%,0% 71%)',
+              background:
+                'linear-gradient(179.99deg, rgba(0, 0, 0, 0) 47.98%, #000000 77.8%)',
+              mixBlendMode: 'multiply',
             }}
-          >
-            <DraggableImage
-              propertyPath={`slides[${state.currentSlide}].data.image.position`}
-            />
-            <div
-              className="w-full h-full absolute top-0 left-0 z-30"
-              style={{
-                background:
-                  'linear-gradient(179.99deg, rgba(0, 0, 0, 0) 47.98%, #000000 77.8%)',
-                mixBlendMode: 'multiply',
-              }}
-            />
-            <div
-              className="absolute top-0 left-0 z-20 object-cover h-full w-full"
-              style={{
-                backgroundImage: `url(${
-                  state.slides[state.currentSlide].data.image.url !== ''
-                    ? state.slides[state.currentSlide].data.image.url
-                    : `/assets/images/defaultImages/quote-1.jpg`
-                })`,
-                backgroundSize: `${
-                  state.slides[state.currentSlide].data.image.scale * 10 + 100
-                }%`,
-                backgroundRepeat: 'repeat',
-                backgroundPosition: `${
-                  state.slides[state.currentSlide].data.image.position.x
-                }px ${
-                  state.slides[state.currentSlide].data.image.position.y
-                }px`,
-              }}
-            />
-          </div>
-          {state.slides[state.currentSlide].options.colorTheme === 'green' && (
-            <BGQuoteImage11Green />
-          )}
-          {state.slides[state.currentSlide].options.colorTheme === 'yellow' && (
-            <BGQuoteImage11Yellow />
-          )}
-          {state.slides[state.currentSlide].options.colorTheme === 'purple' && (
-            <BGQuoteImage11Purple />
-          )}
-          {state.slides[state.currentSlide].options.colorTheme === 'blue' && (
-            <BGQuoteImage11Blue />
-          )}
+          />
+          <div
+            className="absolute top-0 left-0 z-20 object-cover h-full w-full"
+            style={{
+              backgroundImage: `url(${
+                image.url !== ''
+                  ? image.url
+                  : `/assets/images/defaultImages/quote-1.jpg`
+              })`,
+              backgroundSize: `${image.scale * 10 + 100}%`,
+              backgroundRepeat: 'repeat',
+              backgroundPosition:
+                image.position.x === 0 &&
+                image.position.y === 0 &&
+                image.url === ''
+                  ? `-234px -93px`
+                  : `${image.position.x - 234}px ${image.position.y - 93}px`,
+            }}
+          />
         </div>
+        {colorTheme === 'green' && <BGQuoteImage11Green />}
+        {colorTheme === 'yellow' && <BGQuoteImage11Yellow />}
+        {colorTheme === 'purple' && <BGQuoteImage11Purple />}
+        {colorTheme === 'blue' && <BGQuoteImage11Blue />}
+      </div>
 
-        <div className="absolute top-0 right-0 h-full z-30 px-3 pt-3 pb-1 flex flex-col w-1/2">
-          {state.slides[state.currentSlide].data.body.content !== '' && (
+      <div className="absolute top-0 right-0 h-full z-30 px-3 pt-3 pb-1 flex flex-col w-1/2">
+        {body.content !== '' && (
+          <span
+            dangerouslySetInnerHTML={{
+              __html: `„${formatText(body.content)}“`,
+            }}
+            className="font-ttnorms leading-normal overflow-hidden"
+            style={{
+              fontSize: `${body.options.scale.value}px`,
+              maxHeight: '42rem',
+            }}
+          />
+        )}
+
+        <div
+          className="mt-3 flex flex-col items-center"
+          style={{ transform: 'rotate(-3deg)' }}
+        >
+          {description.content !== '' && (
             <span
               dangerouslySetInnerHTML={{
-                __html: `„${formatText(
-                  state.slides[state.currentSlide].data.body.content
-                )}“`,
+                __html: formatText(description.content),
               }}
-              className="font-ttnorms leading-normal"
-              style={{
-                fontSize: `${
-                  state.slides[state.currentSlide].data.body.options.scale.value
-                }px`,
-              }}
+              className="font-kapra uppercase font-bold italic text-white bg-black inline p-2 my-1 shadow leading-none text-base"
             />
           )}
-
-          <div
-            className="mt-3 flex flex-col items-center text-s"
-            style={{ transform: 'rotate(-3deg)' }}
-          >
-            {state.slides[state.currentSlide].data.description.content !==
-              '' && (
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: formatText(
-                    state.slides[state.currentSlide].data.description.content
-                  ),
-                }}
-                className="font-kapra uppercase font-bold italic text-white bg-black inline p-2 my-1 shadow leading-none"
-              />
-            )}
-            {state.slides[state.currentSlide].data.position.content !== '' && (
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: formatText(
-                    state.slides[state.currentSlide].data.position.content
-                  ),
-                }}
-                className="font-kapra uppercase font-bold italic text-black bg-white inline p-2 my-1 shadow leading-none"
-              />
-            )}
-          </div>
+          {position.content !== '' && (
+            <span
+              dangerouslySetInnerHTML={{
+                __html: formatText(position.content),
+              }}
+              className="font-kapra uppercase font-bold italic text-black bg-white inline p-2 my-1 shadow leading-none text-s"
+            />
+          )}
         </div>
-        <div
-          className={`absolute bottom-0 left-0 w-full flex ${
-            state.slides[state.currentSlide].data.partnerLogo.url === ''
-              ? `justify-center`
-              : `justify-start`
-          } px-2 pb-1`}
-        >
-          <LogoText />
-        </div>
-        <PartnerLogo11 />
       </div>
+      <div
+        className={`absolute bottom-0 left-0 w-full flex ${
+          partnerLogo.url === '' ? `justify-center` : `justify-start`
+        } px-2 pb-1`}
+      >
+        <LogoText />
+      </div>
+      <PartnerLogo11 />
     </div>
   )
 }

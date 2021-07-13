@@ -26,7 +26,7 @@ export default () => {
             content: 'Matthias Hiksch',
           },
           position: {
-            content: 'Naturfreunde Deutschland e.V.',
+            content: '',
           },
           partnerLogo: { url: '' },
         },
