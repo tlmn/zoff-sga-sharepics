@@ -19,7 +19,7 @@ export default () => {
             options: {
               min: 1,
               max: 4,
-              scale: { value: 70, range: [60, 100] },
+              scale: { value: 95, range: [70, 110] },
               lineTemplate: {
                 content: 'Neue Textzeile',
                 inputType: 'input',
