@@ -41,7 +41,7 @@ const TemplateStatement21 = () => {
 
       <div className="absolute top-0 left-0 w-full h-full z-30 flex flex-col">
         <div className="flex-1 flex flex-col justify-center">
-          <div className="p-3 flex flex-col justify-center">
+          <div className="p-1 flex flex-col justify-center">
             {/* STATEMENT TEXT */}
             <div className="self-center text-center flex flex-col justify-center items-center">
               {state.slides[state.currentSlide].data.body.lines.map(
@@ -53,7 +53,7 @@ const TemplateStatement21 = () => {
                         transform: 'rotate(-3deg)',
                         fontSize: `${
                           state.slides[state.currentSlide].data.body.options
-                            .scale.value / 2
+                            .scale.value / 2.5
                         }px`,
                         width: 'max-content',
                       }}
