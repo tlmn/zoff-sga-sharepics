@@ -1,16 +1,15 @@
-import React, { useContext } from 'react'
-
 import BGStatement11Blue from '../../assets/backgrounds/statementImage/1-1/blue'
 import BGStatement11Green from '../../assets/backgrounds/statementImage/1-1/green'
 import BGStatement11Purple from '../../assets/backgrounds/statementImage/1-1/purple'
 import BGStatement11Yellow from '../../assets/backgrounds/statementImage/1-1/yellow'
 import LogoText from '../../assets/svg/logo-text'
 import PartnerLogo11 from '../../components/templates/partnerLogo11'
-import TemplateContext from '../../components/templateContext'
+import React from 'react'
 import { formatText } from '../../lib/lib'
+import useDataContext from '../../lib/useDataContext'
 
 const TemplateStatement11 = () => {
-  const [state] = useContext(TemplateContext)
+  const { state } = useDataContext()
   const { templateScale } = state
   const {
     options: {

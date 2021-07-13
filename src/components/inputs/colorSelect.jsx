@@ -1,10 +1,8 @@
-import React, { useContext } from 'react'
-
-import TemplateContext from '../templateContext'
-import { primaryColors } from '../../config/vars'
+import React from 'react'
+import useDataContext from '../../lib/useDataContext'
 
 export default ({ colorOptions = ['orange', 'black'] }) => {
-  const [state, setState] = useContext(TemplateContext)
+  const { state, setState } = useDataContext()
 
   return (
     <>

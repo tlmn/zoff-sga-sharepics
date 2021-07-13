@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
 import { getProperty, updateProperty } from '../../lib/lib'
 
-import TemplateContext from '../templateContext'
+import React from 'react'
+import useDataContext from '../../lib/useDataContext'
 
 export default ({ propertyPath, label, ...props }) => {
-  const [state, setState] = useContext(TemplateContext)
+  const { state, setState } = useDataContext()
+
   return (
     <div className="w-full mt-1">
       <label htmlFor={propertyPath} className="uppercase font-bold text-black">

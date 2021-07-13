@@ -7,67 +7,64 @@ import Image from '../../components/inputs/image'
 import Input from '../../components/inputs/input'
 import InputRepeater from '../../components/inputs/inputRepeater'
 import React from 'react'
-import TemplateContext from '../../components/templateContext'
 import TextScale from '../../components/inputs/textScale'
-import { useContext } from 'react'
+import useDataContext from '../../lib/useDataContext'
 
 export default () => {
-    const currentSlide = 0
-    const [state] = useContext(TemplateContext)
-    return (
-        <ControlsWrapper>
-            <FieldSet legend="Format">
-                <CustomSelect
-                    propertyPath={`slides[${currentSlide}].options.dimensions`}
-                    options={[
-                        {
-                            value: { width: 1080, height: 1080 },
-                            label: 'Instagram / Facebook (1:1)',
-                        },
-                        {
-                            value: { width: 1012, height: 506 },
-                            label: 'Twitter (2:1)',
-                        },
-                    ]}
-                />
-            </FieldSet>
-            <FieldSet legend="Text">
-                <InputRepeater
-                    propertyPath={`slides[${currentSlide}].data.body`}
-                    selectScale={false}
-                />
-                <TextScale
-                    propertyPath={`slides[${currentSlide}].data.body.options.scale`}
-                />
-                <Input
-                    propertyPath={`slides[${currentSlide}].data.description.content`}
-                    label="Autor:in / Quelle"
-                />
-            </FieldSet>
+  const currentSlide = 0
+  const { state } = useDataContext()
+  return (
+    <ControlsWrapper>
+      <FieldSet legend="Format">
+        <CustomSelect
+          propertyPath={`slides[${currentSlide}].options.dimensions`}
+          options={[
+            {
+              value: { width: 1080, height: 1080 },
+              label: 'Instagram / Facebook (1:1)',
+            },
+            {
+              value: { width: 1012, height: 506 },
+              label: 'Twitter (2:1)',
+            },
+          ]}
+        />
+      </FieldSet>
+      <FieldSet legend="Text">
+        <InputRepeater
+          propertyPath={`slides[${currentSlide}].data.body`}
+          selectScale={false}
+        />
+        <TextScale
+          propertyPath={`slides[${currentSlide}].data.body.options.scale`}
+        />
+        <Input
+          propertyPath={`slides[${currentSlide}].data.description.content`}
+          label="Autor:in / Quelle"
+        />
+      </FieldSet>
 
-            <FieldSet legend="Farbe">
-                <ColorThemeSelector
-                    colorThemeOptions={['green', 'blue', 'purple', 'yellow']}
-                    propertyPath={`slides[${currentSlide}].options.colorTheme`}
-                />
-            </FieldSet>
+      <FieldSet legend="Farbe">
+        <ColorThemeSelector
+          colorThemeOptions={['green', 'blue', 'purple', 'yellow']}
+          propertyPath={`slides[${currentSlide}].options.colorTheme`}
+        />
+      </FieldSet>
 
-            <FieldSet legend="Partnerlogo">
-                <Image
-                    propertyPath={`slides[${currentSlide}].data.partnerLogo`}
-                    scale={false}
-                    remove={true}
-                    reset={false}
-                />
-            </FieldSet>
+      <FieldSet legend="Partnerlogo">
+        <Image
+          propertyPath={`slides[${currentSlide}].data.partnerLogo`}
+          scale={false}
+          remove={true}
+          reset={false}
+        />
+      </FieldSet>
 
-            <DownloadButton
-                fileName={`statement-${state.slides[
-                    state.currentSlide
-                ].data.body.lines
-                    .map((line) => line.content)
-                    .join('-')}`}
-            />
-        </ControlsWrapper>
-    )
+      <DownloadButton
+        fileName={`statement-${state.slides[state.currentSlide].data.body.lines
+          .map((line) => line.content)
+          .join('-')}`}
+      />
+    </ControlsWrapper>
+  )
 }

@@ -1,15 +1,14 @@
-import React, { useContext } from 'react'
-
 import BGEvent11Blue from '../../assets/backgrounds/event/1-1/blue'
 import BGEvent11Green from '../../assets/backgrounds/event/1-1/green'
 import BGEvent11Purple from '../../assets/backgrounds/event/1-1/purple'
 import BGEvent11Yellow from '../../assets/backgrounds/event/1-1/yellow'
 import LogoText from '../../assets/svg/logo-text'
 import PartnerLogo11 from '../../components/templates/partnerLogo11'
-import TemplateContext from '../../components/templateContext'
+import React from 'react'
+import useDataContext from '../../lib/useDataContext'
 
 const TemplateEvent11 = () => {
-  const [state] = useContext(TemplateContext)
+  const { state } = useDataContext()
   const { templateScale } = state
   const {
     options: {

@@ -6,73 +6,69 @@ import FieldSet from '../../components/inputs/fieldSet'
 import Image from '../../components/inputs/image'
 import Input from '../../components/inputs/input'
 import React from 'react'
-import TemplateContext from '../../components/templateContext'
 import TextScale from '../../components/inputs/textScale'
 import Textarea from '../../components/inputs/textarea'
-import { useContext } from 'react'
+import useDataContext from '../../lib/useDataContext'
 
 export default () => {
-    const [state] = useContext(TemplateContext)
-    const currentSlide = 0
+  const { state } = useDataContext()
 
-    return (
-        <ControlsWrapper>
-            <FieldSet legend="Format">
-                <CustomSelect
-                    propertyPath={`slides[${currentSlide}].options.dimensions`}
-                    options={[
-                        {
-                            value: { width: 1080, height: 1080 },
-                            label: 'Instagram / Facebook (1:1)',
-                        },
-                        {
-                            value: { width: 1012, height: 506 },
-                            label: 'Twitter (2:1)',
-                        },
-                    ]}
-                />
-            </FieldSet>
-            <FieldSet legend="Text">
-                <Input
-                    propertyPath={`slides[${currentSlide}].data.category.content`}
-                    label="Kategorie"
-                />
-                <Input
-                    propertyPath={`slides[${currentSlide}].data.meta.content`}
-                    label="Ort &amp; Zeit"
-                />
-                <Textarea
-                    propertyPath={`slides[${currentSlide}].data.body.content`}
-                />
-                <TextScale
-                    propertyPath={`slides[${currentSlide}].data.body.options.scale`}
-                />
-            </FieldSet>
+  const currentSlide = 0
 
-            <FieldSet legend="Farbe">
-                <ColorThemeSelector
-                    colorThemeOptions={['green', 'blue', 'purple', 'yellow']}
-                    propertyPath={`slides[${currentSlide}].options.colorTheme`}
-                />
-            </FieldSet>
+  return (
+    <ControlsWrapper>
+      <FieldSet legend="Format">
+        <CustomSelect
+          propertyPath={`slides[${currentSlide}].options.dimensions`}
+          options={[
+            {
+              value: { width: 1080, height: 1080 },
+              label: 'Instagram / Facebook (1:1)',
+            },
+            {
+              value: { width: 1012, height: 506 },
+              label: 'Twitter (2:1)',
+            },
+          ]}
+        />
+      </FieldSet>
+      <FieldSet legend="Text">
+        <Input
+          propertyPath={`slides[${currentSlide}].data.category.content`}
+          label="Kategorie"
+        />
+        <Input
+          propertyPath={`slides[${currentSlide}].data.meta.content`}
+          label="Ort &amp; Zeit"
+        />
+        <Textarea propertyPath={`slides[${currentSlide}].data.body.content`} />
+        <TextScale
+          propertyPath={`slides[${currentSlide}].data.body.options.scale`}
+        />
+      </FieldSet>
 
-            <FieldSet legend="Partnerlogo">
-                <Image
-                    propertyPath={`slides[${currentSlide}].data.partnerLogo`}
-                    scale={false}
-                    reset={false}
-                    remove={true}
-                />
-            </FieldSet>
+      <FieldSet legend="Farbe">
+        <ColorThemeSelector
+          colorThemeOptions={['green', 'blue', 'purple', 'yellow']}
+          propertyPath={`slides[${currentSlide}].options.colorTheme`}
+        />
+      </FieldSet>
 
-            <DownloadButton
-                fileName={`event-${state.slides[
-                    state.currentSlide
-                ].data.body.content
-                    .split(' ')
-                    .slice(0, 3)
-                    .join('-')}`}
-            />
-        </ControlsWrapper>
-    )
+      <FieldSet legend="Partnerlogo">
+        <Image
+          propertyPath={`slides[${currentSlide}].data.partnerLogo`}
+          scale={false}
+          reset={false}
+          remove={true}
+        />
+      </FieldSet>
+
+      <DownloadButton
+        fileName={`event-${state.slides[state.currentSlide].data.body.content
+          .split(' ')
+          .slice(0, 3)
+          .join('-')}`}
+      />
+    </ControlsWrapper>
+  )
 }

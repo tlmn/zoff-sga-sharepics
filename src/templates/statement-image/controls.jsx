@@ -6,13 +6,12 @@ import FieldSet from '../../components/inputs/fieldSet'
 import Image from '../../components/inputs/image'
 import InputRepeater from '../../components/inputs/inputRepeater'
 import React from 'react'
-import TemplateContext from '../../components/templateContext'
 import TextScale from '../../components/inputs/textScale'
-import { useContext } from 'react'
+import useDataContext from '../../lib/useDataContext'
 
 export default () => {
   const currentSlide = 0
-  const [state] = useContext(TemplateContext)
+  const { state } = useDataContext()
   return (
     <ControlsWrapper>
       <FieldSet legend="Format">

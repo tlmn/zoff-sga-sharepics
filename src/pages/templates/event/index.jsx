@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react'
 
 import Controls from '../../../templates/event/controls'
+import { Provider as DataContextProvider } from '../../../lib/useDataContext'
 import Template from '../../../templates/event/template'
-import TemplateContext from '../../../components/templateContext'
 import TemplateLayout from '../../../components/templateLayout'
 
 export default () => {
@@ -32,7 +32,7 @@ export default () => {
   })
 
   return (
-    <TemplateContext.Provider value={[state, setState]}>
+    <DataContextProvider value={{ state, setState }}>
       <TemplateLayout>
         <div className="col-span-6">
           <Template />
@@ -41,6 +41,6 @@ export default () => {
           <Controls />
         </div>
       </TemplateLayout>
-    </TemplateContext.Provider>
+    </DataContextProvider>
   )
 }

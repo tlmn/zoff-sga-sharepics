@@ -1,5 +1,3 @@
-import React, { useContext } from 'react'
-
 import BGStatementImage21Blue from '../../assets/backgrounds/statementImage/2-1/blue'
 import BGStatementImage21Green from '../../assets/backgrounds/statementImage/2-1/green'
 import BGStatementImage21Purple from '../../assets/backgrounds/statementImage/2-1/purple'
@@ -7,10 +5,11 @@ import BGStatementImage21Yellow from '../../assets/backgrounds/statementImage/2-
 import DraggableImage from '../../components/inputs/draggableImage'
 import LogoText from '../../assets/svg/logo-text'
 import PartnerLogo21 from '../../components/templates/partnerLogo21'
-import TemplateContext from '../../components/templateContext'
+import React from 'react'
+import useDataContext from '../../lib/useDataContext'
 
 const TemplateStatementImage21 = () => {
-  const [state] = useContext(TemplateContext)
+  const { state } = useDataContext()
   const { templateScale, currentSlide } = state
   const {
     options: {
