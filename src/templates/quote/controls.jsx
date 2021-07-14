@@ -61,9 +61,7 @@ export default () => {
       <FieldSet legend="Partnerlogo">
         <Image
           propertyPath={`slides[${currentSlide}].data.partnerLogo`}
-          scale={false}
           remove={true}
-          reset={false}
         />
       </FieldSet>
 
