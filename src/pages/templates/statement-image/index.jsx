@@ -53,7 +53,7 @@ export default () => {
             },
             content: '',
           },
-          partnerLogo: { url: '' },
+          partnerLogo: { url: '', position: { x: 0, y: 0 }, scale: 0 },
         },
         ref: useRef(null),
       },

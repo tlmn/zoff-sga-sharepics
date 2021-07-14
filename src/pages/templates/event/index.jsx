@@ -17,7 +17,7 @@ export default () => {
         data: {
           category: { content: 'Kundgebung' },
           meta: { content: 'SO. 12.6. 18 Uhr | Rathaus Lüneburg' },
-          partnerLogo: { url: '' },
+          partnerLogo: { url: '', position: { x: 0, y: 0 }, scale: 0 },
           body: {
             options: {
               scale: { value: 100, range: [70, 120] },
