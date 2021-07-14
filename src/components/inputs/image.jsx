@@ -23,14 +23,16 @@ export default ({
           type="file"
           id={propertyPath}
           name="file"
-          onChange={(e) =>
-            e.target.files[0] !== null &&
-            updateProperty(
-              { setState },
-              `${propertyPath}.url`,
-              URL.createObjectURL(e.target.files[0])
-            )
-          }
+          onChange={(e) => {
+            if (e.target.files[0] !== null) {
+              updateProperty(
+                { setState },
+                `${propertyPath}.url`,
+                URL.createObjectURL(e.target.files[0])
+              )
+              e.target.value = null
+            }
+          }}
           ref={inputFileRef}
           className="hidden"
         />
@@ -42,7 +44,7 @@ export default ({
         >
           <IconUpload className="mr-1" /> Bild
         </button>
-        {scale && (
+        {scale && getProperty({ state }, `${propertyPath}.url`) !== '' && (
           <input
             type="range"
             id={`${propertyPath}.scale`}
@@ -63,7 +65,7 @@ export default ({
             }}
           />
         )}
-        {reset && (
+        {reset && getProperty({ state }, `${propertyPath}.url`) !== '' && (
           <button
             className="btn flex justify-center items-center"
             onClick={() =>
