@@ -78,7 +78,7 @@ export default ({
             Ausschnitt
           </button>
         )}
-        {remove && (
+        {remove && getProperty({ state }, `${propertyPath}.url`) !== '' && (
           <button
             className="btn flex justify-center items-center"
             onClick={() =>
