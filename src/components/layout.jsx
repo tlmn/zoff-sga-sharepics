@@ -41,8 +41,8 @@ export default ({ children }) => {
           Solidarisch geht anders
         </h1>
         <h2 className="text-2xs text-black leading-none font-ttnorms text-center mt-2">
-          Der Generator kann leider nur auf einem Desktop-Gerät verwendet
-          werden.
+          Der Generator kann leider nur auf einem Desktop-Gerät (Mindestbreite
+          992 Pixel) verwendet werden.
         </h2>
       </div>
     </>
