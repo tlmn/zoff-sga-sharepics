@@ -30,7 +30,7 @@ export default () => {
         />
       </FieldSet>
 
-      <FieldSet>
+      <FieldSet legend="Bild">
         <Image propertyPath={`slides[${currentSlide}].data.image`} />
       </FieldSet>
 
