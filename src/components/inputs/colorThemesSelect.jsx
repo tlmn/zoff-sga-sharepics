@@ -12,7 +12,7 @@ const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
       {colorThemeOptions.map(
         (colorThemeOption) =>
           colorThemeOption !== '' && (
-            <div>
+            <div className="flex-1">
               <input
                 type="radio"
                 value={
