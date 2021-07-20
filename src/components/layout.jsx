@@ -2,7 +2,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import { Helmet } from 'react-helmet'
 import React from 'react'
-import { isSafari } from 'react-device-detect'
 
 export default ({ children }) => {
   const {
@@ -22,6 +21,10 @@ export default ({ children }) => {
 
   const longTitle = `${name} – ${title}`
 
+  var ua = navigator.userAgent.toLowerCase()
+  const isSafari =
+    ua.indexOf('safari') > -1 && ua.indexOf('chrome') === -1 ? true : false
+
   return (
     <>
       <Helmet
@@ -34,8 +37,8 @@ export default ({ children }) => {
         <meta name="description" content={description} />
         <meta property="og:title" content={longTitle} />
       </Helmet>
-      {!isSafari && <div className="hidden xl:block pb-2">{children}</div>}
-      {isSafari && (
+      
+      {isSafari ? (
         <div className="flex bg-red w-screen h-screen flex-col items-center justify-center px-3">
           <h1 className="text-xs text-yellow leading-none font-bold font-ttnorms text-center">
             Sharepic Generator <br />
@@ -46,6 +49,8 @@ export default ({ children }) => {
             oder einen anderen Browser.
           </h2>
         </div>
+      ) : (
+        <div className="hidden xl:block pb-2">{children}</div>
       )}
 
       <div className="flex xl:hidden bg-red w-screen h-screen flex-col items-center justify-center px-3">
