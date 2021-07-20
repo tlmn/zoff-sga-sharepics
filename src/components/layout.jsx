@@ -34,9 +34,8 @@ export default ({ children }) => {
         <meta name="description" content={description} />
         <meta property="og:title" content={longTitle} />
       </Helmet>
-      {!isSafari ? (
-        <div className="hidden xl:block pb-2">{children}</div>
-      ) : (
+      {!isSafari && <div className="hidden xl:block pb-2">{children}</div>}
+      {isSafari && (
         <div className="flex bg-red w-screen h-screen flex-col items-center justify-center px-3">
           <h1 className="text-xs text-yellow leading-none font-bold font-ttnorms text-center">
             Sharepic Generator <br />
