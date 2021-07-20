@@ -22,7 +22,7 @@ export default ({ children }) => {
   const longTitle = `${name} – ${title}`
 
   var ua =
-    typeof navigator !== undefined ? navigator.userAgent.toLowerCase() : ''
+    typeof navigator !== "undefined" ? navigator.userAgent.toLowerCase() : ''
   const isSafari =
     ua.indexOf('safari') > -1 && ua.indexOf('chrome') === -1 ? true : false
 
