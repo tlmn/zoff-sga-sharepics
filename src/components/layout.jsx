@@ -21,7 +21,8 @@ export default ({ children }) => {
 
   const longTitle = `${name} – ${title}`
 
-  var ua = navigator.userAgent.toLowerCase()
+  var ua =
+    typeof navigator !== undefined ? navigator.userAgent.toLowerCase() : ''
   const isSafari =
     ua.indexOf('safari') > -1 && ua.indexOf('chrome') === -1 ? true : false
 
@@ -37,7 +38,7 @@ export default ({ children }) => {
         <meta name="description" content={description} />
         <meta property="og:title" content={longTitle} />
       </Helmet>
-      
+
       {isSafari ? (
         <div className="flex bg-red w-screen h-screen flex-col items-center justify-center px-3">
           <h1 className="text-xs text-yellow leading-none font-bold font-ttnorms text-center">
