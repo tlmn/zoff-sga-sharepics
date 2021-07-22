@@ -38,7 +38,7 @@ const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
                 }`}
                 className="label__radio"
               >
-                <div className="flex flex-col items-center px-2 text-center">
+                <div className="flex flex-col items-center px-1 text-center">
                   <span
                     className="text-black text-center mb-1"
                     dangerouslySetInnerHTML={{
@@ -48,7 +48,12 @@ const ColorThemeSelector = ({ colorThemeOptions, propertyPath }) => {
                     }}
                   />
                   <img
-                    style={{ maxHeight: '4rem' }}
+                    style={{
+                      maxHeight: '4rem',
+                      height: '4rem',
+                      maxWidth: '4rem',
+                      width: '4rem',
+                    }}
                     alt={`Farbschema Vorschau für Farbe "${
                       colorThemes.filter(
                         (theme) => theme.label === colorThemeOption
