@@ -35,6 +35,11 @@ export const colorThemes = [
     topic: 'Gleiche Rechte',
   },
   {
+    label: 'red',
+    name: 'rot',
+    topic: 'Gesundheit',
+  },
+  {
     label: 'blue',
     name: 'blau',
     topic: 'Gesundheit',
