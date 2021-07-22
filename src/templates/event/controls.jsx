@@ -49,7 +49,7 @@ export default () => {
 
       <FieldSet legend="Farbe">
         <ColorThemeSelector
-          colorThemeOptions={['green', 'blue', 'purple', 'yellow']}
+          colorThemeOptions={['green', 'red', 'blue', 'purple', 'yellow']}
           propertyPath={`slides[${currentSlide}].options.colorTheme`}
         />
       </FieldSet>
