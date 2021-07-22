@@ -2,6 +2,7 @@ import BGQuote11Blue from '../../assets/backgrounds/quote/1-1/blue'
 import BGQuote11Green from '../../assets/backgrounds/quote/1-1/green'
 import BGQuote11Purple from '../../assets/backgrounds/quote/1-1/purple'
 import BGQuote11Yellow from '../../assets/backgrounds/quote/1-1/yellow'
+import BGQuote11Red from '../../assets/backgrounds/quote/1-1/red'
 import LogoText from '../../assets/svg/logo-text'
 import PartnerLogo11 from '../../components/templates/partnerLogo11'
 import React from 'react'
@@ -35,6 +36,7 @@ const TemplateQuote11 = () => {
         {colorTheme === 'yellow' && <BGQuote11Yellow />}
         {colorTheme === 'purple' && <BGQuote11Purple />}
         {colorTheme === 'blue' && <BGQuote11Blue />}
+        {colorTheme === 'red' && <BGQuote11Red />}
       </div>
 
       <div className="absolute top-0 right-0 h-full z-30 px-4 pt-4 pb-1 flex flex-col w-full font-medium">

@@ -2,6 +2,7 @@ import BGQuoteImage21Blue from '../../assets/backgrounds/quoteImage/2-1/blue'
 import BGQuoteImage21Green from '../../assets/backgrounds/quoteImage/2-1/green'
 import BGQuoteImage21Purple from '../../assets/backgrounds/quoteImage/2-1/purple'
 import BGQuoteImage21Yellow from '../../assets/backgrounds/quoteImage/2-1/yellow'
+import BGQuoteImage21Red from '../../assets/backgrounds/quoteImage/2-1/red'
 import DraggableImage from '../../components/inputs/draggableImage'
 import LogoText from '../../assets/svg/logo-text'
 import PartnerLogo21 from '../../components/templates/partnerLogo21'
@@ -69,6 +70,7 @@ const TemplateQuoteImage21 = () => {
           {colorTheme === 'yellow' && <BGQuoteImage21Yellow />}
           {colorTheme === 'purple' && <BGQuoteImage21Purple />}
           {colorTheme === 'blue' && <BGQuoteImage21Blue />}
+          {colorTheme === 'red' && <BGQuoteImage21Red />}
         </div>
 
         <div className="absolute top-0 right-0 h-full z-30 px-3 pt-3 pb-1 flex flex-col w-1/2">

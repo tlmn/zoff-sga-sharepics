@@ -2,6 +2,7 @@ import BGEvent21Blue from '../../assets/backgrounds/event/2-1/blue'
 import BGEvent21Green from '../../assets/backgrounds/event/2-1/green'
 import BGEvent21Purple from '../../assets/backgrounds/event/2-1/purple'
 import BGEvent21Yellow from '../../assets/backgrounds/event/2-1/yellow'
+import BGEvent21Red from '../../assets/backgrounds/event/2-1/red'
 import LogoText from '../../assets/svg/logo-text'
 import PartnerLogo21 from '../../components/templates/partnerLogo21'
 import React from 'react'
@@ -35,6 +36,7 @@ const TemplateEvent21 = () => {
           {colorTheme === 'yellow' && <BGEvent21Yellow />}
           {colorTheme === 'purple' && <BGEvent21Purple />}
           {colorTheme === 'blue' && <BGEvent21Blue />}
+          {colorTheme === 'red' && <BGEvent21Red />}
         </div>
 
         <div className="absolute top-0 left-0 w-full h-full z-30 px-3 pt-3 pb-1 flex flex-col">

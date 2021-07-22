@@ -7,6 +7,7 @@ import LogoText from '../../assets/svg/logo-text'
 import PartnerLogo21 from '../../components/templates/partnerLogo21'
 import React from 'react'
 import useDataContext from '../../lib/useDataContext'
+import BGStatementImage21Red from '../../assets/backgrounds/statementImage/2-1/red'
 
 const TemplateStatementImage21 = () => {
   const { state } = useDataContext()
@@ -67,6 +68,7 @@ const TemplateStatementImage21 = () => {
         {colorTheme === 'yellow' && <BGStatementImage21Yellow />}
         {colorTheme === 'purple' && <BGStatementImage21Purple />}
         {colorTheme === 'blue' && <BGStatementImage21Blue />}
+        {colorTheme === 'red' && <BGStatementImage21Red />}
       </div>
       <div className="flex flex-col w-full h-full px-3 pt-3 pb-1">
         <div className="flex flex-1 flex-col items-center justify-center">

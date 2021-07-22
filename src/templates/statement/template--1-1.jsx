@@ -2,6 +2,7 @@ import BGStatement11Blue from '../../assets/backgrounds/statementImage/1-1/blue'
 import BGStatement11Green from '../../assets/backgrounds/statementImage/1-1/green'
 import BGStatement11Purple from '../../assets/backgrounds/statementImage/1-1/purple'
 import BGStatement11Yellow from '../../assets/backgrounds/statementImage/1-1/yellow'
+import BGStatement11Red from '../../assets/backgrounds/statementImage/1-1/red'
 import LogoText from '../../assets/svg/logo-text'
 import PartnerLogo11 from '../../components/templates/partnerLogo11'
 import React from 'react'
@@ -35,6 +36,7 @@ const TemplateStatement11 = () => {
         {colorTheme === 'yellow' && <BGStatement11Yellow />}
         {colorTheme === 'purple' && <BGStatement11Purple />}
         {colorTheme === 'blue' && <BGStatement11Blue />}
+        {colorTheme === 'red' && <BGStatement11Red />}
       </div>
 
       <div className="absolute top-0 left-0 w-full h-full z-30 px-3 pt-3 pb-1 flex flex-col">

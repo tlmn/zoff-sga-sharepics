@@ -2,6 +2,7 @@ import BGStatementImage11Blue from '../../assets/backgrounds/statementImage/1-1/
 import BGStatementImage11Green from '../../assets/backgrounds/statementImage/1-1/green'
 import BGStatementImage11Purple from '../../assets/backgrounds/statementImage/1-1/purple'
 import BGStatementImage11Yellow from '../../assets/backgrounds/statementImage/1-1/yellow'
+import BGStatementImage11Red from '../../assets/backgrounds/statementImage/1-1/red'
 import DraggableImage from '../../components/inputs/draggableImage'
 import LogoText from '../../assets/svg/logo-text'
 import PartnerLogo11 from '../../components/templates/partnerLogo11'
@@ -67,6 +68,7 @@ const TemplateStatementImage11 = () => {
         {colorTheme === 'yellow' && <BGStatementImage11Yellow />}
         {colorTheme === 'purple' && <BGStatementImage11Purple />}
         {colorTheme === 'blue' && <BGStatementImage11Blue />}
+        {colorTheme === 'red' && <BGStatementImage11Red />}
       </div>
 
       <div className="flex-1 top-0 right-0 px-3 pt-3 pb-1 flex flex-col justify-end mb-4">
