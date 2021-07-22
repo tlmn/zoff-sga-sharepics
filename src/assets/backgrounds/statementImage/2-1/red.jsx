@@ -9,7 +9,7 @@ const BGStatementImage21Red = () => (
     viewBox="0 0 1012 506"
   >
     <g mask="url(#mask0)">
-      <path fill="#FF5858" fillOpacity="0.8" d="M0 0H1012V506H0z"></path>
+      <path fill="#ff6f75" d="M0 0H1012V506H0z"></path>
       <g filter="url(#filter0_d)">
         <path fill="#FF5858" d="M1016 392L-4 409l-8 99h1028V392z"></path>
       </g>
