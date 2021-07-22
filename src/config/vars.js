@@ -42,7 +42,7 @@ export const colorThemes = [
   {
     label: 'blue',
     name: 'blau',
-    topic: 'Gesundheit',
+    topic: 'Klimagerechtigkeit',
   },
   {
     label: 'purple',
