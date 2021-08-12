@@ -4,7 +4,6 @@ const LogoText = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="642"
       height="159"
       fill="none"
       viewBox="0 0 642 159"
